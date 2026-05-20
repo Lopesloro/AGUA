@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start cmd *)",
+      "Bash(code --new-window \"c:\\\\Users\\\\betem\\\\OneDrive\\\\Área de Trabalho\\\\Agua\")",
+      "Bash(code -n \"c:\\\\Users\\\\betem\\\\OneDrive\\\\Área de Trabalho\\\\Agua\")",
+      "Bash(code.cmd -n \"c:\\\\Users\\\\betem\\\\OneDrive\\\\Área de Trabalho\\\\Agua\")",
+      "Bash(\"C:\\\\Users\\\\betem\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\bin\\\\code.cmd\" -n \"c:\\\\Users\\\\betem\\\\OneDrive\\\\Área de Trabalho\\\\Agua\")",
+      "Bash(where claude *)",
+      "Bash(mkdir -p \"/c/Users/betem/OneDrive/Área de Trabalho/Agua/styles\" \"/c/Users/betem/OneDrive/Área de Trabalho/Agua/scripts\" \"/c/Users/betem/OneDrive/Área de Trabalho/Agua/images\")",
+      "Bash(cp \"/c/Users/betem/Downloads/WhatsApp Image 2026-05-18 at 15.07.37.jpeg\" \"/c/Users/betem/OneDrive/Área de Trabalho/Agua/images/filtro-potavel.jpg\")",
+      "Bash(cp \"/c/Users/betem/Downloads/WhatsApp Image 2026-05-18 at 15.07.38.jpeg\" \"/c/Users/betem/OneDrive/Área de Trabalho/Agua/images/filtro-piscina.jpg\")",
+      "Bash(cp \"/c/Users/betem/Downloads/WhatsApp Image 2026-05-18 at 15.07.38 \\(1\\).jpeg\" \"/c/Users/betem/OneDrive/Área de Trabalho/Agua/images/chuva-predial.jpg\")",
+      "Bash(cp \"/c/Users/betem/Downloads/WhatsApp Image 2026-05-18 at 15.07.39.jpeg\" \"/c/Users/betem/OneDrive/Área de Trabalho/Agua/images/chuva-comercial.jpg\")",
+      "Bash(python -m http.server 8080)",
+      "Bash(curl *)",
+      "WebFetch(domain:phaguas.com.br)",
+      "Bash(python -m http.server 3000)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}

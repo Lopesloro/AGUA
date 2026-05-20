@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PH Aguas &mdash; Tratamento de Agua e Efluentes Industriais</title>
+  <meta name="description" content="PH Aguas: solucoes completas em tratamento de agua industrial, residencial e captacao de chuva. +25 anos de experiencia em todo o Brasil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .category-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    @media(max-width:1024px) { .category-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:600px)  { .category-grid { grid-template-columns: 1fr; } }
+
+    .diff-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    @media(max-width:768px){ .diff-grid { grid-template-columns: 1fr; } }
+    .diff-item { display: flex; gap: 16px; align-items: flex-start; padding: 24px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: var(--radius); }
+    .diff-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .diff-icon svg { width: 22px; stroke: rgba(255,255,255,.85); fill: none; stroke-width: 1.8; }
+    .diff-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .diff-desc { font-size: 13px; color: rgba(255,255,255,.65); line-height: 1.55; }
+
+    .chuva-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+    @media(max-width:900px){ .chuva-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width:500px){ .chuva-grid { grid-template-columns: 1fr; } }
+    .chuva-card { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition); cursor: pointer; text-decoration: none; color: inherit; display: block; }
+    .chuva-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--blue); }
+    .chuva-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .chuva-card-body { padding: 18px 20px 20px; }
+    .chuva-tag { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+    .chuva-title { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .chuva-desc { font-size: 13px; color: var(--text); line-height: 1.55; margin-bottom: 14px; }
+    .chuva-link { font-size: 13px; font-weight: 600; color: var(--blue); }
+  </style>
+</head>
+<body class="page-content">
+
+  <!-- HERO -->
+  <section id="hero-home">
+    <div class="container">
+      <div class="hero-wrap">
+        <div class="hero-content">
+          <div class="hero-eyebrow">Experiencia comprovada desde 1999</div>
+          <h1 class="hero-h1">Tratamento de Agua<br><span class="accent">Industrial e Residencial</span><br>com Resultado Real</h1>
+          <p class="hero-sub">Projetos, instalacao e operacao de sistemas completos para filtração, purificacao e tratamento de efluentes. Atendimento em todo o Brasil.</p>
+          <div class="hero-actions">
+            <a href="contato.html" class="btn btn-primary btn-lg">Solicitar Analise Gratuita</a>
+            <a href="sistemas.html" class="btn btn-outline-dark btn-lg">Ver Sistemas</a>
+          </div>
+          <div class="hero-trust-row">
+            <div class="trust-stat">
+              <span class="trust-num">+25</span>
+              <span class="trust-lbl">anos de mercado</span>
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-stat">
+              <span class="trust-num">+500</span>
+              <span class="trust-lbl">projetos entregues</span>
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-stat">
+              <span class="trust-num">14</span>
+              <span class="trust-lbl">sistemas disponiveis</span>
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-stat">
+              <span class="trust-num">+150</span>
+              <span class="trust-lbl">cidades atendidas</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="hero-photo-frame">
+            <img src="images/sistemas/osmose-reversa.jpg" alt="Sistema de Osmose Reversa PH Aguas">
+            <div class="hero-badge-card">
+              <span class="badge-dot"></span>
+              <span>Sistema em operacao ativa &mdash; Sao Paulo, SP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-partners-bar">
+      <div class="container">
+        <span class="partners-label">Distribuidores autorizados:</span>
+        <div class="partners-row">
+          <span class="partner-name">Hidranautics</span>
+          <span class="partner-sep"></span>
+          <span class="partner-name">DOW Filmtec</span>
+          <span class="partner-sep"></span>
+          <span class="partner-name">Pentair</span>
+          <span class="partner-sep"></span>
+          <span class="partner-name">ProMinent</span>
+          <span class="partner-sep"></span>
+          <span class="partner-name">Grundfos</span>
+          <span class="partner-sep"></span>
+          <span class="partner-name">Clack Corporation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stat-item"><span class="stat-value" data-target="25" data-suffix="+">25+</span><span class="stat-label">Anos de Mercado</span></div>
+      <div class="stat-item"><span class="stat-value" data-target="500" data-suffix="+">500+</span><span class="stat-label">Projetos Entregues</span></div>
+      <div class="stat-item"><span class="stat-value" data-target="150" data-suffix="+">150+</span><span class="stat-label">Cidades Atendidas</span></div>
+      <div class="stat-item"><span class="stat-value" data-target="14" data-suffix="">14</span><span class="stat-label">Sistemas Disponiveis</span></div>
+    </div>
+  </div>
+
+  <!-- CATEGORIAS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Solucoes Completas</span>
+        <h2 class="section-title">Tudo que voce precisa em <span>tratamento de agua</span></h2>
+        <p class="section-subtitle">Sistemas e servicos integrados para industria, comercio e residencias &mdash; projetados, instalados e mantidos pela PH Aguas.</p>
+      </div>
+      <div class="category-grid">
+        <a href="sistemas.html" class="ov-card fade-up" data-delay="0">
+          <div class="ov-title">Sistemas de Tratamento</div>
+          <div class="ov-count">14 sistemas disponíveis</div>
+          <div class="ov-arrow">Ver sistemas &rarr;</div>
+        </a>
+        <a href="equipamentos.html" class="ov-card fade-up" data-delay="80">
+          <div class="ov-title">Equipamentos</div>
+          <div class="ov-count">10 linhas de equipamentos</div>
+          <div class="ov-arrow">Ver equipamentos &rarr;</div>
+        </a>
+        <a href="servicos.html" class="ov-card fade-up" data-delay="160">
+          <div class="ov-title">Serviços Técnicos</div>
+          <div class="ov-count">12 modalidades de serviço</div>
+          <div class="ov-arrow">Ver serviços &rarr;</div>
+        </a>
+        <a href="produtos.html" class="ov-card fade-up" data-delay="240">
+          <div class="ov-title">Produtos Químicos</div>
+          <div class="ov-count">Químicos e Resinas</div>
+          <div class="ov-arrow">Ver produtos &rarr;</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SISTEMAS DESTAQUE -->
+  <section class="section gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sistemas em Destaque</span>
+        <h2 class="section-title">Tecnologias de <span>Alta Performance</span></h2>
+      </div>
+      <div class="grid-3">
+        <div class="card fade-up" data-delay="0">
+          <img class="card-img" src="images/sistemas/osmose-1.jpg" alt="Osmose Reversa">
+          <div class="card-body">
+            <span class="card-tag">Filtracao Avancada</span>
+            <div class="card-title">Dessalinizacao por Osmose Reversa</div>
+            <div class="card-desc">Remocao de sais, bacterias e contaminantes com membranas de 0,001 micron. Taxa de recuperacao ate 90%.</div>
+          </div>
+          <div class="card-footer"><a href="sistemas.html" class="btn btn-outline btn-sm">Saiba Mais</a></div>
+        </div>
+        <div class="card fade-up" data-delay="100">
+          <img class="card-img" src="images/sistemas/reuso.jpg" alt="Reuso de Agua">
+          <div class="card-body">
+            <span class="card-tag">Sustentabilidade</span>
+            <div class="card-title">Sistemas de Reuso de Agua</div>
+            <div class="card-desc">Aproveite efluentes tratados para fins nao potaveis. Reducao de ate 40% no consumo de agua potavel.</div>
+          </div>
+          <div class="card-footer"><a href="sistemas.html" class="btn btn-outline btn-sm">Saiba Mais</a></div>
+        </div>
+        <div class="card fade-up" data-delay="200">
+          <img class="card-img" src="images/sistemas/ete.jpg" alt="ETE">
+          <div class="card-body">
+            <span class="card-tag">Efluentes</span>
+            <div class="card-title">Estacao de Tratamento de Efluentes</div>
+            <div class="card-desc">Sistemas compactos e modulares para efluentes domésticos e industriais conforme CONAMA e CETESB.</div>
+          </div>
+          <div class="card-footer"><a href="sistemas.html" class="btn btn-outline btn-sm">Saiba Mais</a></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <a href="sistemas.html" class="btn btn-primary btn-lg">Ver Todos os 14 Sistemas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPAMENTOS DESTAQUE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Equipamentos</span>
+        <h2 class="section-title">Linha Completa de <span>Equipamentos</span></h2>
+      </div>
+      <div class="grid-4 fade-up">
+        <div class="eq-card">
+          <img class="eq-card-img" src="images/equipamentos/membranas.jpg" alt="Membranas">
+          <div class="eq-card-body">
+            <div class="eq-card-title">Membranas de Osmose Reversa</div>
+            <div class="eq-card-desc">Alta performance para dessalinizacao e desmineralizacao.</div>
+          </div>
+        </div>
+        <div class="eq-card">
+          <img class="eq-card-img" src="images/equipamentos/bombas.jpg" alt="Bombas">
+          <div class="eq-card-body">
+            <div class="eq-card-title">Bombas Dosadoras de Cloro</div>
+            <div class="eq-card-desc">Dosagem precisa para desinfeccao continua.</div>
+          </div>
+        </div>
+        <div class="eq-card">
+          <img class="eq-card-img" src="images/equipamentos/valvulas.jpg" alt="Valvulas">
+          <div class="eq-card-body">
+            <div class="eq-card-title">Valvulas Automaticas</div>
+            <div class="eq-card-desc">Cabecotes e valvulas para automacao de filtros.</div>
+          </div>
+        </div>
+        <div class="eq-card">
+          <img class="eq-card-img" src="images/equipamentos/leitos.jpg" alt="Leitos">
+          <div class="eq-card-body">
+            <div class="eq-card-title">Leitos Filtrantes</div>
+            <div class="eq-card-desc">Meios filtrantes de alta capacidade e durabilidade.</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px">
+        <a href="equipamentos.html" class="btn btn-primary">Ver Todos os Equipamentos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETORES -->
+  <section class="section gray">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">Setores de Atuacao</span>
+        <h2 class="section-title">Atendemos todos os <span>segmentos</span></h2>
+        <p class="section-subtitle">Solucoes personalizadas para cada tipo de operacao, dos pequenos comercios as grandes industrias.</p>
+      </div>
+      <div class="sector-grid fade-up">
+        <div class="sector-card"><span class="sector-name">Industrial</span></div>
+        <div class="sector-card"><span class="sector-name">Farmacêutico</span></div>
+        <div class="sector-card"><span class="sector-name">Hospitalar</span></div>
+        <div class="sector-card"><span class="sector-name">Alimentício</span></div>
+        <div class="sector-card"><span class="sector-name">Predial e Condomínios</span></div>
+        <div class="sector-card"><span class="sector-name">Hoteleiro</span></div>
+        <div class="sector-card"><span class="sector-name">Shopping Centers</span></div>
+        <div class="sector-card"><span class="sector-name">Laboratórios</span></div>
+        <div class="sector-card"><span class="sector-name">Petroquímico</span></div>
+        <div class="sector-card"><span class="sector-name">Metalúrgico</span></div>
+        <div class="sector-card"><span class="sector-name">Têxtil</span></div>
+        <div class="sector-card"><span class="sector-name">Residencial</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section class="section blue-dark">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag" style="color:rgba(255,255,255,.6)">Por que a PH Aguas</span>
+        <h2 class="section-title" style="color:white">Nossos <span style="color:var(--cyan)">Diferenciais</span></h2>
+      </div>
+      <div class="diff-grid fade-up">
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div>
+            <div class="diff-title">Solucoes 100% Personalizadas</div>
+            <div class="diff-desc">Cada projeto e unico — desenvolvemos sob medida apos mapeamento hidrico completo da operacao do cliente.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div>
+            <div class="diff-title">25+ Anos de Experiencia</div>
+            <div class="diff-desc">Corpo tecnico especializado com historico comprovado em projetos industriais, hospitalares e residenciais.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="diff-title">Gestao Sustentavel</div>
+            <div class="diff-desc">Processos que reduzem consumo de agua e energia, eliminando produtos quimicos onde possivel.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <div>
+            <div class="diff-title">Conformidade Regulatoria</div>
+            <div class="diff-desc">Atendimento as normas ANVISA, ABNT e CONAMA. Laudos de laboratorio proprio e relatorios periodicos.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div>
+            <div class="diff-title">Automacao e Monitoramento</div>
+            <div class="diff-desc">Controle remoto em tempo real, CLPs e paineis SCADA para maximizar eficiencia operacional.</div>
+          </div>
+        </div>
+        <div class="diff-item">
+          <div class="diff-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div>
+            <div class="diff-title">Suporte Tecnico Nacional</div>
+            <div class="diff-desc">Equipes em Sao Bernardo do Campo e parceiros em todo o Brasil para atendimento rapido e manutencao preventiva.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPTACAO DE AGUA DE CHUVA -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Sustentabilidade</span>
+        <h2 class="section-title">Captacao de <span>Agua de Chuva</span></h2>
+        <p class="section-subtitle">Sistema completo de 6 etapas para residencias, predios, comercios e escolas. Economia real de agua potavel.</p>
+      </div>
+      <div class="chuva-grid fade-up">
+        <a href="chuva.html#casa" class="chuva-card">
+          <img src="images/chuva-casa.jpg" alt="Casa Residencial">
+          <div class="chuva-card-body">
+            <div class="chuva-tag">Residencial</div>
+            <div class="chuva-title">Casa Residencial</div>
+            <div class="chuva-desc">Lavagem de veiculos, irrigacao, descarga e lavagem de roupas.</div>
+            <div class="chuva-link">Ver sistema completo</div>
+          </div>
+        </a>
+        <a href="chuva.html#predial" class="chuva-card">
+          <img src="images/chuva-predial.jpg" alt="Predio Residencial">
+          <div class="chuva-card-body">
+            <div class="chuva-tag">Predial</div>
+            <div class="chuva-title">Predio Residencial</div>
+            <div class="chuva-desc">Limpeza de areas comuns, irrigacao e descarga de banheiros.</div>
+            <div class="chuva-link">Ver sistema completo</div>
+          </div>
+        </a>
+        <a href="chuva.html#comercial" class="chuva-card">
+          <img src="images/chuva-comercial.jpg" alt="Predio Comercial">
+          <div class="chuva-card-body">
+            <div class="chuva-tag">Comercial</div>
+            <div class="chuva-title">Predio Comercial</div>
+            <div class="chuva-desc">Reducao de custos operacionais com agua nao potavel tratada.</div>
+            <div class="chuva-link">Ver sistema completo</div>
+          </div>
+        </a>
+        <a href="chuva.html#escola" class="chuva-card">
+          <img src="images/chuva-escola.jpg" alt="Escola">
+          <div class="chuva-card-body">
+            <div class="chuva-tag">Educacao</div>
+            <div class="chuva-title">Escolas e Universidades</div>
+            <div class="chuva-desc">Educacao ambiental e economia real de agua no campus.</div>
+            <div class="chuva-link">Ver sistema completo</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>Pronto para transformar sua gestao hidrica?</h2>
+      <p>Nossa equipe tecnica analisa sua operacao e propoe a solucao mais eficiente e economica para o seu negocio.</p>
+      <div class="actions">
+        <a href="contato.html" class="btn btn-white btn-lg">Solicitar Analise Gratuita</a>
+        <a href="tel:+5511910301546" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;">(11) 91030-1546</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

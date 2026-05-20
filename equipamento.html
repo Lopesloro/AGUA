@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipamento — PH Águas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="page-content">
+
+  <div id="detail-hero" class="detail-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a><span>/</span>
+        <a href="equipamentos.html">Equipamentos</a><span>/</span>
+        <span id="d-breadcrumb">—</span>
+      </div>
+      <div class="detail-category-tag" id="d-category">—</div>
+      <h1 id="d-name">—</h1>
+      <p class="detail-hero-sub" id="d-short">—</p>
+      <div class="detail-hero-chips" id="d-chips"></div>
+      <div class="detail-hero-actions">
+        <a id="d-wa" href="#" class="btn btn-white btn-lg" target="_blank">Solicitar pelo WhatsApp</a>
+        <a href="contato.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.4);color:white;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;">Solicitar Cotação</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-img-section">
+    <div class="detail-img-wrap" id="d-img-wrap">
+      <div class="detail-img-placeholder" id="d-placeholder">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#0055B3" stroke-width="1" opacity=".25"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-body">
+    <div class="container">
+      <div class="detail-grid">
+        <div>
+          <div class="detail-section-label">Sobre o Equipamento</div>
+          <div class="detail-section-title" id="d-about-title">Como Funciona</div>
+          <div class="detail-text" id="d-desc">—</div>
+          <div class="detail-section-label" style="margin-top:40px">Especificações Técnicas</div>
+          <table class="detail-specs-table" id="d-specs"></table>
+        </div>
+        <div>
+          <div class="detail-section-label">Instalação e Uso</div>
+          <div class="detail-steps" id="d-steps"></div>
+          <div class="detail-section-label" style="margin-top:40px">Aplicações e Setores</div>
+          <ul class="detail-uses-list" id="d-uses"></ul>
+          <div class="detail-section-label" style="margin-top:40px">Vantagens</div>
+          <div class="detail-benefits" id="d-benefits"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Precisa deste equipamento?</h2>
+      <p>Trabalhamos com os melhores fabricantes do mercado. Consulte disponibilidade, modelos e preços sem compromisso.</p>
+      <div class="actions">
+        <a href="contato.html" class="btn btn-white btn-lg">Solicitar Cotação</a>
+        <a href="tel:+5511910301546" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;">(11) 91030-1546</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>
+  const EQUIPAMENTOS = {
+    'membranas-or': {
+      name: 'Membranas de Osmose Reversa',
+      category: 'Filtração por Membranas',
+      short: 'Membranas de alta performance para dessalinização e desmineralização industrial. Compatíveis com sistemas de simples e duplo passo.',
+      image: 'images/equipamentos/membranas.jpg',
+      chips: ['0,001 micron', 'Alto fluxo', 'Industrial', 'Hidranautics', 'DOW Filmtec'],
+      desc: 'As membranas de osmose reversa são o componente central de qualquer sistema de purificação avançada de água. Fabricadas a partir de poliamida aromática de filme fino (TFC — Thin Film Composite), essas membranas são capazes de rejeitar sais, bactérias, vírus, metais pesados e compostos orgânicos em nível molecular — com poros de apenas 0,001 micron. A PH Águas trabalha com marcas líderes mundiais como Hidranautics, DOW Filmtec, Toray e Koch, garantindo membranas certificadas para cada aplicação: dessalinização de água do mar, desmineralização industrial, produção de água purificada farmacêutica, água ultrapura para eletrônica e reúso de efluentes.',
+      aboutTitle: 'Como as membranas de osmose reversa funcionam',
+      specs: [
+        ['Tecnologia', 'TFC — Thin Film Composite (Poliamida aromatic)'],
+        ['Poro efetivo', '0,001 micron (1 nanômetro)'],
+        ['Rejeição de NaCl', '> 99,0% (membranas padrão) / > 99,7% (high-rejection)'],
+        ['Rejeição de bactérias', '> 99,9999%'],
+        ['Rejeição de vírus', '> 99,99%'],
+        ['Pressão de operação', '10–70 bar (dependendo da aplicação)'],
+        ['Temperatura máx.', '45°C (limpeza: 45°C com pH 1–13)'],
+        ['Fabricantes', 'Hidranautics, DOW Filmtec, Toray, Koch'],
+        ['Configuração', 'Espiral enrolado (spiral wound) 2,5" / 4" / 8"'],
+        ['Certificações', 'NSF 58, ANSI, ISO 9001'],
+      ],
+      steps: [
+        ['Seleção da membrana', 'Análise da qualidade da água bruta (TDS, dureza, pH, SDI) define a membrana mais adequada para cada projeto.'],
+        ['Pré-tratamento obrigatório', 'A água deve passar por coagulação, filtração, carvão ativado e ajuste de pH antes das membranas para evitar danos.'],
+        ['Instalação no vaso de pressão', 'A membrana é inserida dentro de vasos de pressão FRP ou inox, conectados em série ou paralelo conforme o projeto.'],
+        ['Pressurização', 'Bomba de alta pressão força a água através da membrana. O permeado (água pura) sai de um lado; o concentrado (rejeito) do outro.'],
+        ['Monitoramento de desempenho', 'Condutivímetro online mede a qualidade do permeado. Queda no rejeito indica necessidade de limpeza química (CIP).'],
+        ['Limpeza CIP', 'Limpeza química com soluções ácidas e alcalinas restaura o fluxo das membranas quando há incrustação ou biofouling.'],
+        ['Substituição periódica', 'Vida útil média de 3–7 anos dependendo da qualidade da água e da manutenção do pré-tratamento.'],
+      ],
+      uses: [
+        'Dessalinização de água do mar e salobra — abastecimento em regiões áridas',
+        'Desmineralização industrial para caldeiras e processos',
+        'Produção de Água Purificada USP para farmacêutica',
+        'Água ultrapura para eletrônica e semicondutores',
+        'Tratamento de rejeitos industriais e reúso de efluentes',
+        'Remoção de micropoluentes, pesticidas e hormônios',
+        'Pré-tratamento de sistemas WFI (Water For Injection)',
+      ],
+      benefits: [
+        ['Rejeição superior', 'Remove > 99% de sais, bactérias, vírus e compostos orgânicos.'],
+        ['Sem produtos químicos no processo', 'A separação é puramente física — pressão através de membrana.'],
+        ['Longa vida útil', 'Com pré-tratamento adequado, membranas duram 5–7 anos.'],
+        ['Certificadas', 'NSF 58, ANSI e ISO para garantia de qualidade e segurança.'],
+      ],
+    },
+    'filtros-big-blue': {
+      name: 'Filtros Cartuchos em Polipropileno — BIG BLUE',
+      category: 'Filtros de Sedimentos',
+      short: 'Filtros de polipropileno de alta capacidade para retenção de sedimentos, partículas e sólidos suspensos. Ideais como pré-filtros para osmose reversa.',
+      image: 'images/equipamentos/big-blue.jpg',
+      chips: ['Pré-filtragem', 'PP', 'Alta capacidade', '10" / 20"', 'Substituível'],
+      desc: 'Os filtros Big Blue são carcaças de filtragem de grande diâmetro (2,5" interno) projetadas para suportar cartuchos de polipropileno de alto rendimento. O nome "Big Blue" vem da coloração azul característica da carcaça de polipropileno injetado, amplamente reconhecida na indústria de tratamento de água. São usados como pré-filtros em sistemas de osmose reversa, abrandadores, sistemas de desinfecção UV e linhas de distribuição de água industrial. A filtragem por gradiente de densidade do cartucho de PP retém partículas maiores na superfície e menores no núcleo, maximizando a capacidade de retenção e a vida útil do cartucho.',
+      aboutTitle: 'Como funciona o filtro Big Blue',
+      specs: [
+        ['Tamanho carcaça', '10" x 4,5" / 20" x 4,5" (Big Blue padrão)'],
+        ['Cartucho', 'Polipropileno graduado por gradiente de densidade'],
+        ['Porosidade disponível', '1, 5, 10, 20, 50, 75, 100 microns'],
+        ['Vazão máxima', 'Até 6 m³/h por carcaça (com cartucho 5 µm)'],
+        ['Pressão máxima', '125 psi (8,6 bar)'],
+        ['Temperatura máxima', '52°C'],
+        ['Conexão', '1" BSP / NPT'],
+        ['Material carcaça', 'Polipropileno (PP) resistente a UV'],
+        ['Certificação cartucho', 'NSF / FDA compliant'],
+      ],
+      steps: [
+        ['Posicionamento na linha', 'Instalado após o ponto de captação ou abrandador, antes de sistemas de osmose reversa, UV ou carvão ativado.'],
+        ['Fluxo de entrada', 'Água entra pela lateral superior, percola o cartucho de PP de fora para dentro, e sai pelo centro pela parte inferior.'],
+        ['Retenção por gradiente', 'Partículas maiores ficam retidas na camada externa do cartucho; partículas menores penetram e são retidas nas camadas internas.'],
+        ['Monitoramento de pressão diferencial', 'Quando a perda de carga ultrapassa 1 bar (indicador de entupimento), o cartucho deve ser substituído.'],
+        ['Substituição do cartucho', 'A carcaça é aberta com chave strap wrench, o cartucho é descartado e um novo é instalado — processo rápido sem ferramentas especiais.'],
+      ],
+      uses: [
+        'Pré-filtro obrigatório para sistemas de osmose reversa',
+        'Proteção de membranas de ultrafiltração e nanofiltração',
+        'Filtração em pontos de uso industriais e comerciais',
+        'Proteção de sistemas de desinfecção por UV',
+        'Linha de abastecimento de equipamentos de laboratório',
+        'Remoção de sedimentos em poços artesianos e cisternas',
+      ],
+      benefits: [
+        ['Alta capacidade de retenção', 'Cartucho de gradiente maximiza a vida útil e a retenção de partículas.'],
+        ['Baixo custo de manutenção', 'Cartucho substituível de baixo custo — sem ferramentas especiais.'],
+        ['Ampla faixa de porosidade', 'De 1 a 100 microns para cada aplicação.'],
+        ['Universal', 'Compatível com todas as carcaças padrão do mercado.'],
+      ],
+    },
+    'leitos-filtrantes': {
+      name: 'Leitos Filtrantes',
+      category: 'Meios Filtrantes',
+      short: 'Meios filtrantes granulados para retenção de partículas, turbidez e sólidos em suspensão. Disponíveis em areia, antracito, zeólita e carvão ativado.',
+      image: 'images/equipamentos/leitos.jpg',
+      chips: ['Areia', 'Antracito', 'Zeólita', 'Carvão', 'Alta durabilidade'],
+      desc: 'Leitos filtrantes são camadas de material granulado disposto dentro de vasos de pressão filtrantes pelo qual a água flui, retendo partículas sólidas em suspensão por mecanismos de peneiramento, sedimentação e adsorção. A PH Águas trabalha com os principais meios filtrantes: areia quartzosa (granulometria 0,4–1,2 mm) para remoção de turbidez e sólidos; antracito (carvão mineral de baixa densidade) para filtros bicamada de alta eficiência; zeólita clinoptilolita (mineral vulcânico natural) para remoção de ferro, manganês, amônia e metais pesados; e carvão vegetal ativado granular (CAG) para adsorção de cloro, compostos orgânicos e odores. A escolha do meio filtrante é determinada pela qualidade da água bruta e pelos objetivos do tratamento.',
+      aboutTitle: 'Como os leitos filtrantes removem contaminantes',
+      specs: [
+        ['Areia quartzosa', 'Granulometria 0,4–1,2 mm — remoção de turbidez e sólidos'],
+        ['Antracito', 'D.A. 0,8 g/cm³, 0,8–2,0 mm — filtros bicamada e multicamada'],
+        ['Zeólita clinoptilolita', 'Pureza > 85%, mineral vulcânico natural — Fe, Mn, NH₄⁺'],
+        ['Carvão vegetal ativado (CAG)', 'Casca de coco, área > 900 m²/g — cloro e compostos orgânicos'],
+        ['Taxa de filtração', '5–20 m/h (velocidade superficial)'],
+        ['Retrolavagem', '30–60 m/h por 10–15 minutos'],
+        ['Vida útil', '5–15 anos (com retrolavagem adequada)'],
+        ['Instalação', 'Em vasos PRFV ou aço carbono/inox de qualquer tamanho'],
+      ],
+      steps: [
+        ['Análise da água bruta', 'Turbidez, cor, ferro, manganês, cloro e compostos orgânicos determinam qual meio filtrante usar e em que configuração.'],
+        ['Carregamento do leito', 'O vaso de pressão é carregado com cascalho de suporte (na base), seguido do meio filtrante principal e eventualmente de meios secundários.'],
+        ['Filtração por percolação', 'A água entra pelo topo e percola o leito de cima para baixo, sendo filtrada gradualmente pelas camadas de material granulado.'],
+        ['Monitoramento', 'Diferencial de pressão e turbidez da água filtrada indicam quando o leito está saturado e precisa de retrolavagem.'],
+        ['Retrolavagem automática', 'Água flui em sentido inverso (de baixo para cima) a alta velocidade por 10–15 minutos, expandindo o leito e removendo os sólidos retidos.'],
+        ['Retorno ao serviço', 'Após retrolavagem e enxágue, o leito assenta e o sistema retorna automaticamente à filtração.'],
+      ],
+      uses: [
+        'ETAs (Estações de Tratamento de Água) para remoção de turbidez',
+        'Pré-tratamento para sistemas de osmose reversa',
+        'Remoção de ferro e manganês de poços artesianos (zeólita)',
+        'Decloração de água municipal para processos industriais (CAG)',
+        'ETEs (Estações de Tratamento de Efluentes) para polimento final',
+        'Piscinas e tanques ornamentais de grande porte',
+        'Tratamento de água para caldeiras e torres de resfriamento',
+      ],
+      benefits: [
+        ['Versátil', 'Escolha do meio define o contaminante removido — uma solução para cada problema.'],
+        ['Alta durabilidade', 'Com retrolavagem adequada, leitos duram décadas.'],
+        ['Baixo custo operacional', 'Sem consumo de reagentes na filtração (exceto carvão ativado).'],
+        ['Automatizável', 'Retrolavagem programada por temporizador ou diferencial de pressão.'],
+      ],
+    },
+    'filtros-cartucho': {
+      name: 'Filtros de Cartucho e Elementos Filtrantes',
+      category: 'Filtros Substituíveis',
+      short: 'Cartuchos substituíveis para filtragem em múltiplas etapas. Disponíveis em polipropileno, carvão ativado e fibra de vidro.',
+      image: 'images/equipamentos/filtros-cartucho.jpg',
+      chips: ['PP', 'Carvão Ativado', 'Fibra de vidro', 'Padrão 10"', 'Multi-estágio'],
+      desc: 'Os filtros de cartucho são unidades de filtragem compactas compostas por uma carcaça (housing) rígida e um elemento filtrante (cartucho) substituível. São amplamente utilizados em sistemas de pré-tratamento e polimento em pontos de uso. A PH Águas fornece cartuchos em polipropileno (PP) para retenção de sedimentos e partículas (1–100 µm), cartuchos de carvão ativado (CTO — Carbon Block) para remoção de cloro, odores, sabores e compostos orgânicos voláteis, e cartuchos de fibra de vidro para alta temperatura e compatibilidade com solventes. Carcaças disponíveis em transparente (para inspeção visual), opaco (proteção UV) e inox para ambientes sanitários.',
+      aboutTitle: 'Como os filtros de cartucho funcionam',
+      specs: [
+        ['Tipos de cartucho', 'PP graduado, CTO (carvão block), fibra de vidro, náilon, PTFE'],
+        ['Porosidade PP', '0,5 / 1 / 5 / 10 / 20 / 50 microns'],
+        ['Cartucho CTO', '5 µm + adsorção de cloro, sabor e odor'],
+        ['Tamanho padrão', '10" x 2,5" (padrão slim) / 10" x 4,5" (big blue)'],
+        ['Pressão máxima', '125 psi (8,6 bar)'],
+        ['Temperatura máxima', '38°C (PP) / 52°C (fibra de vidro)'],
+        ['Carcaças', 'PP transparente, PP opaco, inox 304/316'],
+        ['Certificação', 'NSF/ANSI 42, 53, 58'],
+      ],
+      steps: [
+        ['Instalação na linha', 'Instalados em série na linha de água, com a sequência correta: sedimentos (maior µm) → sedimentos finos → carvão ativado.'],
+        ['Fluxo de fora para dentro', 'A água entra pela parte externa do cartucho, percola de fora para dentro, e sai purificada pelo núcleo.'],
+        ['Retenção por tamanho e adsorção', 'Cartuchos de PP retêm partículas por tamanho; cartuchos de carvão retêm compostos químicos por adsorção.'],
+        ['Monitoramento visual ou de pressão', 'Carcaças transparentes permitem inspeção visual da coloração do cartucho. Queda de pressão indica troca necessária.'],
+        ['Substituição periódica', 'Troca semestral ou anual dependendo da qualidade da água. Processo simples: abrir carcaça, remover cartucho usado, inserir novo.'],
+      ],
+      uses: [
+        'Pré-filtro para sistemas de osmose reversa — proteção das membranas',
+        'Polimento final de água purificada em laboratórios',
+        'Pontos de uso em restaurantes, cafeterias e refeitórios',
+        'Proteção de equipamentos sensíveis como máquinas de gelo e café',
+        'Filtração de água de processo em indústrias de alimentos',
+        'Residências e condomínios com água municipal tratada com cloro',
+      ],
+      benefits: [
+        ['Fácil manutenção', 'Troca de cartucho em menos de 5 minutos sem ferramentas especiais.'],
+        ['Baixo custo', 'Cartuchos de reposição de baixo valor agregado.'],
+        ['Compacto', 'Ocupa mínimo espaço — pode ser instalado embaixo da pia.'],
+        ['Multi-contaminante', 'Configuração em série ataca partículas e compostos químicos ao mesmo tempo.'],
+      ],
+    },
+    'crepinas': {
+      name: 'Crepinas e Distribuidores',
+      category: 'Componentes de Distribuição',
+      short: 'Componentes de distribuição e coleta para filtros e leitos filtrantes. Garantem distribuição uniforme da água e evitam passagem de material filtrante.',
+      image: 'images/equipamentos/crepinas.jpg',
+      chips: ['PVC', 'Inox', 'PP', 'Alta durabilidade', 'Distribuição uniforme'],
+      desc: 'Crepinas e distribuidores são componentes instalados no fundo e na parte superior dos vasos de pressão filtrantes. Sua função é distribuir a água uniformemente por toda a seção transversal do leito filtrante durante a filtração e a retrolavagem, evitando caminhos preferenciais que comprometem a eficiência do filtro. As crepinas de fundo (underdrain) impedem que o material filtrante (areia, zeólita, carvão, resina) passe para a linha de água tratada, funcionando como uma grelha de precisão com abertura calibrada para cada granulometria de meio filtrante. A PH Águas fornece crepinas individuais para leitos filtrantes e sistemas de distribuição completos (manifold) para vasos de grande diâmetro.',
+      aboutTitle: 'Como crepinas e distribuidores funcionam',
+      specs: [
+        ['Abertura de filtração', '0,1 a 0,5 mm (escolha conforme granulometria do meio)'],
+        ['Materiais', 'PVC, PP, ABS, aço inoxidável 304/316'],
+        ['Pressão máxima', 'Até 10 bar (inox) / 6 bar (PVC/PP)'],
+        ['Temperatura máxima', '60°C (PP) / 120°C (inox)'],
+        ['Rosca padrão', '1/4", 3/8", 1/2", 3/4" BSP/NPT'],
+        ['Compatibilidade', 'Vasos PRFV, aço carbono, aço inox de qualquer diâmetro'],
+        ['Configuração fundo', 'Crepinas individuais / manifold lateral / tubo central com laterais'],
+        ['Resistência química', 'Alta — compatível com soluções ácidas e básicas de regeneração'],
+      ],
+      steps: [
+        ['Seleção da abertura', 'A abertura da fenda da crepina deve ser menor que a granulometria mínima do meio filtrante para evitar passagem de material.'],
+        ['Instalação no vaso', 'As crepinas são rosqueadas no prato de fundo do vaso ou no tubo central (riser) em número e espaçamento calculados para distribuição uniforme.'],
+        ['Teste de distribuição', 'Antes de carregar o meio filtrante, faz-se um teste de distribuição de fluxo para verificar uniformidade em toda a seção do vaso.'],
+        ['Carregamento do meio filtrante', 'Após instalar as crepinas, carrega-se o cascalho de suporte e em seguida o meio filtrante por cima das crepinas.'],
+        ['Verificação periódica', 'Durante manutenções preventivas, as crepinas são inspecionadas quanto a trincas, entupimentos ou desgaste das fendas.'],
+      ],
+      uses: [
+        'Filtros de areia, antracito e zeólita em ETAs e ETEs',
+        'Abrandadores com resinas catiônicas de sódio',
+        'Sistemas de desmineralização por troca iônica',
+        'Filtros de carvão ativado granular (CAG)',
+        'Leitos mistos de resinas aniônica e catiônica',
+        'Filtros de desinchamento para reúso de efluentes',
+      ],
+      benefits: [
+        ['Distribuição uniforme', 'Garante que toda a seção do leito trabalhe eficientemente — sem caminhos preferenciais.'],
+        ['Retenção do meio filtrante', 'Impede perda de areia, resina ou zeólita para a linha de saída.'],
+        ['Longa vida útil', 'Materiais resistentes à corrosão — duram a vida do equipamento.'],
+        ['Fácil substituição', 'Manutenção simples em caso de trinca ou entupimento.'],
+      ],
+    },
+    'bombas-dosadoras': {
+      name: 'Bombas Dosadoras de Cloro e Produtos Químicos',
+      category: 'Dosagem Química',
+      short: 'Bombas de dosagem para injeção precisa de hipoclorito, PAC, biocidas e outros produtos químicos. Marcas líderes: ProMinent, Grundfos, Stenner.',
+      image: 'images/equipamentos/bombas.jpg',
+      chips: ['ProMinent', 'Grundfos', 'Stenner', 'Digital', 'Dosagem precisa'],
+      desc: 'Bombas dosadoras são equipamentos de precisão responsáveis por injetar volumes controlados e constantes de produtos químicos líquidos na linha de água. Na indústria de tratamento de água, são fundamentais para dosagem de hipoclorito de sódio (desinfecção), PAC (coagulação), antiincrustante (proteção de membranas), biocidas (controle microbiológico em torres), ácido clorídrico ou sulfúrico (ajuste de pH) e polímeros aniônicos/catiônicos (auxiliar de coagulação). A PH Águas fornece bombas dosadoras das marcas líderes mundiais — ProMinent, Grundfos Alldos e Stenner — em versões magnéticas (diafragma eletromagnético) e mecânicas, com controle analógico (4–20 mA) e digital (RS485/Modbus), compatíveis com sistemas de automação e SCADA.',
+      aboutTitle: 'Como as bombas dosadoras funcionam',
+      specs: [
+        ['Princípio de operação', 'Diafragma eletromagnético (solenoide) ou motor de passo'],
+        ['Marcas disponíveis', 'ProMinent, Grundfos Alldos, Stenner, Seko'],
+        ['Vazão típica', '0,1 a 2.000 L/h dependendo do modelo'],
+        ['Pressão máxima', 'Até 16 bar (10 bar nos modelos mais comuns)'],
+        ['Controle', 'Analógico 4–20 mA / pulso de medidor / RS485 Modbus'],
+        ['Fluidos compatíveis', 'Hipoclorito, PAC, ácidos, bases, biocidas, polímeros'],
+        ['Material cabeça', 'PP, PVC, PVDF — compatível com produtos agressivos'],
+        ['Membrana', 'PTFE (Teflon) — máxima resistência química'],
+        ['Tensão', '110/220 VAC 60 Hz monofásico'],
+        ['Certificações', 'CE, UL, ATEX (modelos especiais)'],
+      ],
+      steps: [
+        ['Dimensionamento', 'O cálculo da dosagem é feito com base na vazão da linha, concentração do produto e dose desejada (mg/L).'],
+        ['Instalação na linha de injeção', 'A bomba injeta o produto na linha principal através de uma válvula de injeção (ponto de injeção) com valvulamento para evitar retorno.'],
+        ['Ajuste de dosagem', 'Frequência de pulso e tempo de abertura da membrana são ajustados via painel digital ou sinal analógico externo.'],
+        ['Controle proporcional à vazão', 'Conectada ao sinal do medidor de vazão (pulsado), a bomba ajusta automaticamente a dose proporcionalmente à vazão da linha.'],
+        ['Manutenção preventiva', 'Inspeção trimestral das válvulas de sucção e descarga, membrana e tubulação dosadora. Membrana com vida útil de 2.000–5.000 horas.'],
+        ['Alarmes e segurança', 'Modelos avançados incluem alarme de falta de produto, falha de membrana e alarme de sobrepressão.'],
+      ],
+      uses: [
+        'Dosagem de hipoclorito de sódio para desinfecção de ETAs',
+        'Injeção de PAC (Policloreto de Alumínio) para coagulação',
+        'Antiincrustante para proteção de membranas de osmose reversa',
+        'Biocidas e biodispersantes em torres de resfriamento',
+        'Ajuste de pH com ácido clorídrico, sulfúrico ou soda cáustica',
+        'Polímeros catiônicos/aniônicos para auxiliar de floculação',
+        'Alimentação de sistemas de dosagem de cloro gasoso (solução)',
+      ],
+      benefits: [
+        ['Dosagem precisa', 'Repetibilidade de ±1% garante tratamento eficiente e sem desperdício.'],
+        ['Controle remoto', 'Integração com SCADA e automação — dosagem sem operador local.'],
+        ['Segurança química', 'Válvulas antisifonagem e alarmes de falha protegem o sistema.'],
+        ['Ampla faixa', 'Modelos de 0,1 L/h a mais de 2.000 L/h para qualquer escala de planta.'],
+      ],
+    },
+    'valvulas-automaticas': {
+      name: 'Válvulas Automáticas e Cabeçotes',
+      category: 'Automação de Filtros',
+      short: 'Válvulas e cabeçotes automáticos para abrandadores, filtros de carvão, filtros de areia e leitos filtrantes. Programação de retrolavagem e regeneração automática.',
+      image: 'images/equipamentos/valvulas.jpg',
+      chips: ['Pentair', 'Clack', 'Fleck', 'Automático', 'Retrolavagem'],
+      desc: 'As válvulas automáticas (também chamadas de cabeçotes automáticos ou válvulas multivias) são o cérebro dos sistemas de filtração e abrandamento. Uma única válvula multiposição substitui 5 a 6 válvulas manuais, gerenciando automaticamente todos os ciclos do equipamento: serviço (filtração), retrolavagem, regeneração/injeção de salmoura, enxágue lento, enxágue rápido e retorno ao serviço. São programadas por volume tratado, temporizador ou condutividade, e trabalham 24 horas sem necessidade de operador. A PH Águas é distribuidor autorizado de Pentair (Autotrol e Fleck), Clack e outras marcas líderes mundiais.',
+      aboutTitle: 'Como as válvulas automáticas controlam filtros e abrandadores',
+      specs: [
+        ['Marcas', 'Pentair (Fleck, Autotrol), Clack, WS'],
+        ['Ciclos controlados', 'Serviço, retrolavagem, regeneração, enxágue lento, enxágue rápido'],
+        ['Programação', 'Por volume (m³), temporizador (horas/dias) ou condutividade'],
+        ['Vazão máxima', 'De 1,5 m³/h (residencial) até 20 m³/h (industrial padrão)'],
+        ['Conexão', '3/4", 1", 1,5", 2" BSP/NPT'],
+        ['Tensão', '110 VAC / 220 VAC 60 Hz'],
+        ['Display', 'LCD com contagem regressiva e configuração intuitiva'],
+        ['Modos de regeneração', 'Imediato / diferido (horário programável)'],
+        ['Material corpo', 'Noryl (PPO + PS) de alta resistência química'],
+      ],
+      steps: [
+        ['Instalação no topo do vaso', 'A válvula é rosqueada diretamente no topo do vaso de pressão e conectada à linha de entrada, saída, dreno e salmoura.'],
+        ['Programação inicial', 'O técnico programa o volume tratado entre regenerações (baseado na capacidade de troca das resinas) e o horário preferencial de regeneração.'],
+        ['Operação em serviço', 'Durante o uso normal, a válvula mantém o fluxo: entrada → leito (de cima para baixo) → saída.'],
+        ['Detecção do fim de ciclo', 'O totalizador de volume (ou temporizador) atinge o ponto programado e a válvula inicia automaticamente o ciclo de regeneração.'],
+        ['Retrolavagem', 'Válvula inverte o fluxo: entrada → de baixo para cima no leito → dreno. Expande e limpa o leito por 10–12 minutos.'],
+        ['Regeneração (abrandadores)', 'Salmoura é injetada lentamente pelo leito por 30–60 minutos, trocando Ca²⁺ e Mg²⁺ retidos por Na⁺.'],
+        ['Enxágue e retorno', 'Enxágue lento e rápido removem excesso de sal. Válvula retorna automaticamente ao modo serviço.'],
+      ],
+      uses: [
+        'Abrandadores de água com resinas catiônicas sódicas',
+        'Filtros de carvão ativado com retrolavagem automática',
+        'Filtros de areia e zeólita em sistemas industriais',
+        'Sistemas de desmineralização com resinas de troca iônica',
+        'Filtros de ferro e manganês com retrolavagem periódica',
+        'Sistemas de remoção de nitratos por troca iônica',
+      ],
+      benefits: [
+        ['Operação 24h sem operador', 'Regeneração e retrolavagem automáticas — sem intervenção manual.'],
+        ['Durabilidade comprovada', 'Marcas Pentair e Clack com mais de 30 anos de mercado.'],
+        ['Redução de perdas', 'Regeneração por volume evita regenerações desnecessárias.'],
+        ['Simples manutenção', 'Kits de vedação anuais de baixo custo.'],
+      ],
+    },
+    'vasos-pressao': {
+      name: 'Vasos de Pressão Filtrantes',
+      category: 'Vasos e Tanques',
+      short: 'Vasos e tanques pressurizados para filtros de areia, carvão, leitos de zeólita e abrandadores. Fabricação em fibra de vidro (PRFV) ou aço carbono/inox.',
+      image: 'images/equipamentos/vasos-pressao.jpg',
+      chips: ['PRFV', 'Aço Carbono', 'Inox', 'Alta pressão', 'Customizável'],
+      desc: 'Vasos de pressão filtrantes são os recipientes que contêm os leitos filtrantes (areia, carvão, zeólita, resinas de troca iônica) sob pressão positiva. Disponíveis em três materiais principais: PRFV (Plástico Reforçado com Fibra de Vidro) — padrão para a maioria das aplicações residenciais e industriais, leve, resistente à corrosão e com custo acessível; aço carbono com revestimento interno epóxi — para grandes volumes e alta pressão; e aço inoxidável AISI 304/316 — para aplicações sanitárias e farmacêuticas. A PH Águas fornece vasos de 6" a 63" de diâmetro, com capacidades de 50 litros a dezenas de metros cúbicos de leito filtrante, certificados pela NR13 quando aplicável.',
+      aboutTitle: 'Como selecionar o vaso de pressão correto',
+      specs: [
+        ['Materiais disponíveis', 'PRFV (FRP), aço carbono + epóxi, aço inoxidável 304/316'],
+        ['Diâmetros padrão', '6", 8", 10", 12", 13", 14", 16", 18", 21", 24", 30", 36", 42", 48", 54", 63"'],
+        ['Pressão de operação', 'Até 10 bar (PRFV) / 10–40 bar (aço)'],
+        ['Temperatura', 'Até 60°C (PRFV) / até 120°C (aço)'],
+        ['Volume de leito', '10 litros (6" x 35") até várias toneladas (grandes vasos)'],
+        ['Conexão superior', '3/4" a 4" BSP/NPT (para cabeçote ou tubulação)'],
+        ['Normas', 'ASME Seção VIII / NR13 (vasos > 0,5 m³ x 0,5 MPa)'],
+        ['Tratamento interno (aço)', 'Sand blast + epóxi bi-componente ou zinco epóxi'],
+      ],
+      steps: [
+        ['Dimensionamento', 'O diâmetro é calculado pela taxa de filtração desejada (m/h) e a altura pelo volume de leito necessário para o EBCT definido.'],
+        ['Montagem das crepinas', 'Crepinas de fundo são instaladas no prato inferior antes de carregar o meio filtrante.'],
+        ['Carregamento do leito', 'Cascalho de suporte → meio filtrante principal → meio filtrante secundário (em filtros multicamada).'],
+        ['Conexão da válvula automática', 'Cabeçote automático ou tubulações manuais são conectadas ao topo e à base do vaso.'],
+        ['Teste hidrostático', 'Antes da entrada em operação, o vaso é pressurizado a 1,5x a pressão de trabalho para verificação de estanqueidade.'],
+        ['Comissionamento', 'Retrolavagem inicial para assentamento do leito e análise da água filtrada para confirmação de qualidade.'],
+      ],
+      uses: [
+        'Filtros de areia e antracito em ETAs industriais e municipais',
+        'Abrandadores com resinas catiônicas para caldeiras e lavanderias',
+        'Filtros de carvão ativado granular (CAG) para decloração',
+        'Filtros de zeólita para remoção de ferro e manganês',
+        'Colunas de troca iônica catiônica e aniônica em sistemas de desmineralização',
+        'Leitos mistos (Mixed Bed) para produção de água de alta pureza',
+      ],
+      benefits: [
+        ['Ampla faixa de tamanhos', 'Disponível de 6" a 63" — qualquer capacidade de planta.'],
+        ['Resistente à corrosão', 'PRFV não corrói e não precisa de pintura — vida útil de 20+ anos.'],
+        ['Certificação ASME/NR13', 'Vasos com NR13 garantem segurança e conformidade legal.'],
+        ['Integração completa', 'Compatível com qualquer cabeçote automático do mercado.'],
+      ],
+    },
+    'vasos-membranas': {
+      name: 'Vasos de Alta e Baixa Pressão para Membranas',
+      category: 'Vasos para Membranas',
+      short: 'Vasos especializados para acomodar membranas de osmose reversa e nanofiltração. Disponíveis para 1 a 7 membranas em série. Materiais: FRP e aço inoxidável.',
+      image: 'images/equipamentos/vasos-membranas.jpg',
+      chips: ['FRP', 'Inox', 'ASME', '1–7 membranas', 'Alta pressão'],
+      desc: 'Os vasos de pressão para membranas são projetados especificamente para acomodar membranas espirais de osmose reversa, nanofiltração ou ultrafiltração dentro de um invólucro pressurizado. Diferente dos vasos filtrantes convencionais, esses vasos possuem conexões de permeado (saída da água purificada) e concentrado (saída do rejeito) nas extremidades, além de portas de acesso para inserção e remoção das membranas sem necessidade de ferramentas especiais. A PH Águas fornece vasos para membranas de 2,5", 4" e 8" de diâmetro (as mais comuns no mercado industrial), com capacidade para 1, 2, 3, 4, 6 ou 7 elementos em série. Materiais: FRP (fibra de vidro reforçada) para sistemas de até 20 bar, e aço inoxidável com certificação ASME para aplicações de alta pressão como água do mar.',
+      aboutTitle: 'Como os vasos para membranas são dimensionados',
+      specs: [
+        ['Diâmetros de membrana', '2,5" (mini sistemas), 4" (industrial pequeno/médio), 8" (industrial grande)'],
+        ['Elementos por vaso', '1, 2, 3, 4, 6 ou 7 membranas em série'],
+        ['Materiais', 'FRP (até 300 psi / 20 bar) — Inox 316 com ASME (até 1.000 psi / 68 bar)'],
+        ['Pressão de operação', '150–300 psi FRP / até 1.000 psi inox (dessalinização mar)'],
+        ['Temperatura máxima', '45°C (operação) / 45°C (limpeza CIP)'],
+        ['Certificação', 'ASME (opção), CE, ISO 9001'],
+        ['Conexão de permeado', 'Flangeada ou rosqueada nas extremidades'],
+        ['Terminais de extremidade', 'Removíveis para acesso às membranas — sem ferramentas especiais'],
+      ],
+      steps: [
+        ['Seleção do diâmetro', 'O diâmetro do vaso (2,5", 4" ou 8") é definido pelo diâmetro da membrana de osmose reversa escolhida no projeto.'],
+        ['Definição do número de membranas', 'O número de elementos por vaso (geralmente 6 por vaso de 4" e 8") é definido pela taxa de recuperação e pressão disponível.'],
+        ['Instalação das membranas', 'O terminal de extremidade é removido e as membranas são inseridas uma a uma com lubrificante adequado (não graxa — pode danificar a membrana).'],
+        ['Conexão de permeado e concentrado', 'O permeado sai pelo centro de cada membrana e é coletado no tubo de permeado central. O concentrado sai pela extremidade final do vaso.'],
+        ['Pressurização e teste', 'O sistema é pressurizado gradualmente até a pressão de operação. Vazamentos nos terminais de extremidade indicam problema de vedação.'],
+        ['Manutenção e CIP', 'Para limpeza química (CIP), as membranas permanecem nos vasos e a solução de limpeza circula pelo sistema.'],
+      ],
+      uses: [
+        'Sistemas de osmose reversa para desmineralização industrial',
+        'Dessalinização de água do mar (sistemas de alta pressão)',
+        'Produção de Água Purificada USP para farmacêutica',
+        'Tratamento de efluentes industriais e lixiviados',
+        'Concentração de sucos e produtos alimentares por nanofiltração',
+        'Sistemas de reúso de água em indústrias têxteis e papel',
+      ],
+      benefits: [
+        ['Fácil acesso às membranas', 'Terminais removíveis permitem troca rápida sem desmontagem do sistema.'],
+        ['Certificação ASME disponível', 'Para sistemas de alta pressão com conformidade legal e seguro.'],
+        ['Ampla compatibilidade', 'Compatível com membranas de todos os principais fabricantes (4" e 8").'],
+        ['Resistente à corrosão', 'FRP ou inox 316 garantem longa vida útil mesmo em ambientes agressivos.'],
+      ],
+    },
+    'purificadores': {
+      name: 'Purificadores Residenciais e Centrais',
+      category: 'Água Potável',
+      short: 'Sistemas compactos para produção de água potável de alta qualidade em residências, condomínios e estabelecimentos comerciais. Filtração em múltiplos estágios.',
+      image: 'images/equipamentos/purificadores.jpg',
+      chips: ['Multi-estágio', 'Centralizado', 'Ponto de uso', 'Residencial', 'Sedimentos + Carvão + OR'],
+      desc: 'Os purificadores são sistemas compactos de tratamento de água projetados para produzir água potável de alta qualidade a partir da água da rede municipal ou de poços. A PH Águas fornece duas categorias: Purificadores de ponto de uso (under-sink ou bancada) — instalados próximos ao ponto de consumo (torneira, bebedouro) com filtração em 3 a 5 estágios: sedimentos, carvão ativado, osmose reversa ou ultrafiltração e pós-carvão; e Purificadores centrais — instalados na entrada principal de residências, condomínios, hotéis e estabelecimentos comerciais, tratando toda a água que entra no imóvel com remoção de cloro, sedimentos, dureza e contaminantes orgânicos. Ideal para regiões com água de baixa qualidade organoléptica (cheiro, sabor, cor) ou com alto teor de cloro.',
+      aboutTitle: 'Estágios de purificação e como cada um contribui',
+      specs: [
+        ['Estágio 1 — Sedimentos', 'Cartucho PP 5 µm — remove areia, ferrugem e partículas'],
+        ['Estágio 2 — Carvão granular', 'GAC — adsorve cloro livre, odor e compostos orgânicos voláteis'],
+        ['Estágio 3 — Carvão block', 'CTO 1 µm — remoção fina de compostos e cloro residual'],
+        ['Estágio 4 — Membrana OR/UF', 'Osmose reversa (0,001 µm) ou Ultrafiltração (0,01 µm)'],
+        ['Estágio 5 — Pós-carvão', 'Melhora sabor e odor pós-membrana'],
+        ['Produção OR', '100–500 GPD (380–1.900 L/dia) por unidade'],
+        ['Reservatório', '10–20 L pressurizado (modelos under-sink com OR)'],
+        ['Certificações', 'NSF/ANSI 42, 53, 58 (conforme modelo)'],
+      ],
+      steps: [
+        ['Análise da água local', 'Determinação dos principais contaminantes (cloro, dureza, metais, turbidez) para escolha do modelo mais adequado.'],
+        ['Instalação', 'Sistema under-sink conectado à tubulação fria sob a pia, com torneira dedicada de saída. Sistema central instalado no cavalete de entrada.'],
+        ['Primeiro uso', 'Descartar os primeiros 10–15 litros produzidos para lavar o sistema e ativar as mídias filtrantes.'],
+        ['Manutenção semestral', 'Troca dos cartuchos de pré-filtragem (sedimentos e carvão). Membrana de osmose reversa tem vida útil de 2–3 anos.'],
+        ['Monitoramento de qualidade', 'Medidor TDS de mão verifica periodicamente a eficiência da membrana. Valor abaixo de 30 ppm confirma bom funcionamento.'],
+      ],
+      uses: [
+        'Residências com água de baixa qualidade sensorial (cloro, sabor, odor)',
+        'Condomínios residenciais — tratamento central na entrada',
+        'Escritórios, clínicas e consultórios — bebedouros e cafeteiras',
+        'Restaurantes e cafeterias — água de processo e consumo',
+        'Hotéis e pousadas — quartos e cozinha industrial',
+        'Academias, creches e escolas',
+      ],
+      benefits: [
+        ['Água de qualidade superior', 'Elimina cloro, sedimentos, bactérias e compostos orgânicos.'],
+        ['Compacto e discreto', 'Cabe embaixo da pia sem ocupar espaço útil.'],
+        ['Baixo custo por litro', 'Custo médio de R$ 0,05–0,15 por litro de água purificada.'],
+        ['Sustentável', 'Substitui garrafões e copos descartáveis — redução de plástico.'],
+      ],
+    },
+  };
+
+  const params = new URLSearchParams(location.search);
+  const id = params.get('id') || '';
+  const eq = EQUIPAMENTOS[id];
+
+  if (!eq) {
+    document.getElementById('d-name').textContent = 'Equipamento não encontrado';
+    document.getElementById('d-short').textContent = 'Verifique o link ou retorne à página de equipamentos.';
+  } else {
+    document.title = eq.name + ' — PH Águas';
+    document.getElementById('d-breadcrumb').textContent = eq.name;
+    document.getElementById('d-category').textContent = eq.category;
+    document.getElementById('d-name').textContent = eq.name;
+    document.getElementById('d-short').textContent = eq.short;
+    document.getElementById('d-about-title').textContent = eq.aboutTitle;
+    document.getElementById('d-desc').textContent = eq.desc;
+
+    const wa = document.getElementById('d-wa');
+    wa.href = 'https://wa.me/5511910301546?text=' + encodeURIComponent('Olá! Tenho interesse no equipamento: ' + eq.name + '. Poderia enviar mais informações?');
+
+    const chipsEl = document.getElementById('d-chips');
+    (eq.chips || []).forEach(c => {
+      const span = document.createElement('span');
+      span.className = 'detail-chip';
+      span.textContent = c;
+      chipsEl.appendChild(span);
+    });
+
+    if (eq.image) {
+      const imgWrap = document.getElementById('d-img-wrap');
+      imgWrap.innerHTML = '<img src="' + eq.image + '" alt="' + eq.name + '" style="width:100%;height:420px;object-fit:cover;display:block;">';
+    }
+
+    const specsEl = document.getElementById('d-specs');
+    (eq.specs || []).forEach(([k, v]) => {
+      specsEl.innerHTML += '<tr><td>' + k + '</td><td>' + v + '</td></tr>';
+    });
+
+    const stepsEl = document.getElementById('d-steps');
+    (eq.steps || []).forEach(([title, text], i) => {
+      stepsEl.innerHTML += '<div class="detail-step"><div class="detail-step-num">' + (i + 1) + '</div><div><strong>' + title + '</strong><p>' + text + '</p></div></div>';
+    });
+
+    const usesEl = document.getElementById('d-uses');
+    (eq.uses || []).forEach(u => {
+      usesEl.innerHTML += '<li>' + u + '</li>';
+    });
+
+    const benefitsEl = document.getElementById('d-benefits');
+    (eq.benefits || []).forEach(([title, text]) => {
+      benefitsEl.innerHTML += '<div class="detail-benefit"><strong>' + title + '</strong><p>' + text + '</p></div>';
+    });
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistemas de Tratamento — PH Águas</title>
+  <meta name="description" content="14 sistemas de tratamento de água e efluentes: ETA, ETE, Osmose Reversa, UV, UPW/WFI, Carvão Ativado e muito mais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .systems-layout { display: flex; flex-direction: column; gap: 0; }
+    .family-block { padding: 48px 0; border-bottom: 1px solid var(--gray-border); }
+    .family-block:last-child { border-bottom: none; }
+    .sys-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .sys-card-specs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-border); }
+    .spec-pill { font-size: 12px; background: var(--blue-light); color: var(--blue); padding: 4px 12px; border-radius: 100px; font-weight: 500; }
+    .sys-card-actions { display: flex; gap: 10px; margin-top: 16px; }
+    @media(max-width:768px){
+      .sys-card { grid-template-columns: 1fr; }
+      .sys-card-img { width: 100%; height: 200px; }
+    }
+  </style>
+</head>
+<body class="page-content">
+
+  <!-- injected by components.js -->
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Início</a><span>/</span><span>Sistemas de Tratamento</span></div>
+      <h1>Sistemas de Tratamento de Água</h1>
+      <p>14 soluções tecnológicas para tratamento de água e efluentes industriais, residenciais e comerciais.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- TABS DE FAMÍLIA -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Todos (14)</button>
+        <button class="filter-tab" data-filter="filtracao">Filtração e Purificação</button>
+        <button class="filter-tab" data-filter="desinfeccao">Desinfecção</button>
+        <button class="filter-tab" data-filter="alta-pureza">Alta Pureza</button>
+        <button class="filter-tab" data-filter="sustentabilidade">Sustentabilidade</button>
+        <button class="filter-tab" data-filter="servicos-industria">Serviços Industriais</button>
+      </div>
+
+      <div class="sys-grid">
+
+        <!-- ─── FAMÍLIA: FILTRAÇÃO E PURIFICAÇÃO ─── -->
+        <div class="family-block" id="filtracao" data-family="filtracao">
+          <div class="family-header">
+            <span class="family-name">Filtração e Purificação</span>
+            <span class="family-count">7 sistemas</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/osmose-1.jpg" alt="ETA Industrial">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Filtração Industrial</div>
+                <div class="sys-card-title">Estações de Tratamento de Água (ETA)</div>
+                <div class="sys-card-desc">Projeto e implementação de ETAs para água potável, industriais e pluviais. Processos completos: captação, decantação, coagulação, floculação, equalização, filtração e desinfecção. Sistemas compactos, modulares e com monitoramento remoto.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Água Potável</span><span class="spec-pill">Industrial</span><span class="spec-pill">Água de Chuva</span><span class="spec-pill">Modular</span><span class="spec-pill">Monitoramento Remoto</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=eta" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/osmose-1.jpg" alt="Osmose Reversa">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Dessalinização</div>
+                <div class="sys-card-title">Dessalinização por Osmose Inversa</div>
+                <div class="sys-card-desc">Produção de água doce de alta qualidade a partir de água do mar ou salobra. Membranas de 0,001 micron com alta capacidade de retenção de bactérias, vírus e contaminantes químicos. Duplo passo disponível para maior pureza.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">0,001 micron</span><span class="spec-pill">Taxa até 90%</span><span class="spec-pill">Sem regenerantes</span><span class="spec-pill">Água do mar</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=osmose-dessalinizacao" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/desmi-osmose.jpg" alt="Desmineralização">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Desmineralização</div>
+                <div class="sys-card-title">Desmineralização por Osmose Reversa</div>
+                <div class="sys-card-desc">Remoção de sais dissolvidos, matéria orgânica e micro-organismos para aplicações industriais exigentes. Ideal para caldeiras, farmacêutica, cosmética, alimentos e bebidas. Sistema sem regenerantes químicos, com reuso de água em duplo passo.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Caldeiras</span><span class="spec-pill">Farmac&ecirc;utica</span><span class="spec-pill">Alimentos</span><span class="spec-pill">500-1000 STD ate 90%</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=osmose-desmineralizacao" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/osmose-2.jpg" alt="Carvão Ativado">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Adsorção</div>
+                <div class="sys-card-title">Sistemas Adsortivos — Carvão Vegetal Ativado</div>
+                <div class="sys-card-desc">Carvão vegetal ativado granulado produzido a partir da casca de coco. Elevada área superficial microporosa para decloração, clarificação, desodorização e purificação. Configurações manuais e automatizadas. pH ideal 6,8–7,4.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Casca de coco</span><span class="spec-pill">Decloração</span><span class="spec-pill">pH 5,5–8,5</span><span class="spec-pill">Pré-filtragem OR</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=carvao-ativado" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/osmose-3.jpg" alt="Troca Iônica">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Troca Iônica</div>
+                <div class="sys-card-title">Desmineralização por Troca Iônica</div>
+                <div class="sys-card-desc">Redução de sais dissolvidos por resinas catiônicas e aniônicas. Configurações: Coluna Dupla (10 a 4 uS/cm), Mixed Bed (1 a 0,1 uS/cm), ou combinadas (abaixo de 0,1 uS/cm). Aplicações em caldeiras, galvanoplastia e indústria química.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Coluna Dupla</span><span class="spec-pill">Mixed Bed</span><span class="spec-pill">Galvanoplastia</span><span class="spec-pill">0,1 uS/cm</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=troca-ionica" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/osmose-4.jpg" alt="Abrandamento">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Abrandamento</div>
+                <div class="sys-card-title">Abrandamento da Água</div>
+                <div class="sys-card-desc">Controle, redução e eliminação total da dureza (ions Ca2+ e Mg2+). Resina catiônica sódica que troca Ca/Mg por Na solúvel. Sistemas automatizados em skid. Previne incrustações em caldeiras, lavanderias e torres de refrigeração.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Caldeiras</span><span class="spec-pill">Lavanderias</span><span class="spec-pill">Torres</span><span class="spec-pill">Automático em Skid</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=abrandamento" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/osmose-reversa-2.png" alt="Remoção de Ferro">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Filtração Natural</div>
+                <div class="sys-card-title">Remoção de Ferro / Manganês / Metais Pesados</div>
+                <div class="sys-card-desc">Leitos filtrantes com Zeólita Clinoptilolita (mineral de cinzas vulcânicas). Alta seletividade iônica, baixa densidade e alta porosidade. Remove amônia, fluoretos e metais pesados sem produtos químicos. Ecologicamente sustentável — não gera passivo ambiental.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Zeólita Natural</span><span class="spec-pill">Sem Químicos</span><span class="spec-pill">PRFV</span><span class="spec-pill">Manual e Automático</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=remocao-ferro" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── FAMÍLIA: DESINFECÇÃO ─── -->
+        <div class="family-block" id="desinfeccao" data-family="desinfeccao">
+          <div class="family-header">
+            <span class="family-name">Desinfecção</span>
+            <span class="family-count">2 sistemas</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/reuso.jpg" alt="Desinfecção UV">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Desinfecção Física</div>
+                <div class="sys-card-title">Sistema de Desinfecção por Ultravioleta (UV)</div>
+                <div class="sys-card-desc">Esterilização por UV como alternativa ecológica à cloração. Comprimento de onda 240–280 nm ataca o material genético dos micro-organismos, impedindo sua reprodução. Sem formação de subprodutos tóxicos ou carcinogênicos. Disponível em aço inoxidável sanitário.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">240–280 nm</span><span class="spec-pill">Sem Cloro</span><span class="spec-pill">Aço Inox</span><span class="spec-pill">Autolimpante</span><span class="spec-pill">Monitorado</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=desinfeccao-uv" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/osmose-reversa.jpg" alt="Geração de Ozônio">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Oxidação Avançada</div>
+                <div class="sys-card-title">Geração de Ozônio e Processos Oxidativos</div>
+                <div class="sys-card-desc">O Ozônio é 200× mais eficiente que o cloro. Extremamente eficaz contra E. coli, Salmonela, Pseudomonas e Cryptosporidium Parvum. Geração automática no local de uso a partir do ar ambiente. Não cancerígeno. Remove ferro solúvel e manganês por oxidação.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">200× Cloro</span><span class="spec-pill">Sem reposição</span><span class="spec-pill">Geração local</span><span class="spec-pill">Não cancerígeno</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=ozonio" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── FAMÍLIA: ALTA PUREZA ─── -->
+        <div class="family-block" id="alta-pureza" data-family="alta-pureza">
+          <div class="family-header">
+            <span class="family-name">Alta Pureza</span>
+            <span class="family-count">2 sistemas</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/equipamentos/purificadores.jpg" alt="UPW WFI">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Ultrapura</div>
+                <div class="sys-card-title">Sistemas de Geração de Água UPW e WFI</div>
+                <div class="sys-card-desc">Abastecimento contínuo de água ultrapura. Condutividade até 16 MΩ/cm (&lt;0,1 μS/cm). Integração de microfiltração/UF, nanofiltração, osmose reversa duplo passo, desgaseificação (GTM) e eletrodeionização (CEDI). Conforme USP e EP para farmacêutica.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">16 MΩ/cm</span><span class="spec-pill">Farmacêutica</span><span class="spec-pill">Laboratórios</span><span class="spec-pill">CEDI</span><span class="spec-pill">Sem regenerantes</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=upw-wfi" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/equipamentos/valvulas.jpg" alt="Polarizadores">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Sem Químicos</div>
+                <div class="sys-card-title">Polarizadores Magnéticos</div>
+                <div class="sys-card-desc">Magnetos instalados na superfície externa das tubulações criam campo magnético que altera propriedades físico-químicas da água. Previne incrustações e depósitos. Sem consumo de energia, instalação simples, durabilidade ilimitada. Compatível com qualquer posição de tubo.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Sem energia</span><span class="spec-pill">Sem químicos</span><span class="spec-pill">Torres</span><span class="spec-pill">Caldeiras</span><span class="spec-pill">Instalação externa</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=polarizadores" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── FAMÍLIA: SUSTENTABILIDADE ─── -->
+        <div class="family-block" id="sustentabilidade" data-family="sustentabilidade">
+          <div class="family-header">
+            <span class="family-name">Sustentabilidade e Reúso</span>
+            <span class="family-count">2 sistemas</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/reuso.jpg" alt="Reúso de Água">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Reúso</div>
+                <div class="sys-card-title">Sistemas de Reúso de Água</div>
+                <div class="sys-card-desc">Aproveitamento de efluentes sanitários e industriais tratados. Tecnologias MBBR (Moving Bed Bio Reactor) e Ultrafiltração (UF). Redução de até 40% no consumo de água potável. Aplicações: irrigação, descargas, limpeza e torres de resfriamento.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">MBBR</span><span class="spec-pill">Ultrafiltração</span><span class="spec-pill">-40% Consumo</span><span class="spec-pill">Condomínios</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="contato.html?interesse=Reúso+de+Água" class="btn btn-primary btn-sm">Solicitar Orçamento</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/ete.jpg" alt="ETE">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Efluentes</div>
+                <div class="sys-card-title">Estação de Tratamento de Efluentes (ETE)</div>
+                <div class="sys-card-desc">Sistemas compactos e modulares para efluentes domésticos e industriais. Etapas: gradeamento, desarenação, decantação primária, processos biológicos (anaeróbico e aeróbico), decantação secundária e desinfecção (cloro, ozônio ou UV). Materiais PRFV ou PP.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">PRFV / PP</span><span class="spec-pill">Modular</span><span class="spec-pill">CONAMA</span><span class="spec-pill">CETESB</span><span class="spec-pill">Pré-montado</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=ete" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── FAMÍLIA: SERVIÇOS INDUSTRIAIS ─── -->
+        <div class="family-block" id="servicos-industria" data-family="servicos-industria">
+          <div class="family-header">
+            <span class="family-name">Serviços Industriais Especializados</span>
+            <span class="family-count">2 sistemas</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px">
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/reatores.jpg" alt="Caldeiras">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Vapor Industrial</div>
+                <div class="sys-card-title">Tratamento de Águas para Caldeiras e Geradores de Vapor</div>
+                <div class="sys-card-desc">Métodos: abrandamento, desmineralização, ultrafiltração, nanofiltração, troca iônica e osmose inversa. Acompanhamento semanal, quinzenal ou mensal com análises em campo e coletas para laboratório próprio. Elimina gases dissolvidos, sólidos em suspensão e sais minerais.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Análise em Campo</span><span class="spec-pill">Lab Próprio</span><span class="spec-pill">Contrato Mensal</span><span class="spec-pill">Vapor Seguro</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=caldeiras" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="sys-card fade-up">
+              <img class="sys-card-img" src="images/sistemas/osmose-3.jpg" alt="Torres">
+              <div class="sys-card-body">
+                <div class="sys-card-tag">Resfriamento</div>
+                <div class="sys-card-title">Tratamento de Torres de Refrigeração e Chillers</div>
+                <div class="sys-card-desc">Programas de tratamento químico e filtração para torres de refrigeração, chillers e geladeiras industriais. Controle de CaCO3, CaSO4, biocidas e biodispersantes. Inspeções com documentação fotográfica e laudos periódicos. Regime de comodato disponível.</div>
+                <div class="sys-card-specs">
+                  <span class="spec-pill">Biocidas</span><span class="spec-pill">Comodato</span><span class="spec-pill">Inspeção Periódica</span><span class="spec-pill">Laudo Fotográfico</span>
+                </div>
+                <div class="sys-card-actions">
+                  <a href="sistema.html?id=torres" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes Completos</a>
+                  <a href="contato.html" class="btn btn-outline btn-sm">Análise Gratuita</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /sys-grid -->
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Qual sistema é ideal para você?</h2>
+      <p>Nossa equipe técnica analisa sua operação e indica a solução mais eficiente e econômica.</p>
+      <div class="actions">
+        <a href="contato.html" class="btn btn-white btn-lg">Solicitar Análise Gratuita</a>
+        <a href="tel:+5511910301546" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;">(11) 91030-1546</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

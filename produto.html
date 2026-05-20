@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto — PH Águas</title>
+  <meta name="description" content="Detalhes técnicos do produto PH Águas para tratamento de água industrial.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="page-content">
+
+  <div id="prod-hero" class="prod-detail-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a><span>/</span>
+        <a href="produtos.html">Produtos</a><span>/</span>
+        <span id="prod-breadcrumb">—</span>
+      </div>
+      <div class="prod-detail-layout">
+        <div class="prod-detail-img-wrap" id="prod-img-wrap">
+          <div class="prod-detail-img-placeholder" id="prod-placeholder">
+            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#0055B3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity=".3">
+              <path d="M9 3h6v4l3 6H6L9 7V3zM6 13v4a2 2 0 002 2h8a2 2 0 002-2v-4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="prod-detail-info">
+          <div class="prod-detail-category" id="prod-category">—</div>
+          <div class="prod-detail-name" id="prod-name">—</div>
+          <div class="prod-detail-formula" id="prod-formula">—</div>
+          <div class="prod-detail-desc" id="prod-desc">—</div>
+          <div class="prod-detail-apps-label">Aplicações</div>
+          <div class="prod-detail-chips" id="prod-apps"></div>
+          <div class="prod-detail-actions" id="prod-actions"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prod-detail-body">
+    <div class="container">
+      <div>
+        <div class="prod-detail-section-title">Especificações Técnicas</div>
+        <table class="prod-specs-table" id="prod-specs"></table>
+        <div style="margin-top:32px">
+          <div class="prod-detail-section-title">Embalagem e Disponibilidade</div>
+          <div class="prod-safety-box" id="prod-packaging"></div>
+        </div>
+      </div>
+      <div>
+        <div class="prod-detail-section-title">Sistemas Recomendados</div>
+        <ul class="prod-uses-list" id="prod-uses"></ul>
+        <div style="margin-top:32px">
+          <div class="prod-detail-section-title">Segurança e Manuseio</div>
+          <div class="prod-safety-box" id="prod-safety"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Precisa deste produto?</h2>
+      <p>Nossa equipe técnica orienta sobre dosagem, compatibilidade e entrega. Consulta sem compromisso.</p>
+      <div class="actions">
+        <a href="contato.html" class="btn btn-white btn-lg">Solicitar Orçamento</a>
+        <a id="cta-wa" href="https://wa.me/5511910301546" class="btn btn-outline btn-lg" target="_blank" style="border-color:rgba(255,255,255,.4);color:white;">WhatsApp Direto</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>
+  const PRODUCTS = {
+    'soda-caustica': {
+      name: 'Soda Cáustica',
+      formula: 'NaOH — Hidróxido de Sódio',
+      category: 'Alcalinizante',
+      image: 'images/sistemas/osmose-1.jpg',
+      desc: 'Solução concentrada de hidróxido de sódio amplamente utilizada em tratamento de água industrial. Essencial para correção de pH, regeneração de resinas catiônicas e neutralização de efluentes ácidos. Reage rapidamente com ácidos, garantindo controle preciso de alcalinidade em sistemas de alta demanda. Disponível em solução líquida 50% (grau industrial) ou pérolas sólidas, conforme necessidade logística do cliente.',
+      apps: ['Correção de pH', 'Regeneração de Resinas', 'Neutralização de Efluentes', 'Osmose Reversa', 'Tratamento de Caldeiras'],
+      specs: [
+        ['Fórmula Química', 'NaOH'],
+        ['Concentração (Líquida)', '50% p/p (solução aquosa)'],
+        ['Forma Sólida', 'Pérolas ou escamas (96–99%)'],
+        ['Densidade (solução 50%)', '1,52 g/cm³'],
+        ['pH em solução 1%', '≥ 13'],
+        ['Cor', 'Incolor (líquido) / Branco (sólido)'],
+        ['Pureza (sólido)', '≥ 96%'],
+        ['Ponto de Fusão (sólido)', '318°C'],
+      ],
+      uses: [
+        'Abrandadores e desmineralizadores — regeneração aniônica',
+        'Estações de tratamento de efluentes (ETE) — neutralização',
+        'Sistemas de osmose reversa — ajuste de pH da alimentação',
+        'Caldeiras de vapor — controle de alcalinidade',
+        'Tratamento de água de torres de resfriamento',
+        'Limpeza química (CIP) de membranas e tubulações',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto fortemente alcalino e corrosivo. Uso obrigatório de óculos de segurança, luvas de nitrila, avental e botas impermeáveis. Em caso de contato com a pele ou olhos, lavar imediatamente com água abundante por 15 minutos. Armazenar em local ventilado, longe de ácidos e materiais inflamáveis.',
+      packaging: '<strong>Apresentação e Entrega</strong>Solução 50%: IBC 1.000 L, tambores 200 L ou bombonas 20 L. Sólido (pérolas): sacos de 25 kg ou big bags de 1.000 kg. Entrega em todo o Brasil com acompanhamento de FISPQ e laudo de análise.',
+      waItem: 'Soda Cáustica (NaOH)',
+    },
+    'pac': {
+      name: 'Policloreto de Alumínio — PAC',
+      formula: 'Al₂(OH)ₙCl₆₋ₙ',
+      category: 'Coagulante',
+      image: 'images/sistemas/osmose-2.jpg',
+      desc: 'Coagulante inorgânico de alta eficiência amplamente utilizado em estações de tratamento de água potável e efluentes. O PAC age rapidamente em ampla faixa de pH (5 a 9), formando flocos compactos que sedimentam com facilidade. Em comparação ao sulfato de alumínio convencional, o PAC gera até 40% menos volume de lodo, reduz o consumo de auxiliares de floculação e mantém desempenho superior em água fria. Ideal para ETAs de alta turbidez e sistemas com variação sazonal de qualidade.',
+      apps: ['ETA — Água Potável', 'ETE Industrial', 'Pré-tratamento OR', 'Flotação por Ar Dissolvido', 'Remoção de Turbidez e Cor'],
+      specs: [
+        ['Fórmula', 'Al₂(OH)ₙCl₆₋ₙ (n = 1 a 5)'],
+        ['Teor de Al₂O₃', '10% mínimo'],
+        ['Basicidade', '60 a 80%'],
+        ['pH da solução 1%', '3,5 a 5,0'],
+        ['Aspecto', 'Líquido amarelo-âmbar'],
+        ['Densidade', '1,18 a 1,22 g/cm³'],
+        ['Turbidez residual', 'Conforme norma ABNT/OMS'],
+        ['Norma', 'ABNT NBR 12.216 / Portaria 888/2021'],
+      ],
+      uses: [
+        'Estações de Tratamento de Água (ETA) — coagulação primária',
+        'Estações de Tratamento de Efluentes — remoção de SST',
+        'Pré-tratamento de sistemas de osmose reversa',
+        'Flotação por ar dissolvido (DAF) em indústrias de alimentos',
+        'Remoção de metais pesados por coprecipitação',
+        'Clarificação de efluentes industriais e sanitários',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto ácido, corrosivo em contato direto. Utilizar óculos de proteção e luvas de borracha no manuseio. Em caso de contato com mucosas, lavar com água em abundância. Não misturar com bases concentradas. Armazenar em recipientes de PEAD ou FRP, longe de calor e luz solar direta.',
+      packaging: '<strong>Apresentação e Entrega</strong>IBC 1.000 L, tambores 200 L ou bombonas de 20 e 50 L. Para grandes volumes: caminhão-tanque com descarga direta no tanque de armazenamento do cliente. Entrega com FISPQ, laudo técnico e certificado de qualidade.',
+      waItem: 'Policloreto de Alumínio PAC',
+    },
+    'nr5': {
+      name: 'NR5 — Inibidor Anticorrosivo',
+      formula: 'Formulação aquosa multifuncional',
+      category: 'Inibidor Multimetal',
+      image: 'images/sistemas/osmose-3.jpg',
+      desc: 'O NR5 é um inibidor anticorrosivo multimetal formulado especificamente para sistemas de refrigeração abertos e fechados. Atua simultaneamente na proteção de aço carbono, aço inoxidável, cobre, latão, alumínio e ligas metálicas mistas. Sua formulação exclusiva combina inibidores anódicos e catódicos com dispersantes poliméricos, formando película protetora uniforme mesmo em condições de alta temperatura e ciclos elevados de concentração. Compatível com biocidas oxidantes e não oxidantes, e com outros inibidores de incrustação.',
+      apps: ['Torres de Resfriamento', 'Chillers', 'Loops Fechados', 'Trocadores de Calor', 'Sistemas HVAC'],
+      specs: [
+        ['Aspecto', 'Líquido levemente turvo'],
+        ['pH (produto puro)', '8,0 a 10,0'],
+        ['Metais protegidos', 'Aço carbono, Cu, Al, Latão, Inox'],
+        ['Temperatura de aplicação', 'Até 65°C'],
+        ['Dosagem típica', '200–500 mg/L (manutenção)'],
+        ['Compatibilidade', 'Biocidas e antiincrustantes'],
+        ['Base química', 'Fosfato + azol + polímero'],
+        ['Ciclos de concentração', 'Até 6 ciclos'],
+      ],
+      uses: [
+        'Torres de resfriamento abertas — proteção contínua de aço e cobre',
+        'Chillers de água gelada — inibição de corrosão galvânica',
+        'Sistemas fechados de aquecimento e resfriamento',
+        'Trocadores de calor de placa e casco — proteção de superfícies mistas',
+        'Sistemas HVAC de grande porte — hotéis, hospitais e indústrias',
+        'Monitoramento via análise quinzenal de pH e condutividade',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto levemente alcalino. Evitar contato com olhos — usar óculos de proteção no manuseio. Não ingerir. Em caso de contato com pele, lavar com água e sabão. Armazenar entre 5°C e 40°C, em local seco e ventilado, longe de ácidos fortes.',
+      packaging: '<strong>Apresentação e Entrega</strong>Bombonas de 20 e 60 L, tambores de 200 L e IBC 1.000 L. Disponível em regime de comodato para clientes com programa mensal de tratamento. Entrega com protocolo de dosagem e relatório técnico inicial.',
+      waItem: 'NR5 Inibidor Anticorrosivo',
+    },
+    'tor40': {
+      name: 'TOR 40 — Antiincrustante para Torres',
+      formula: 'Polímero orgânico + dispersante',
+      category: 'Antiincrustante',
+      image: 'images/sistemas/reuso.jpg',
+      desc: 'O TOR 40 é um antiincrustante e dispersante formulado para torres de resfriamento e sistemas de água de processo que operam com ciclos de concentração médios (até 4 ciclos). Age impedindo a cristalização e deposição de sais insolúveis — principalmente carbonato de cálcio, sulfato de cálcio e sílica coloidal — nas superfícies de transferência de calor. O uso do TOR 40 resulta em manutenção da eficiência energética do sistema, menor frequência de limpezas mecânicas e aumento da vida útil dos equipamentos.',
+      apps: ['Torres Abertas', 'Trocadores de Calor', 'Condensadores', 'Sistemas de Processo', 'Circuitos de Resfriamento'],
+      specs: [
+        ['Aspecto', 'Líquido levemente âmbar'],
+        ['pH (produto puro)', '6,5 a 8,5'],
+        ['Base ativa', 'Poliacrilato + fosfonato'],
+        ['Mecanismo', 'Threshold + dispersão de cristais'],
+        ['Dosagem típica', '10–30 mg/L (manutenção)'],
+        ['Temperatura máx.', '70°C'],
+        ['Sais controlados', 'CaCO₃, CaSO₄, sílica coloidal'],
+        ['Ciclos de concentração', 'Até 4 ciclos'],
+      ],
+      uses: [
+        'Torres de resfriamento abertas com água de dureza moderada',
+        'Trocadores de calor de casco e tubos — prevenção de fouling',
+        'Condensadores de refrigeração industrial',
+        'Sistemas de processo com recirculação de água',
+        'Circuitos de resfriamento em indústrias alimentícias e têxteis',
+        'Prevenção de paradas não programadas por incrustação',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto de baixa toxicidade, não corrosivo em condições normais. Usar luvas de proteção no manuseio. Evitar contato com olhos e mucosas. Armazenar em local fresco e ventilado, protegido de temperaturas extremas (-5°C a 50°C).',
+      packaging: '<strong>Apresentação e Entrega</strong>Bombonas de 20 L e 60 L, tambores 200 L e IBC 1.000 L. Disponível em programa mensal de fornecimento com dosagem assistida. Acompanha ficha de dosagem e monitoramento analítico.',
+      waItem: 'TOR 40 Antiincrustante para Torres',
+    },
+    'tor43': {
+      name: 'TOR 43 — Antiincrustante Premium',
+      formula: 'Polímero de alto desempenho',
+      category: 'Antiincrustante Premium',
+      image: 'images/sistemas/osmose-reversa.jpg',
+      desc: 'O TOR 43 é a versão premium do antiincrustante TOR 40, desenvolvida para sistemas mais exigentes: alta dureza, alto teor de sílica e ciclos de concentração elevados (até 8 ciclos). Sua formulação avançada combina polímeros terpolímeros de última geração com fosfonatos de alta estabilidade térmica, oferecendo proteção superior contra incrustações de carbonato, sulfato, silicato e compostos orgânicos. Indicado para torres de alto fluxo, sistemas industriais que operam em regiões com água de alta mineralização e projetos que buscam máxima eficiência hídrica.',
+      apps: ['Torres de Alto Ciclo', 'Alta Dureza', 'Alta Sílica', 'Indústria Química', 'Sistemas de Alta Performance'],
+      specs: [
+        ['Aspecto', 'Líquido âmbar transparente'],
+        ['pH (produto puro)', '7,0 a 9,0'],
+        ['Base ativa', 'Terpolímero + HEDP + fosfonato'],
+        ['Ciclos de concentração', 'Até 8 ciclos'],
+        ['Sílica controlada', 'Até 200 mg/L SiO₂'],
+        ['Dureza da água (max)', 'Até 800 mg/L CaCO₃'],
+        ['Temperatura máx.', '80°C'],
+        ['Dosagem típica', '5–15 mg/L (manutenção)'],
+      ],
+      uses: [
+        'Torres de resfriamento com água de alta mineralização',
+        'Sistemas operando acima de 5 ciclos de concentração',
+        'Indústrias em regiões semiáridas ou com água calcária',
+        'Processos com temperatura de retorno elevada (>50°C)',
+        'Sistemas que precisam minimizar volume de purga',
+        'Projetos de gestão hídrica com meta de redução de consumo',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto de baixa toxicidade. Usar luvas de nitrila e óculos de proteção. Em caso de contato com os olhos, lavar imediatamente com água corrente por 15 minutos. Não misturar com oxidantes fortes. Armazenar protegido de congelamento e calor excessivo.',
+      packaging: '<strong>Apresentação e Entrega</strong>Bombonas 20 L e 60 L, tambores 200 L e IBC 1.000 L. Disponível com programa de monitoramento analítico mensal incluso. Relatório técnico e dosagem personalizada por laudo de água do cliente.',
+      waItem: 'TOR 43 Antiincrustante Premium',
+    },
+    'bio03': {
+      name: 'BIO 03 — Biocida Não Oxidante',
+      formula: 'DBNPA + BNPD — Formulação sinérgica',
+      category: 'Biocida',
+      image: 'images/sistemas/ete.jpg',
+      desc: 'O BIO 03 é um biocida não oxidante de amplo espectro, formulado com a combinação sinérgica de DBNPA (2,2-Dibromo-3-nitrilopropionamida) e BNPD. Age rapidamente por inibição enzimática, destruindo bactérias aeróbias, anaeróbias (sulfato-redutoras), algas e fungos. Por sua natureza não oxidante, não interfere nos inibidores de corrosão e mantém estabilidade mesmo em presença de matéria orgânica. Ideal para aplicações de choque periódico e manutenção de sistemas com biofilme estabelecido. Controle eficaz de Legionella pneumophila conforme regulamentações de saúde pública.',
+      apps: ['Torres de Resfriamento', 'Controle de Legionella', 'Eliminação de Biofilme', 'Sistemas HVAC', 'Circuitos Industriais'],
+      specs: [
+        ['Princípio ativo 1', 'DBNPA (2,2-Dibromo-3-nitrilopropionamida)'],
+        ['Princípio ativo 2', 'BNPD (Bronopol)'],
+        ['Aspecto', 'Líquido levemente turvo'],
+        ['pH (produto puro)', '5,0 a 7,0'],
+        ['Espectro de ação', 'Bactérias, algas, fungos, Legionella'],
+        ['Dosagem de choque', '100–300 mg/L por 4 horas'],
+        ['Dosagem contínua', '10–30 mg/L'],
+        ['Compatibilidade', 'Inibidores de corrosão e antiincrustantes'],
+      ],
+      uses: [
+        'Torres de resfriamento — controle de biofilme e Legionella',
+        'Chillers e sistemas HVAC em hospitais, hotéis e shoppings',
+        'Sistemas de processo em indústrias alimentícias (não alimentar)',
+        'Circuitos de resfriamento industrial com biofilme recorrente',
+        'Programa de choque periódico quinzenal ou mensal',
+        'Conformidade com normas ABNT NBR 14.605 e legislação Legionella',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto moderadamente tóxico. Uso obrigatório de luvas de nitrila, óculos de proteção hermético e máscara PFF2 no manuseio concentrado. Em caso de contato com a pele, lavar imediatamente. Não lançar em corpos d\'água sem tratamento. Produto de uso restrito — aplicação por técnico treinado.',
+      packaging: '<strong>Apresentação e Entrega</strong>Bombonas de 20 L e 60 L, tambores 200 L. Produto sujeito a controle de estoque — fornecimento mediante cadastro técnico. Entrega com FISPQ, protocolo de aplicação e documentação para conformidade regulatória (Legionella).',
+      waItem: 'BIO 03 Biocida Não Oxidante',
+    },
+    'nf300': {
+      name: 'NF 300 — Antiespumante Industrial',
+      formula: 'Base de silicone + poliol',
+      category: 'Antiespumante',
+      image: 'images/sistemas/osmose-reversa-2.png',
+      desc: 'O NF 300 é um antiespumante de alta eficiência formulado com base de silicone e poliol etoxilado. Age rapidamente quebrando a tensão superficial das bolhas de espuma e prevenindo sua reformação por até 4 horas após a aplicação. Sua formulação é compatível com membranas de osmose reversa, resinas de troca iônica e biocidas oxidantes e não oxidantes. Não forma depósitos, é inativo biologicamente e biodegradável. Indicado para qualquer sistema de tratamento de água onde a espuma compromete a operação, o controle analítico ou a segurança da instalação.',
+      apps: ['Torres de Resfriamento', 'ETE Industrial', 'Osmose Reversa', 'Sistemas de Processo', 'Flotação (DAF)'],
+      specs: [
+        ['Base', 'Silicone dimetil + poliol etoxilado'],
+        ['Aspecto', 'Emulsão branco-leitosa'],
+        ['pH', '6,0 a 8,0'],
+        ['Dosagem de choque', '10–50 mg/L'],
+        ['Dosagem contínua', '1–5 mg/L'],
+        ['Compatibilidade', 'Membranas OR, resinas, biocidas'],
+        ['Biodegradabilidade', 'Sim (OECD 301)'],
+        ['Temperatura de aplicação', '5°C a 80°C'],
+      ],
+      uses: [
+        'Torres de resfriamento — controle de espuma em arranhagem',
+        'Sistemas de flotação por ar dissolvido (DAF)',
+        'Estações de tratamento de efluentes (ETE) com lodo ativado',
+        'Sistemas de osmose reversa — eliminação de espuma no concentrado',
+        'Evaporadores industriais e lavadores de gases',
+        'Tanques de equalização com agitação ou aeração',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto de baixa toxicidade. Usar luvas de proteção no manuseio e evitar inalação de névoa em ambientes fechados. Produto escorregadio em caso de derramamento — limpar com areia ou serragem. Armazenar entre 5°C e 45°C.',
+      packaging: '<strong>Apresentação e Entrega</strong>Bombonas de 20 L e 60 L, tambores 200 L e IBC 1.000 L. Dosagem típica por bomba dosadora peristáltica de precisão. Produto disponível para entrega em até 5 dias úteis em todo o Brasil.',
+      waItem: 'NF 300 Antiespumante Industrial',
+    },
+    'multifuncional-caldeiras': {
+      name: 'Multifuncional para Caldeiras',
+      formula: 'Sequestrante + fosfato + antiespumante',
+      category: 'Tratamento de Caldeiras',
+      image: 'images/sistemas/reatores.jpg',
+      desc: 'Formulação completa para tratamento interno de caldeiras de vapor de baixa e média pressão. Em um único produto, combina sequestrante de oxigênio (sulfito de sódio catalisado), antiincrustante fosfato-polímero, inibidor de corrosão alcalinizante e antiespumante para controle de carryover. Simplifica o programa de tratamento, reduz o número de produtos manuseados e garante proteção contínua do corpo da caldeira, tubulações e sistema de vapor. Monitoramento simplificado por condutividade e determinação de fosfato residual.',
+      apps: ['Caldeiras de Vapor', 'Baixa Pressão (até 10 bar)', 'Média Pressão (10–25 bar)', 'Geradores de Vapor', 'Sistemas de Condensado'],
+      specs: [
+        ['Sequestrante de O₂', 'Sulfito de sódio catalisado'],
+        ['Antiincrustante', 'Fosfato + polímero dispersante'],
+        ['Alcalinidade', 'Hidroxila + carbonato'],
+        ['pH da água de caldeira', '10,5 a 12,0'],
+        ['Fosfato residual alvo', '20–40 mg/L PO₄'],
+        ['Dosagem', 'Contínua via bomba dosadora'],
+        ['Pressão de operação', 'Até 25 bar (média pressão)'],
+        ['Aspecto', 'Líquido incolor a levemente âmbar'],
+      ],
+      uses: [
+        'Caldeiras flamotubulares de 1 a 3 passes',
+        'Caldeiras aquatubulares de baixa e média pressão',
+        'Geradores de vapor elétricos e a gás',
+        'Proteção do sistema de condensado e retorno',
+        'Instalações industriais com operação contínua 24h',
+        'Lavanderias industriais, hospitais e indústrias de alimentos',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto alcalino. Usar luvas de nitrila, óculos de proteção e avental resistente a produtos químicos. Em caso de contato com pele ou olhos, lavar abundantemente com água. Manter longe de ácidos. Armazenar em local ventilado, entre 5°C e 40°C.',
+      packaging: '<strong>Apresentação e Entrega</strong>Bombonas de 20 L e 60 L, tambores 200 L. Recomenda-se bomba dosadora peristáltica de 0–40 L/h para dosagem contínua proporcional ao consumo de água de reposição. Entrega com laudo técnico e protocolo de monitoramento.',
+      waItem: 'Multifuncional para Caldeiras',
+    },
+    'hcl': {
+      name: 'Ácido Clorídrico',
+      formula: 'HCl — Grau Industrial 31–33%',
+      category: 'Acidulante',
+      image: 'images/sistemas/desmi-osmose.jpg',
+      desc: 'Ácido clorídrico industrial com concentração de 31 a 33%, amplamente utilizado em tratamento de água para correção de pH, regeneração de resinas de troca iônica catiônicas e limpeza química (CIP) de membranas de osmose reversa. O HCl é um dos ácidos mais utilizados na indústria por sua alta efetividade, custo competitivo e compatibilidade com a maioria dos materiais dos sistemas de tratamento de água (PRFV, PEAD, PVC). Fornecido com laudo de análise, FISPQ atualizada e acompanhamento técnico para dosagem segura.',
+      apps: ['Regeneração Resinas Catiônicas', 'CIP de Membranas OR', 'Correção de pH', 'Descalcificação', 'Desmineralização'],
+      specs: [
+        ['Fórmula', 'HCl'],
+        ['Concentração', '31–33% m/m'],
+        ['Densidade', '1,15–1,17 g/cm³'],
+        ['pH (solução 1%)', '< 1'],
+        ['Cor', 'Incolor a levemente amarelado'],
+        ['Cloretos', '≥ 31%'],
+        ['Ferro (Fe)', '≤ 5 mg/kg'],
+        ['Norma', 'ABNT / Grau industrial'],
+      ],
+      uses: [
+        'Regeneração de resinas catiônicas de abrandadores e desmineralizadores',
+        'Limpeza ácida (CIP) de membranas de osmose reversa — remoção de carbonatos',
+        'Correção de pH de água alcalina antes de filtros e membranas',
+        'Descalcificação de trocadores de calor e evaporadores',
+        'Neutralização de efluentes alcalinos',
+        'Preparação de soluções diluídas para laboratório e processo',
+      ],
+      safety: '<strong>Segurança e EPI</strong>PRODUTO PERIGOSO — ácido forte e corrosivo, libera vapores irritantes (HCl gasoso). Uso obrigatório de máscara PFF3 com filtro para vapores ácidos, óculos de proteção hermético, luvas de butila e avental de PVC. Armazenar em área ventilada com exaustão forçada, longe de bases e metais. Tanques de armazenamento em PRFV ou PEAD.',
+      packaging: '<strong>Apresentação e Entrega</strong>IBC 1.000 L (PRFV ou PEAD), tambores 200 L e bombonas 20 L. Transporte classificado como carga perigosa (ONU 1789). Entrega somente para instalações com estrutura adequada de recebimento, conforme legislação de produtos perigosos.',
+      waItem: 'Ácido Clorídrico HCl Industrial',
+    },
+    'resina-cationica': {
+      name: 'Resina Catiônica',
+      formula: 'Poliestireno sulfonado — SAC (H⁺ / Na⁺)',
+      category: 'Resina de Troca Iônica',
+      image: 'images/equipamentos/purificadores.jpg',
+      desc: 'Resinas de troca iônica do tipo ácido forte (SAC — Strong Acid Cation) para remoção de cátions da água: cálcio (Ca²⁺), magnésio (Mg²⁺), sódio (Na⁺), ferro (Fe²⁺/³⁺) e outros metais pesados. Disponíveis em forma gel (boa capacidade de troca) ou macroporosa (maior resistência osmótica e mecânica). Na forma Na⁺, produzem água abrandada. Na forma H⁺, produzem água desmineralizada em combinação com resina aniônica. Regeneradas com ácido clorídrico (HCl) ou ácido sulfúrico (H₂SO₄) diluído. Vida útil superior a 5 anos com operação e regeneração adequadas.',
+      apps: ['Abrandamento', 'Desmineralização', 'Pré-tratamento OR', 'Remoção de Ferro', 'Galvanoplastia'],
+      specs: [
+        ['Tipo', 'SAC — Ácido Forte Catiônica'],
+        ['Matriz', 'Poliestireno divinilbenzeno (DVB)'],
+        ['Estrutura', 'Gel ou Macroporosa'],
+        ['Forma iônica', 'H⁺ (deionização) ou Na⁺ (abrandamento)'],
+        ['Capacidade de troca', '≥ 1,8 mEq/mL (gel) / ≥ 1,6 mEq/mL (macro)'],
+        ['Faixa de pH', '0 a 14'],
+        ['Temperatura máxima', 'H⁺: 120°C / Na⁺: 120°C'],
+        ['Regenerante', 'HCl 4–10% ou H₂SO₄ 2–8%'],
+      ],
+      uses: [
+        'Abrandadores automáticos para caldeiras e lavanderias',
+        'Colunas catiônicas em desmineralizadores de duplo leito',
+        'Mixed Bed (leito misto) para água ultrapura',
+        'Pré-tratamento de sistemas de osmose reversa',
+        'Remoção de ferro e manganês dissolvidos',
+        'Sistemas de desmineralização para galvanoplastia e eletrônica',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto sólido granular inerte em condições normais. No manuseio de grandes volumes, usar óculos de proteção contra partículas. Evitar inalação de pó. As soluções regenerantes (ácidos) requerem todos os EPIs específicos. Armazenar em local seco, em sacos ou contêineres fechados.',
+      packaging: '<strong>Apresentação e Entrega</strong>Sacos de 25 L (~12,5 kg), big bags 500 L ou bombonas plásticas. Para sistemas com mais de 500 L de resina, fornecimento em caminhão-tanque com bomba de transferência. Acompanha ficha técnica, curva de operação e protocolo de regeneração.',
+      waItem: 'Resina Catiônica de Troca Iônica',
+    },
+    'resina-anionica': {
+      name: 'Resina Aniônica',
+      formula: 'Poliestireno amínico — SBA (OH⁻ / Cl⁻)',
+      category: 'Resina de Troca Iônica',
+      image: 'images/equipamentos/valvulas.jpg',
+      desc: 'Resinas de troca iônica do tipo base forte (SBA — Strong Base Anion) para remoção de ânions da água: cloreto (Cl⁻), sulfato (SO₄²⁻), nitrato (NO₃⁻), bicarbonato (HCO₃⁻), silicatos (SiO₂) e ácidos orgânicos. Disponíveis em Tipo I (maior capacidade de regeneração, ideal para água ultrapura) ou Tipo II (maior resistência à degradação térmica). Regeneradas com hidróxido de sódio (NaOH) 4 a 10%. Essenciais em sistemas de desmineralização completa e polimento de água para processos críticos como farmacêutica, laboratórios e eletrônica.',
+      apps: ['Desmineralização', 'Água Ultrapura (UPW/WFI)', 'Polimento pós-OR', 'Remoção de Nitratos', 'Indústria Farmacêutica'],
+      specs: [
+        ['Tipo', 'SBA — Base Forte Aniônica (Tipo I e II)'],
+        ['Matriz', 'Poliestireno divinilbenzeno (DVB)'],
+        ['Forma iônica', 'OH⁻ (deionização) ou Cl⁻ (condicionamento)'],
+        ['Capacidade de troca', '≥ 1,0 mEq/mL (Tipo I)'],
+        ['Faixa de pH', '0 a 14'],
+        ['Temperatura máxima (OH⁻)', 'Tipo I: 60°C / Tipo II: 35°C'],
+        ['Regenerante', 'NaOH 4–10%'],
+        ['Remoção de SiO₂', 'Sim (com excesso de regenerante)'],
+      ],
+      uses: [
+        'Colunas aniônicas em desmineralizadores de duplo leito',
+        'Mixed Bed (leito misto) para água ultrapura UPW e WFI',
+        'Polimento final pós-osmose reversa para condutividade < 0,1 μS/cm',
+        'Remoção de nitratos em sistemas de água potável',
+        'Tratamento de condensado de retorno em caldeiras',
+        'Processos farmacêuticos, laboratoriais e de eletrônica de precisão',
+      ],
+      safety: '<strong>Segurança e EPI</strong>Produto sólido granular inerte em condições normais. No manuseio de grandes volumes, usar óculos de proteção. A solução regenerante NaOH é fortemente alcalina — usar todos os EPIs adequados (luvas, óculos, avental). Armazenar em sacos fechados, longe de calor excessivo que degrada resinas Tipo II.',
+      packaging: '<strong>Apresentação e Entrega</strong>Sacos de 25 L (~12,5 kg) e big bags 500 L. Entrega com ficha técnica, curva de seletividade, protocolo de regeneração e orientação técnica para primeiro carregamento. Disponível laudo de capacidade de troca para cada lote.',
+      waItem: 'Resina Aniônica de Troca Iônica',
+    },
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id') || '';
+    const p = PRODUCTS[id];
+
+    if (!p) {
+      document.getElementById('prod-name').textContent = 'Produto não encontrado';
+      document.getElementById('prod-desc').textContent = 'Acesse produtos.html para ver todos os produtos disponíveis.';
+      return;
+    }
+
+    document.title = p.name + ' — PH Águas';
+    document.querySelector('meta[name="description"]').content = p.desc.slice(0, 155);
+    document.getElementById('prod-breadcrumb').textContent = p.name;
+    document.getElementById('prod-category').textContent = p.category;
+    document.getElementById('prod-name').textContent = p.name;
+    document.getElementById('prod-formula').textContent = p.formula;
+    document.getElementById('prod-desc').textContent = p.desc;
+
+    // Image
+    const wrap = document.getElementById('prod-img-wrap');
+    if (p.image) {
+      const img = document.createElement('img');
+      img.src = p.image;
+      img.alt = p.name;
+      img.onerror = () => { img.style.display = 'none'; document.getElementById('prod-placeholder').style.display = 'flex'; };
+      wrap.innerHTML = '';
+      wrap.appendChild(img);
+    }
+
+    // Apps chips
+    const appsEl = document.getElementById('prod-apps');
+    appsEl.innerHTML = p.apps.map(a => `<span class="prod-detail-chip">${a}</span>`).join('');
+
+    // Actions
+    const waMsg = encodeURIComponent('Olá, gostaria de solicitar informações sobre: ' + p.waItem);
+    const interestParam = encodeURIComponent(p.waItem);
+    document.getElementById('prod-actions').innerHTML = `
+      <a href="https://wa.me/5511910301546?text=${waMsg}" class="btn btn-primary btn-lg" target="_blank">Solicitar pelo WhatsApp</a>
+      <a href="contato.html?interesse=${interestParam}" class="btn btn-outline-dark btn-lg">Solicitar Orçamento</a>
+    `;
+    document.getElementById('cta-wa').href = `https://wa.me/5511910301546?text=${waMsg}`;
+
+    // Specs table
+    const specsEl = document.getElementById('prod-specs');
+    specsEl.innerHTML = p.specs.map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+
+    // Uses list
+    const usesEl = document.getElementById('prod-uses');
+    usesEl.innerHTML = p.uses.map(u => `<li>${u}</li>`).join('');
+
+    // Safety and packaging
+    document.getElementById('prod-safety').innerHTML = p.safety;
+    document.getElementById('prod-packaging').innerHTML = p.packaging;
+  });
+  </script>
+</body>
+</html>

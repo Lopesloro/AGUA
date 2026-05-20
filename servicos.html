@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços — PH Águas</title>
+  <meta name="description" content="12 serviços técnicos em tratamento de água: consultoria, instalação, caldeiras, torres, automação, retrofit, limpeza química e locação B.O.T.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .srv-family { margin-bottom: 56px; }
+    .srv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 20px; }
+    .srv-card { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius-lg); padding: 28px; transition: all var(--transition); }
+    .srv-card:hover { box-shadow: var(--shadow-lg); border-color: var(--blue); transform: translateY(-3px); }
+    .srv-icon { width: 52px; height: 52px; border-radius: 12px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .srv-icon svg { width: 24px; stroke: var(--blue); fill: none; stroke-width: 1.8; }
+    .srv-title { font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .srv-desc { font-size: 14px; color: var(--text); line-height: 1.65; margin-bottom: 16px; }
+    .srv-list { list-style: none; margin-bottom: 20px; }
+    .srv-list li { font-size: 13px; color: var(--text); padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+    .srv-list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+
+    .bot-highlight {
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      border-radius: var(--radius-lg); padding: 36px; color: white;
+      grid-column: 1 / -1;
+    }
+    .bot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+    .bot-steps { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .bot-step { display: flex; gap: 14px; align-items: flex-start; }
+    .bot-num { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,.15); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+    .bot-text strong { display: block; font-size: 14px; font-weight: 600; }
+    .bot-text span { font-size: 13px; color: rgba(255,255,255,.7); }
+
+    @media(max-width:768px){ .bot-grid { grid-template-columns: 1fr; } .bot-highlight { grid-column: 1; } }
+  </style>
+</head>
+<body class="page-content">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Início</a><span>/</span><span>Serviços</span></div>
+      <h1>Serviços Técnicos Especializados</h1>
+      <p>12 modalidades de serviço para implantação, operação e manutenção de sistemas de tratamento de água.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">Todos (12)</button>
+        <button class="filter-tab" data-filter="projetos">Projetos e Implantação</button>
+        <button class="filter-tab" data-filter="operacao">Operação Industrial</button>
+        <button class="filter-tab" data-filter="manutencao">Manutenção</button>
+        <button class="filter-tab" data-filter="negocios">Modelos de Negócio</button>
+      </div>
+
+      <!-- PROJETOS E IMPLANTAÇÃO -->
+      <div class="srv-family" id="srv-projetos" data-family="projetos">
+        <div class="family-header">
+          <span class="family-name">Projetos e Implantação</span>
+          <span class="family-count">4 serviços</span>
+        </div>
+        <div class="srv-grid">
+
+          <div class="srv-card fade-up" data-delay="0">
+
+            <div class="srv-title">Consultoria, Projetos, Implantação e Execução</div>
+            <div class="srv-desc">Análise completa de necessidades, mapeamento hídrico, elaboração de soluções customizadas com memorial descritivo e projeto executivo. Corpo técnico com 25+ anos de atuação em âmbito nacional.</div>
+            <ul class="srv-list">
+              <li>Diagnóstico técnico da operação</li>
+              <li>Mapeamento hidrológico e balanço hídrico</li>
+              <li>Projeto executivo com memorial descritivo</li>
+              <li>Implantação e comissionamento</li>
+              <li>Análise de viabilidade técnica e econômica</li>
+            </ul>
+            <a href="servico.html?id=consultoria" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+          <div class="srv-card fade-up" data-delay="80">
+
+            <div class="srv-title">Instalação, Montagem e Manutenção</div>
+            <div class="srv-desc">Instalação e montagem de ETAs e ETEs complexas, com foco em sistemas que requerem operação especializada. Ciclos de retrolavagem programáveis, regeneração de resinas, limpeza química de membranas.</div>
+            <ul class="srv-list">
+              <li>Ciclos de retrolavagem programados</li>
+              <li>Regeneração de resinas de troca iônica</li>
+              <li>Limpeza e substituição de peneiras</li>
+              <li>Reformas de tanques e reservatórios</li>
+              <li>Reparos e otimização de bombas</li>
+            </ul>
+            <a href="servico.html?id=instalacao" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+          <div class="srv-card fade-up" data-delay="160">
+
+            <div class="srv-title">Retrofit em Equipamentos e Sistemas</div>
+            <div class="srv-desc">Modernização e otimização de sistemas obsoletos sem necessidade de substituição completa. Ampliação de vazão, otimização de filtração e adaptação a novas qualidades de água.</div>
+            <ul class="srv-list">
+              <li>Ampliação de sistemas existentes</li>
+              <li>Atualização de tecnologia filtrante</li>
+              <li>Retrofit de sistemas de troca iônica</li>
+              <li>Adaptação a novos padrões de poluentes</li>
+              <li>Maximização da vida útil do equipamento</li>
+            </ul>
+            <a href="servico.html?id=retrofit" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+          <div class="srv-card fade-up" data-delay="240">
+
+            <div class="srv-title">Gestão Sustentável de Águas</div>
+            <div class="srv-desc">Soluções integradas para otimizar aspectos econômicos, ambientais e de desenvolvimento. Estratégias de reúso, captação pluvial e conformidade para descarte em redes municipais e corpos hídricos.</div>
+            <ul class="srv-list">
+              <li>Estudo de balanço hídrico completo</li>
+              <li>Avaliações físico-químicas e microbiológicas</li>
+              <li>Estratégia de reúso não potável</li>
+              <li>Conformidade ambiental para descarte</li>
+              <li>Relatórios de desempenho hídrico</li>
+            </ul>
+            <a href="servico.html?id=gestao-sustentavel" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- OPERAÇÃO INDUSTRIAL -->
+      <div class="srv-family" id="srv-operacao" data-family="operacao">
+        <div class="family-header">
+          <span class="family-name">Operação Industrial</span>
+          <span class="family-count">3 serviços</span>
+        </div>
+        <div class="srv-grid">
+
+          <div class="srv-card fade-up" data-delay="0">
+
+            <div class="srv-title">Tratamento de Caldeiras e Geradores de Vapor</div>
+            <div class="srv-desc">Programa especializado de tratamento químico e monitoramento. Acompanhamento semanal, quinzenal ou mensal conforme contrato. Análises de campo e coleta para laboratório próprio. Vapor seguro que evita paradas de produção.</div>
+            <ul class="srv-list">
+              <li>Análises físico-químicas em campo</li>
+              <li>Coleta de amostras para laboratório</li>
+              <li>Manutenção de sistemas de tratamento</li>
+              <li>Monitoramento de pH, condutividade e dureza</li>
+              <li>Relatório de desempenho periódico</li>
+            </ul>
+            <a href="servico.html?id=caldeiras-servico" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+          <div class="srv-card fade-up" data-delay="80">
+
+            <div class="srv-title">Tratamento de Torres de Refrigeração e Chillers</div>
+            <div class="srv-desc">Programa completo com análises em campo, manutenções, laudos laboratoriais e inspeções fotográficas. Controle de incrustações, corrosão e biofouling. Regime de comodato semanal/quinzenal/mensal.</div>
+            <ul class="srv-list">
+              <li>Controle de carbonato e sulfato de cálcio</li>
+              <li>Biocidas e biodispersantes para algas</li>
+              <li>Otimização de purgas para economia de água</li>
+              <li>Inspeção com documentação fotográfica</li>
+              <li>Laudo laboratorial periódico</li>
+            </ul>
+            <a href="servico.html?id=torres-servico" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+          <div class="srv-card fade-up" data-delay="160">
+
+            <div class="srv-title">Automação e Monitoramento Remoto</div>
+            <div class="srv-desc">Projetos completos de monitoramento e medição da qualidade da água antes, durante e após tratamento. Controle de bombeamento, aeração, níveis, vazões, pressões e retrolavagens. Tecnologia própria desenvolvida pela PH Águas.</div>
+            <ul class="srv-list">
+              <li>Painéis e quadros de comando personalizados</li>
+              <li>Controle CLP e sistemas supervisórios (SCADA)</li>
+              <li>Telemetria e monitoramento remoto em tempo real</li>
+              <li>Integração com sistemas existentes</li>
+              <li>Redução de mão de obra operacional</li>
+            </ul>
+            <a href="servico.html?id=automacao" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MANUTENÇÃO -->
+      <div class="srv-family" id="srv-manutencao" data-family="manutencao">
+        <div class="family-header">
+          <span class="family-name">Manutenção e Limpeza</span>
+          <span class="family-count">3 serviços</span>
+        </div>
+        <div class="srv-grid">
+
+          <div class="srv-card fade-up" data-delay="0">
+
+            <div class="srv-title">Limpeza Física, Higienização e Sanitização</div>
+            <div class="srv-desc">Remoção de resíduos orgânicos e minerais de linhas de processo, membranas, resinas, tanques, torres e caixas d'água. Redução significativa da carga microbiana contaminante. Proteção contra recalls e crises de contaminação.</div>
+            <ul class="srv-list">
+              <li>Membranas de osmose reversa e UF</li>
+              <li>Resinas de troca iônica</li>
+              <li>Tanques e caixas d'água potável</li>
+              <li>Torres de resfriamento e chillers</li>
+              <li>Linhas de alimentos, cosméticos e farmacêuticos</li>
+            </ul>
+            <a href="servico.html?id=higienizacao" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+          <div class="srv-card fade-up" data-delay="80">
+
+            <div class="srv-title">Limpeza Química, Decapagem, Passivação e Desengraxe</div>
+            <div class="srv-desc">Limpeza industrial com soluções ácidas e alcalinas. Decapagem remove weld burn e depósitos inorgânicos. Passivação cria película protetora contra oxidação. Desengraxe remove óleos e gorduras por spray ou circulação.</div>
+            <ul class="srv-list">
+              <li>Decapagem (Pickling) de superfícies metálicas</li>
+              <li>Passivação de aço inoxidável</li>
+              <li>Desengraxe por imersão, spray ou circulação</li>
+              <li>Vasos de pressão e trocadores de calor</li>
+              <li>Sistemas de tubagens e válvulas</li>
+            </ul>
+            <a href="servico.html?id=limpeza-quimica" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+          <div class="srv-card fade-up" data-delay="160">
+
+            <div class="srv-title">Projetos para Economia de Água e Energia</div>
+            <div class="srv-desc">Custo inicial zero para o cliente — a PH Águas financia 100% da implementação. O pagamento é feito como parte da economia gerada. Diagnóstico técnico, avaliação operacional, implementação e planejamento de manutenção em 6 etapas.</div>
+            <ul class="srv-list">
+              <li>Financiamento 100% pela PH Águas</li>
+              <li>Diagnóstico + avaliação operacional</li>
+              <li>Implementação de tecnologias de conservação</li>
+              <li>Relatórios de economia mensal</li>
+              <li>Sem risco financeiro para o cliente</li>
+            </ul>
+            <a href="servico.html?id=economia-agua" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MODELOS DE NEGÓCIO -->
+      <div class="srv-family" id="srv-negocios" data-family="negocios">
+        <div class="family-header">
+          <span class="family-name">Modelos de Negócio</span>
+          <span class="family-count">2 serviços</span>
+        </div>
+        <div class="srv-grid">
+
+          <div class="bot-highlight fade-up">
+            <div class="bot-grid">
+              <div>
+                <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px">Modelo de Alto Impacto</div>
+                <h3 style="font-size:24px;font-weight:800;margin-bottom:12px">Locação de Equipamentos e B.O.T.<br><span style="color:#7dd3fc">Build · Operate · Transfer</span></h3>
+                <p style="font-size:14px;color:rgba(255,255,255,.8);line-height:1.65;margin-bottom:24px">Projetamos, fabricamos e implantamos a solução ideal com investimento próprio. O cliente paga mensalmente e recebe a planta ao final do contrato. Toda a responsabilidade técnica é nossa durante a vigência.</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap">
+                  <a href="contato.html?interesse=BOT" class="btn btn-white">Conhecer o B.O.T.</a>
+                  <a href="contato.html" class="btn" style="border:1.5px solid rgba(255,255,255,.4);color:white;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600">Solicitar Proposta</a>
+                </div>
+              </div>
+              <div>
+                <div class="bot-steps">
+                  <div class="bot-step"><div class="bot-num">1</div><div class="bot-text"><strong>Diagnóstico e Proposta</strong><span>Análise da operação e proposta técnico-financeira</span></div></div>
+                  <div class="bot-step"><div class="bot-num">2</div><div class="bot-text"><strong>Projeto e Fabricação (Build)</strong><span>Desenvolvimento completo do sistema sob medida</span></div></div>
+                  <div class="bot-step"><div class="bot-num">3</div><div class="bot-text"><strong>Implantação e Operação (Operate)</strong><span>Instalação + operação pela equipe PH Águas</span></div></div>
+                  <div class="bot-step"><div class="bot-num">4</div><div class="bot-text"><strong>Pagamento Mensal</strong><span>Taxa operacional + amortização de capital</span></div></div>
+                  <div class="bot-step"><div class="bot-num">5</div><div class="bot-text"><strong>Transferência ao Cliente (Transfer)</strong><span>Ao final do contrato, o sistema passa para o cliente</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Qual serviço sua empresa precisa?</h2>
+      <p>Entre em contato para uma análise técnica gratuita e receba uma proposta personalizada.</p>
+      <div class="actions">
+        <a href="contato.html" class="btn btn-white btn-lg">Falar com Especialista</a>
+        <a href="tel:+5511910301546" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;">(11) 91030-1546</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

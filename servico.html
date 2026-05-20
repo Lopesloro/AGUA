@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviço — PH Águas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="page-content">
+
+  <div id="detail-hero" class="detail-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a><span>/</span>
+        <a href="servicos.html">Serviços</a><span>/</span>
+        <span id="d-breadcrumb">—</span>
+      </div>
+      <div class="detail-category-tag" id="d-category">—</div>
+      <h1 id="d-name">—</h1>
+      <p class="detail-hero-sub" id="d-short">—</p>
+      <div class="detail-hero-chips" id="d-chips"></div>
+      <div class="detail-hero-actions">
+        <a id="d-wa" href="#" class="btn btn-white btn-lg" target="_blank">Falar pelo WhatsApp</a>
+        <a href="contato.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.4);color:white;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;">Solicitar Proposta</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-img-section">
+    <div class="detail-img-wrap" id="d-img-wrap">
+      <div class="detail-img-placeholder" id="d-placeholder">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#0055B3" stroke-width="1" opacity=".25"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-body">
+    <div class="container">
+      <div class="detail-grid">
+        <div>
+          <div class="detail-section-label">Sobre o Serviço</div>
+          <div class="detail-section-title" id="d-about-title">Como Funciona</div>
+          <div class="detail-text" id="d-desc">—</div>
+          <div class="detail-section-label" style="margin-top:40px">Escopo e Detalhes</div>
+          <table class="detail-specs-table" id="d-specs"></table>
+        </div>
+        <div>
+          <div class="detail-section-label">Como Executamos</div>
+          <div class="detail-steps" id="d-steps"></div>
+          <div class="detail-section-label" style="margin-top:40px">Setores Atendidos</div>
+          <ul class="detail-uses-list" id="d-uses"></ul>
+          <div class="detail-section-label" style="margin-top:40px">Benefícios</div>
+          <div class="detail-benefits" id="d-benefits"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Vamos conversar sobre seu projeto?</h2>
+      <p>Análise técnica gratuita. Nossa equipe com 25+ anos de experiência apresenta a solução ideal para sua operação.</p>
+      <div class="actions">
+        <a href="contato.html" class="btn btn-white btn-lg">Solicitar Análise Gratuita</a>
+        <a href="tel:+5511910301546" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;">(11) 91030-1546</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>
+  const SERVICOS = {
+    'consultoria': {
+      name: 'Consultoria, Projetos, Implantação e Execução',
+      category: 'Projetos e Implantação',
+      short: 'Análise completa de necessidades, mapeamento hídrico, elaboração de soluções customizadas com memorial descritivo e projeto executivo. Corpo técnico com 25+ anos.',
+      image: 'images/sistemas/osmose-1.jpg',
+      chips: ['Diagnóstico técnico', 'Projeto executivo', 'Memorial descritivo', 'Comissionamento', 'Nacional'],
+      desc: 'A consultoria da PH Águas inicia com uma visita técnica para levantamento completo da operação: análise físico-química e microbiológica da água bruta, mapeamento dos pontos de uso, levantamento de consumos e avaliação dos sistemas existentes. A partir desses dados, elaboramos um projeto customizado com memorial descritivo técnico, planilha de dimensionamento, especificação de equipamentos e cronograma de implantação. Após aprovação, nossa equipe gerencia a implantação completa — da compra dos equipamentos à instalação, comissionamento e treinamento da equipe operacional. Com corpo técnico de mais de 25 anos de atuação em âmbito nacional, a PH Águas já implantou sistemas em todos os segmentos industriais, desde pequenas empresas até grandes complexos industriais.',
+      aboutTitle: 'Da análise ao comissionamento — processo completo',
+      specs: [
+        ['Diagnóstico', 'Análise físico-química, microbiológica e visita técnica presencial'],
+        ['Projeto', 'Memorial descritivo + planilha de dimensionamento + especificações'],
+        ['Entregável', 'Projeto executivo completo (P&ID, layout, especificações)'],
+        ['Atuação', 'Nacional — equipes em SP, RJ, MG, PR, SC, RS e demais estados'],
+        ['Prazo típico de projeto', '5–30 dias úteis (dependendo da complexidade)'],
+        ['Prazo de implantação', '30–180 dias (dependendo do escopo)'],
+        ['Normas atendidas', 'ABNT, Portaria 888/2021, CONAMA, legislação estadual'],
+        ['Relatório', 'Laudo técnico com diagnóstico e proposta de melhoria'],
+      ],
+      steps: [
+        ['Visita técnica', 'Engenheiro da PH Águas visita a operação para levantamento de dados, coleta de amostras e diagnóstico das necessidades.'],
+        ['Análise laboratorial', 'Amostras de água são analisadas no laboratório próprio da PH Águas para determinação dos parâmetros físico-químicos e microbiológicos.'],
+        ['Elaboração do projeto', 'Com base no diagnóstico, a equipe técnica elabora o projeto executivo com todas as especificações, layouts e memoriais.'],
+        ['Aprovação e contratação', 'O projeto é apresentado ao cliente, ajustado conforme necessidades e aprovado para implantação.'],
+        ['Compras e logística', 'A PH Águas gerencia todo o processo de compra de equipamentos, produtos e materiais com os melhores fornecedores.'],
+        ['Instalação e montagem', 'Equipe especializada realiza a instalação seguindo rigorosamente o projeto executivo aprovado.'],
+        ['Comissionamento', 'Testes de desempenho, ajustes finos e análises de qualidade da água tratada confirma o funcionamento do sistema.'],
+        ['Treinamento', 'Capacitação da equipe operacional do cliente para operação e manutenção preventiva do sistema.'],
+      ],
+      uses: [
+        'Indústrias alimentícias, de bebidas e farmacêuticas',
+        'Hotéis, resorts e complexos turísticos',
+        'Condomínios residenciais e comerciais',
+        'Municípios e saneamento básico',
+        'Fazendas, agronegócio e agroindústria',
+        'Hospitais, clínicas e laboratórios',
+        'Petroquímica, química e metalurgia',
+      ],
+      benefits: [
+        ['Solução sob medida', 'Cada projeto é dimensionado para a realidade específica do cliente — sem soluções genéricas.'],
+        ['25+ anos de experiência', 'Histórico comprovado em todos os segmentos industriais do Brasil.'],
+        ['Gestão completa', 'Da consultoria à operação — único ponto de contato responsável pelo projeto.'],
+        ['Conformidade garantida', 'Projeto atende todas as normas técnicas e regulatórias aplicáveis.'],
+      ],
+    },
+    'instalacao': {
+      name: 'Instalação, Montagem e Manutenção',
+      category: 'Projetos e Implantação',
+      short: 'Instalação e montagem de ETAs e ETEs complexas, com operação especializada. Retrolavagem programável, regeneração de resinas e limpeza química de membranas.',
+      image: 'images/sistemas/osmose-reversa.jpg',
+      chips: ['Montagem industrial', 'Retrolavagem', 'Regeneração', 'Manutenção preventiva', 'CIP membranas'],
+      desc: 'O serviço de instalação e montagem da PH Águas abrange desde a montagem de sistemas simples (abrandadores e filtros de carvão) até complexas estações de tratamento de água (ETAs) e efluentes (ETEs) com múltiplos estágios de tratamento. Nossa equipe técnica especializada realiza toda a instalação mecânica, elétrica e de automação, com programação dos controladores (PLC/CLP), calibração dos instrumentos e testes de desempenho. O serviço inclui retrolavagens programadas de filtros e abrandadores, regeneração de resinas de troca iônica (catiônica e aniônica), limpeza química de membranas (CIP — Clean-In-Place) e substituição de meios filtrantes. Também realizamos reformas e reparos em tanques, reservatórios e bombas, além de substituição de componentes eletrônicos e mecânicos.',
+      aboutTitle: 'Instalação e manutenção especializada em tratamento de água',
+      specs: [
+        ['Equipe', 'Técnicos especializados em mecânica, elétrica e automação'],
+        ['Cobertura', 'Nacional — São Paulo e interior, outros estados mediante programação'],
+        ['Manutenção preventiva', 'Semanal, quinzenal, mensal ou trimestral'],
+        ['Retrolavagem', 'Programação de filtros de areia, carvão e zeólita'],
+        ['Regeneração de resinas', 'Catiônica (HCl/H₂SO₄) e aniônica (NaOH) — manual e automática'],
+        ['CIP de membranas', 'Limpeza ácida e alcalina de membranas de osmose reversa'],
+        ['Substituições', 'Membranas, resinas, leitos filtrantes, válvulas e bombas'],
+        ['Relatório', 'Relatório técnico de cada visita com parâmetros medidos'],
+      ],
+      steps: [
+        ['Levantamento de escopo', 'Inspeção dos sistemas existentes, diagnóstico das condições e elaboração de cronograma de intervenção.'],
+        ['Planejamento da intervenção', 'Definição dos materiais, ferramentas e equipe necessária. Comunicação prévia para minimizar impacto na produção.'],
+        ['Instalação mecânica', 'Montagem de tubulações, vasos, bombas, válvulas e instrumentos conforme projeto e boas práticas de engenharia.'],
+        ['Instalação elétrica e automação', 'Cabeamento, quadros elétricos, CLPs e programação dos controladores de válvulas automáticas e bombas.'],
+        ['Programação dos ciclos', 'Configuração das retrolavagens, regenerações e alertas dos equipamentos automáticos conforme recomendação técnica.'],
+        ['Teste e comissionamento', 'Análise da qualidade da água em cada ponto do sistema para validação do desempenho após a instalação.'],
+        ['Treinamento operacional', 'Capacitação da equipe interna para operação, ajustes e identificação de problemas no sistema instalado.'],
+      ],
+      uses: [
+        'Instalação de novas ETAs e ETEs industriais',
+        'Manutenção preventiva de sistemas de osmose reversa em indústrias',
+        'Retrolavagem e regeneração de filtros e abrandadores',
+        'Reforma de estações de tratamento existentes e obsoletas',
+        'Substituição de membranas, resinas e meios filtrantes',
+        'Reparos emergenciais em bombas, válvulas e tubulações',
+      ],
+      benefits: [
+        ['Equipe própria', 'Técnicos PH Águas — sem terceirização — conhecimento dos sistemas e histórico da operação.'],
+        ['Relatório documentado', 'Cada visita gera relatório técnico com parâmetros medidos e recomendações.'],
+        ['Resposta rápida', 'Atendimento emergencial para paradas não programadas em sistemas críticos.'],
+        ['Integração com fornecimento', 'Mesma empresa que instala fornece os produtos químicos e equipamentos de reposição.'],
+      ],
+    },
+    'retrofit': {
+      name: 'Retrofit em Equipamentos e Sistemas',
+      category: 'Projetos e Implantação',
+      short: 'Modernização e otimização de sistemas obsoletos sem substituição completa. Ampliação de vazão, otimização de filtração e adaptação a novas qualidades de água.',
+      image: 'images/sistemas/osmose-2.jpg',
+      chips: ['Modernização', 'Ampliação de vazão', 'Sem substituição total', 'Otimização', 'ROI rápido'],
+      desc: 'O retrofit é a solução ideal quando um sistema de tratamento de água ainda funciona estruturalmente mas precisa de modernização tecnológica, ampliação de capacidade ou adaptação a novas exigências de qualidade. Em vez de substituir todo o sistema — com alto investimento e longa paralisação —, a PH Águas identifica os componentes que podem ser aproveitados (vasos de pressão, tanques, estruturas metálicas) e substitui apenas os elementos que comprometem o desempenho: válvulas automáticas obsoletas, membranas vencidas, resinas saturadas, controladores analógicos por digitais com automação, e tubulações com vazamentos. Também realizamos ampliações de vazão com adição de módulos em paralelo, instalação de novos estágios de tratamento (ex: osmose reversa após um sistema existente de filtração) e adaptação a novos parâmetros de qualidade da água bruta.',
+      aboutTitle: 'Como o retrofit transforma sistemas obsoletos',
+      specs: [
+        ['Avaliação inicial', 'Diagnóstico do sistema existente, identificação do que pode ser aproveitado'],
+        ['Componentes atualizados', 'Válvulas automáticas, controladores, membranas, resinas, instrumentação'],
+        ['Ampliação de capacidade', 'Adição de módulos em paralelo sem substituição do existente'],
+        ['Novos estágios', 'Adição de osmose reversa, UV, carvão ativado a sistemas existentes'],
+        ['Automação', 'Substituição de painéis analógicos por CLPs com SCADA e telemetria'],
+        ['Paralisação', 'Minimizada — intervenções programadas nos períodos de menor demanda'],
+        ['ROI típico', '12–36 meses (dependendo da melhoria de eficiência obtida)'],
+        ['Garantia', 'Garantia dos novos componentes instalados pela PH Águas'],
+      ],
+      steps: [
+        ['Diagnóstico técnico', 'Engenheiro avalia o sistema existente: condição dos vasos, válvulas, membranas, resinas, instrumentação e automação.'],
+        ['Proposta de retrofit', 'Elaboração de proposta com levantamento dos componentes a substituir, escopo da modernização e estimativa de ROI.'],
+        ['Aprovação e planejamento', 'Alinhamento do cronograma de intervenção para minimizar impacto na produção do cliente.'],
+        ['Aquisição dos novos componentes', 'PH Águas gerencia a compra dos equipamentos e materiais necessários.'],
+        ['Intervenção técnica', 'Substituição dos componentes identificados — válvulas, membranas, resinas, painéis — com equipe especializada.'],
+        ['Reprogramação e automação', 'Configuração dos novos controladores, programação dos ciclos automáticos e integração com o sistema supervisório.'],
+        ['Comissionamento e validação', 'Análises de qualidade da água e testes de desempenho confirmam os ganhos do retrofit.'],
+      ],
+      uses: [
+        'Sistemas de osmose reversa com membranas vencidas e baixa eficiência',
+        'Abrandadores com válvulas manuais — atualização para automático',
+        'ETAs com controladores analógicos obsoletos',
+        'Sistemas de filtração com perdas de carga excessivas',
+        'Ampliação de capacidade de sistemas existentes para nova demanda',
+        'Adequação de sistemas a novos parâmetros de qualidade de água',
+      ],
+      benefits: [
+        ['Menor investimento', 'Muito mais econômico que substituição completa do sistema.'],
+        ['Menor paralisação', 'Intervenções programadas com tempo de parada minimizado.'],
+        ['ROI rápido', 'Ganhos de eficiência e economia de reagentes geram retorno em meses.'],
+        ['Aproveitamento máximo', 'Estruturas, vasos e tubulações boas são mantidas — sem desperdício.'],
+      ],
+    },
+    'gestao-sustentavel': {
+      name: 'Gestão Sustentável de Águas',
+      category: 'Projetos e Implantação',
+      short: 'Soluções integradas para otimizar aspectos econômicos, ambientais e de desenvolvimento. Reúso, captação pluvial e conformidade para descarte.',
+      image: 'images/sistemas/reuso.jpg',
+      chips: ['Reúso de água', 'Captação pluvial', 'Balanço hídrico', 'Conformidade ambiental', 'ESG'],
+      desc: 'A gestão sustentável de águas da PH Águas é um serviço integrado que avalia todo o ciclo da água dentro da operação do cliente — da captação ao descarte —, identificando oportunidades de redução de consumo, reúso e conformidade ambiental. O serviço inclui o estudo de balanço hídrico completo (mapeamento de todos os pontos de uso, consumo e descarte), avaliações físico-químicas e microbiológicas da água bruta, água de processo e efluentes, elaboração de estratégia de reúso não potável (reúso de águas de retrolavagem, condensados, efluentes tratados), projeto de captação de água pluvial e conformidade legal para descarte em redes municipais e corpos hídricos. O serviço também inclui relatórios de desempenho hídrico periódicos com indicadores de eficiência e conformidade — documentação essencial para auditorias ISO 14001, ESG e certificações de sustentabilidade.',
+      aboutTitle: 'Otimização do ciclo da água na sua operação',
+      specs: [
+        ['Balanço hídrico', 'Mapeamento completo de captação, consumo, perdas e descarte'],
+        ['Análises realizadas', 'Físico-química + microbiológica em todos os pontos relevantes'],
+        ['Captação pluvial', 'Projeto e implantação de sistemas de captação e aproveitamento'],
+        ['Reúso', 'Projetos de reúso não potável para redução de captação'],
+        ['Conformidade descarte', 'Adequação ao CONAMA 430/2011 e legislação estadual'],
+        ['Certificação ESG', 'Documentação e indicadores para relatórios de sustentabilidade'],
+        ['Normas', 'ABNT NBR 15.527 (captação pluvial), NBR 13.969 (reúso)'],
+        ['Relatório periódico', 'Indicadores de eficiência hídrica e conformidade'],
+      ],
+      steps: [
+        ['Diagnóstico hídrico', 'Levantamento de todos os pontos de uso, captação e descarte de água na operação.'],
+        ['Coleta e análise', 'Amostragem e análise da água bruta, de processo e do efluente para mapear qualidade e conformidade.'],
+        ['Balanço hídrico', 'Elaboração do balanço hídrico completo com identificação de perdas, consumo e potencial de reúso.'],
+        ['Plano de gestão', 'Documento técnico com estratégias priorizadas por impacto e investimento necessário.'],
+        ['Implantação das soluções', 'Execução das melhorias aprovadas: sistemas de reúso, captação pluvial, otimização de processos.'],
+        ['Monitoramento contínuo', 'Análises periódicas e relatórios de desempenho hídrico com indicadores de eficiência.'],
+        ['Suporte à certificação', 'Documentação e evidências para auditorias ISO 14001, GRI e relatórios ESG.'],
+      ],
+      uses: [
+        'Indústrias com restrições de outorga de captação de água',
+        'Empresas com metas de redução de consumo hídrico (ESG)',
+        'Condomínios e empreendimentos com sistemas de captação pluvial',
+        'Indústrias com necessidade de conformidade para descarte',
+        'Empresas em processo de certificação ISO 14001',
+        'Municípios com gestão integrada de recursos hídricos',
+      ],
+      benefits: [
+        ['Redução de custos hídricos', 'Reúso e otimização reduzem consumo de água tratada em até 40%.'],
+        ['Conformidade ambiental', 'Descarte dentro dos limites legais evita multas e passivos ambientais.'],
+        ['Valorização ESG', 'Indicadores hídricos documentados fortalecem relatórios de sustentabilidade.'],
+        ['Segurança hídrica', 'Diversificação das fontes de água reduz riscos operacionais em períodos de estiagem.'],
+      ],
+    },
+    'caldeiras-servico': {
+      name: 'Tratamento de Caldeiras e Geradores de Vapor',
+      category: 'Operação Industrial',
+      short: 'Programa especializado de tratamento químico e monitoramento. Acompanhamento semanal, quinzenal ou mensal. Análises de campo e laboratório próprio.',
+      image: 'images/sistemas/caldeiras.jpg',
+      chips: ['Tratamento químico', 'Análises em campo', 'Laboratório próprio', 'Controle de incrustações', 'Vapor seguro'],
+      desc: 'O tratamento de caldeiras é um dos serviços mais críticos da PH Águas. Caldeiras sem tratamento adequado desenvolvem incrustações calcárias, corrosão interna e arraste de produtos químicos para o vapor — problemas que causam ineficiência energética, paradas de produção, acidentes graves e custos de manutenção altíssimos. O programa da PH Águas inclui acompanhamento técnico periódico (semanal, quinzenal ou mensal conforme contrato), com análises de campo (pH, condutividade, dureza, ferro, alcalinidade, fosfato, sulfito) realizadas pelo técnico na visita, e coleta de amostras para laboratório próprio da PH Águas para análises mais completas. Com base nos resultados, a dosagem dos produtos químicos (sequestrante de dureza, inibidor de corrosão, dispersante, alcalinizante e antiespumante) é ajustada continuamente para manter os parâmetros dentro dos limites técnicos ideais definidos pelas normas ABNT e ASME.',
+      aboutTitle: 'Programa completo de tratamento e monitoramento de caldeiras',
+      specs: [
+        ['Frequência de visita', 'Semanal, quinzenal ou mensal (conforme contrato)'],
+        ['Análises de campo', 'pH, condutividade, dureza, Fe, alcalinidade, fosfato, sulfito, sílica'],
+        ['Laboratório', 'Análises avançadas no laboratório próprio PH Águas'],
+        ['Produtos fornecidos', 'Sequestrante, inibidor de corrosão, dispersante, alcalinizante, antiespumante'],
+        ['Controle de purgas', 'Cálculo e otimização de purgas para controle de TDS e ciclos'],
+        ['Relatório técnico', 'Relatório de cada visita com parâmetros medidos e ajustes realizados'],
+        ['Normas', 'ABNT NBR 12.177 — Tratamento de água para caldeiras e vasos de pressão'],
+        ['Comodato', 'Equipamentos de análise instalados sem custo adicional no contrato'],
+      ],
+      steps: [
+        ['Diagnóstico inicial', 'Análise completa da água de alimentação, água de caldeira e condensado antes do início do programa.'],
+        ['Seleção do programa de tratamento', 'Definição dos produtos químicos e dosagens com base na qualidade da água, tipo de caldeira e pressão de operação.'],
+        ['Instalação dos dosadores', 'Bombas dosadoras e tanques de diluição são instalados em comodato pela PH Águas.'],
+        ['Visita técnica periódica', 'Técnico realiza análises de campo, ajusta dosagens e verifica condições gerais da caldeira e sistemas auxiliares.'],
+        ['Análise laboratorial', 'Amostras de água de caldeira, água de alimentação e condensado são analisadas no laboratório PH Águas para parâmetros avançados.'],
+        ['Ajuste contínuo', 'Com base nos resultados laboratoriais, o programa de tratamento é ajustado para manter todos os parâmetros dentro dos limites ideais.'],
+        ['Relatório de desempenho', 'Relatório mensal com histórico de parâmetros, tendências e recomendações preventivas.'],
+      ],
+      uses: [
+        'Caldeiras aquatubulares e flamotubulares de todos os portes',
+        'Geradores de vapor para indústrias alimentícias e farmacêuticas',
+        'Autoclaves e esterilizadores hospitalares',
+        'Caldeiras de processos químicos e petroquímicos',
+        'Sistemas de vapor de lavanderias e hospitais',
+        'Geradores de calor para secagem industrial',
+      ],
+      benefits: [
+        ['Prevenção de incrustações', 'Sequestrante de dureza evita depósito calcário que reduz eficiência e pode causar explosão.'],
+        ['Sem corrosão interna', 'Inibidor de corrosão protege o aço da caldeira e prolonge a vida útil.'],
+        ['Vapor de qualidade', 'Antiespumante e controle de purgas garantem vapor seco e sem arraste de produtos.'],
+        ['Conformidade NR13', 'Programa documentado atende exigências de inspeção de caldeiras.'],
+      ],
+    },
+    'torres-servico': {
+      name: 'Tratamento de Torres de Refrigeração e Chillers',
+      category: 'Operação Industrial',
+      short: 'Programa completo com análises em campo, laudos laboratoriais e inspeções fotográficas. Controle de incrustações, corrosão e biofouling.',
+      image: 'images/sistemas/torres.jpg',
+      chips: ['Torres de resfriamento', 'Chillers', 'Controle de Legionella', 'Biofouling', 'Laudos laboratoriais'],
+      desc: 'Torres de resfriamento e chillers são sistemas de grande consumo de água e altíssimo risco microbiológico se não tratados adequadamente. A proliferação de Legionella pneumophila em torres mal tratadas causa a Doença dos Legionários — infecção respiratória grave e potencialmente fatal. Além do risco biológico, incrustações de carbonato de cálcio e sulfato de cálcio reduzem a troca de calor, causando super-resfriamento ineficiente e aumento no consumo de energia elétrica dos compressores; corrosão interna destrói o recheio, a bacia e a estrutura metálica das torres; e biofouling (acúmulo de biofilme) obstrui os aspersores e bloqueia a transferência de calor. O programa PH Águas inclui visitas periódicas com análises de campo completas, ajuste automático de purgas para otimização dos ciclos de concentração (economia de água), biocidas e biodispersantes rotativos para prevenção de resistência bacteriana, e documentação fotográfica de cada inspeção para registro do histórico visual.',
+      aboutTitle: 'Programa de tratamento e controle microbiológico em torres',
+      specs: [
+        ['Frequência de visita', 'Semanal, quinzenal ou mensal (conforme contrato)'],
+        ['Análises de campo', 'pH, condutividade, dureza, alcalinidade, cloro, ferro, turbidez'],
+        ['Controle de Legionella', 'Programa de biocidas e laudos microbiológicos periódicos'],
+        ['Biocidas', 'Cloro, hipobromito, isotiazolona, glutaraldeído (rotação para resistência)'],
+        ['Biodispersantes', 'Remoção de biofilme estabelecido nas superfícies e recheios'],
+        ['Ciclos de concentração', 'Controle e otimização para redução do consumo de água'],
+        ['Laudo laboratorial', 'Análise microbiológica completa incluindo pesquisa de Legionella'],
+        ['Documentação fotográfica', 'Registro visual da condição das torres em cada visita'],
+      ],
+      steps: [
+        ['Diagnóstico inicial', 'Análise completa da água da torre, avaliação do estado físico do equipamento e identificação de áreas de risco.'],
+        ['Programa de biocidas', 'Definição dos biocidas primários e secundários com esquema de rotação para prevenir resistência bacteriana.'],
+        ['Instalação dos dosadores', 'Bombas dosadoras para biocidas, biodispersantes e inibidores instaladas em comodato.'],
+        ['Visita técnica periódica', 'Análises de campo, ajuste de dosagens, verificação do sistema de purgas e inspeção visual do equipamento.'],
+        ['Coleta para laboratório', 'Amostras de água são enviadas ao laboratório para análise microbiológica incluindo pesquisa de Legionella.'],
+        ['Relatório com fotos', 'Relatório técnico da visita com parâmetros medidos, ajustes realizados e documentação fotográfica.'],
+        ['Ação corretiva', 'Em caso de resultado microbiológico adverso, protocolo de choque de biocida e comunicação imediata ao cliente.'],
+      ],
+      uses: [
+        'Torres de resfriamento de indústrias petroquímicas e siderúrgicas',
+        'Chillers de ar condicionado central em hospitais, shoppings e hotéis',
+        'Condensadores evaporativos em indústrias frigoríficas',
+        'Sistemas de refrigeração de processo em indústrias de alimentos',
+        'Torres de compressores de ar em plantas industriais',
+        'Sistemas de refrigeração de data centers',
+      ],
+      benefits: [
+        ['Prevenção de Legionella', 'Programa de biocidas e laudos microbiológicos garante segurança e conformidade legal.'],
+        ['Economia de água', 'Controle dos ciclos de concentração reduz o consumo de água de reposição.'],
+        ['Eficiência energética', 'Ausência de incrustações mantém a troca de calor eficiente — compressores consomem menos.'],
+        ['Documentação para auditorias', 'Laudos, relatórios e fotos compõem o dossiê de tratamento para inspeções sanitárias.'],
+      ],
+    },
+    'automacao': {
+      name: 'Automação e Monitoramento Remoto',
+      category: 'Operação Industrial',
+      short: 'Projetos de monitoramento e medição de qualidade da água antes, durante e após tratamento. Controle de bombeamento, aeração, níveis, vazões e pressões.',
+      image: 'images/sistemas/ozonio.jpg',
+      chips: ['CLP / SCADA', 'Telemetria', 'Monitoramento remoto', 'Tecnologia própria', 'Redução de operadores'],
+      desc: 'A automação de sistemas de tratamento de água transforma operações manuais e dependentes de operadores em sistemas inteligentes que operam, monitoram e se auto-ajustam 24 horas por dia. A PH Águas desenvolveu tecnologia própria de automação e telemetria, com painéis de comando personalizados, controladores lógico-programáveis (CLP/PLC), sistemas supervisórios (SCADA) e plataformas de monitoramento remoto via internet. O sistema mede continuamente os parâmetros mais críticos — pH, condutividade, turbidez, cloro, ORP (potencial de oxidação-redução), nível, vazão e pressão — e aciona automaticamente bombas, válvulas solenoide, dosadores e sistemas de ventilação conforme a lógica programada. Em caso de anomalia (pH fora do range, nível crítico, falha de bomba), o sistema envia alertas por SMS, e-mail ou aplicativo ao responsável técnico para intervenção imediata.',
+      aboutTitle: 'Automação inteligente para operação 24h sem operador presencial',
+      specs: [
+        ['Tecnologia', 'CLP (Siemens, Allen Bradley, Schneider) + IHM + SCADA'],
+        ['Monitoramento online', 'pH, condutividade, turbidez, cloro, ORP, nível, vazão, pressão'],
+        ['Telemetria', 'Monitoramento remoto via internet, aplicativo e dashboard web'],
+        ['Alertas', 'SMS, e-mail e app quando parâmetros saem dos limites definidos'],
+        ['Controle automático', 'Bombas, válvulas, dosadores, aeradores, retrolavagens'],
+        ['Registro', 'Histórico de todos os parâmetros com relatórios automáticos'],
+        ['Integração', 'OPC-UA, Modbus, 4-20 mA — integração com sistemas ERP e MES'],
+        ['Tecnologia própria', 'Software supervisório e telemetria desenvolvidos pela PH Águas'],
+      ],
+      steps: [
+        ['Levantamento de automação', 'Mapeamento dos pontos de instrumentação, acionamentos e lógica de controle necessária.'],
+        ['Projeto elétrico e de automação', 'Elaboração do projeto elétrico dos painéis, lista de I/O e lógica de programação do CLP.'],
+        ['Fabricação dos painéis', 'Montagem dos quadros elétricos com proteções, CLP, IHM e comunicação de rede.'],
+        ['Instalação em campo', 'Instalação de instrumentos (sensores de pH, condutividade, nível, vazão), tubulações de amostra e cabeamento.'],
+        ['Programação do CLP', 'Desenvolvimento da lógica de controle, malhas PID, intertravamentos de segurança e automações.'],
+        ['Configuração do SCADA', 'Desenvolvimento das telas de supervisão, histórico de dados e relatórios automáticos.'],
+        ['Comissionamento e treinamento', 'Testes funcionais de todos os pontos, ajuste das malhas de controle e treinamento da equipe operacional.'],
+      ],
+      uses: [
+        'ETAs e ETEs industriais com necessidade de operação remota',
+        'Sistemas de osmose reversa que requerem controle preciso de pressão e qualidade',
+        'Abastecimento de água em condomínios e loteamentos',
+        'Sistemas de reúso com controle de qualidade online',
+        'Caldeiras e torres com monitoramento de parâmetros críticos',
+        'Redes de distribuição de água industrial e utilities',
+      ],
+      benefits: [
+        ['Operação 24h', 'O sistema trabalha enquanto a equipe descansa — sem dependência de operador presencial.'],
+        ['Detecção precoce', 'Alertas imediatos de anomalias previnem paradas prolongadas e problemas de qualidade.'],
+        ['Rastreabilidade', 'Histórico completo de todos os parâmetros para laudos, auditorias e análise de tendências.'],
+        ['Redução de custos', 'Automação elimina ou reduz a necessidade de operadores presenciais.'],
+      ],
+    },
+    'higienizacao': {
+      name: 'Limpeza Física, Higienização e Sanitização',
+      category: 'Manutenção e Limpeza',
+      short: 'Remoção de resíduos orgânicos e minerais de membranas, resinas, tanques e torres. Redução da carga microbiana contaminante. Proteção contra recalls.',
+      image: 'images/sistemas/upw.jpg',
+      chips: ['Higienização', 'Sanitização', 'Membranas OR', 'Tanques potáveis', 'Indústria de alimentos'],
+      desc: 'A higienização e sanitização são serviços essenciais para garantir a qualidade microbiológica da água e dos sistemas que a produzem e distribuem. Biofilmes, depósitos orgânicos e contaminação microbiológica se desenvolvem em tanques, membranas, resinas, tubulações e caixas d\'água sem manutenção adequada, comprometendo a qualidade da água e criando riscos de contaminação do produto final em indústrias alimentícias, farmacêuticas e de cosméticos. A PH Águas realiza higienização física completa com remoção mecânica de resíduos, seguida de sanitização com agentes biocidas aprovados para cada aplicação — ácido peracético, hipoclorito de sódio, dióxido de cloro ou outros — com documentação completa do processo para fins de auditoria. O serviço cobre membranas de osmose reversa e ultrafiltração (CIP), resinas de troca iônica, tanques e reservatórios de água potável, torres de resfriamento, caixas d\'água e linhas de processo alimentício, cosmético e farmacêutico.',
+      aboutTitle: 'Como realizamos higienização e sanitização de sistemas hídricos',
+      specs: [
+        ['Agentes sanitizantes', 'Ácido peracético, hipoclorito de sódio, dióxido de cloro, NaOH, HCl'],
+        ['Membranas', 'CIP com soluções ácidas e alcalinas em sequência definida por fabricante'],
+        ['Resinas', 'Sanitização com NaOH ou formalina (conforme tipo de resina)'],
+        ['Tanques e reservatórios', 'Limpeza física + sanitização conforme ABNT NBR 5.626 e portaria municipal'],
+        ['Torres', 'Programa de biocidas + limpeza física do recheio e bacia'],
+        ['Frequência recomendada', 'Semestral (tanques potáveis) / conforme diferencial de pressão (membranas)'],
+        ['Certificação', 'Laudo de análise microbiológica pré e pós-higienização'],
+        ['Documentação', 'Relatório técnico com produtos utilizados, concentrações e tempo de contato'],
+      ],
+      steps: [
+        ['Avaliação prévia', 'Inspeção visual e análise microbiológica pré-limpeza para quantificar a contaminação existente.'],
+        ['Limpeza física (pré-limpeza)', 'Remoção mecânica de incrustações, biofilme visível e resíduos sólidos antes da sanitização.'],
+        ['Preparação das soluções', 'Diluição dos agentes sanitizantes nas concentrações corretas conforme protocolo técnico aprovado.'],
+        ['Aplicação e tempo de contato', 'Circulação ou imersão do agente sanitizante pelo tempo de contato mínimo definido para cada aplicação.'],
+        ['Enxágue', 'Enxágue abundante com água tratada para remoção completa do sanitizante residual.'],
+        ['Análise pós-higienização', 'Coleta de amostras e análise microbiológica para confirmação da eficácia do processo.'],
+        ['Emissão de laudo', 'Laudo técnico com os resultados pré e pós-limpeza, produtos utilizados e conformidade alcançada.'],
+      ],
+      uses: [
+        'Membranas de osmose reversa com biofouling ou fouling orgânico',
+        'Resinas de troca iônica com contaminação microbiológica',
+        'Tanques e caixas d\'água potável de condomínios e indústrias',
+        'Linhas de produção da indústria alimentícia e farmacêutica',
+        'Torres de resfriamento com biofouling e risco de Legionella',
+        'Purificadores centrais de água para consumo humano',
+      ],
+      benefits: [
+        ['Conformidade microbiológica', 'Laudo pós-higienização comprova conformidade com padrões de potabilidade e sanitização.'],
+        ['Recuperação de membranas', 'CIP adequado restaura o fluxo e a eficiência de membranas com fouling.'],
+        ['Prevenção de recalls', 'Sistemas higienizados reduzem drasticamente o risco de contaminação do produto.'],
+        ['Documentação para auditorias', 'Relatórios e laudos compõem o dossiê de qualidade para certificações ISO e ANVISA.'],
+      ],
+    },
+    'limpeza-quimica': {
+      name: 'Limpeza Química, Decapagem, Passivação e Desengraxe',
+      category: 'Manutenção e Limpeza',
+      short: 'Limpeza industrial com soluções ácidas e alcalinas. Decapagem, passivação de aço inoxidável e desengraxe de sistemas industriais.',
+      image: 'images/sistemas/osmose-3.jpg',
+      chips: ['Decapagem', 'Passivação', 'Desengraxe', 'Aço inoxidável', 'Trocadores de calor'],
+      desc: 'A limpeza química industrial é aplicada para remoção de depósitos inorgânicos (carbonatos, sulfatos, silicatos, óxidos de ferro) e orgânicos que comprometem a eficiência de trocadores de calor, caldeiras, tubulações e vasos de pressão. A PH Águas realiza os seguintes serviços especializados: Decapagem (Pickling) — remoção de weld burn (oxidação de solda), incrustações e produtos de corrosão de superfícies metálicas com soluções ácidas controladas; Passivação — aplicação de solução ácida nítrica ou cítrica em superfícies de aço inoxidável após decapagem para formar a camada protetora de óxido de cromo que garante a resistência à corrosão; Desengraxe — remoção de óleos, graxas, lubrificantes e contaminantes orgânicos de superfícies e sistemas de tubulação por imersão, spray ou circulação com agentes tensoativos e solventes aprovados.',
+      aboutTitle: 'Processos de limpeza química industrial especializada',
+      specs: [
+        ['Decapagem ácida', 'HCl 10–15%, H₂SO₄ 5–10% ou ácido misto — remoção de óxidos e incrustações'],
+        ['Passivação', 'HNO₃ 20–40% ou ácido cítrico 4–10% — formação de filme de óxido de cromo em inox'],
+        ['Desengraxe alcalino', 'NaOH + tensoativos — remoção de óleos e graxas'],
+        ['Neutralização', 'Sempre realizada após processos ácidos e alcalinos para neutralizar resíduos'],
+        ['Inibidores de corrosão', 'Adicionados às soluções ácidas para proteger o metal base enquanto removem incrustações'],
+        ['Temperatura', 'Ambiente a 70°C dependendo do processo e do material'],
+        ['Métodos', 'Circulação, imersão, spray ou aplicação manual com tempo controlado'],
+        ['Descarte', 'Resíduos neutralizados e descartados em conformidade com CONAMA'],
+      ],
+      steps: [
+        ['Diagnóstico do depósito', 'Análise do tipo de incrustação ou contaminante (carbonato, silicato, óxido de ferro, óleo) para seleção dos agentes corretos.'],
+        ['Isolamento do sistema', 'Bloqueio das seções a serem limpas, proteção de instrumentos sensíveis e preparação do sistema de circulação temporário.'],
+        ['Pré-enxágue', 'Enxágue inicial com água para remoção de partículas soltas e preparo das superfícies.'],
+        ['Aplicação do agente de limpeza', 'Circulação ou imersão no agente de limpeza (ácido, alcalino ou desengraxante) com temperatura e tempo controlados.'],
+        ['Monitoramento', 'Análise periódica do pH, concentração do agente e presença de íons metálicos durante o processo.'],
+        ['Passivação (inox)', 'Após decapagem em superfícies de aço inoxidável, aplicação imediata de solução passivante para formação da camada protetora.'],
+        ['Enxágue final e neutralização', 'Enxágue abundante com água tratada e neutralização do pH antes do descarte dos efluentes do processo.'],
+      ],
+      uses: [
+        'Trocadores de calor com incrustações de carbonato e silicato',
+        'Vasos de pressão e caldeiras com depósito de óxido de ferro',
+        'Superfícies de aço inoxidável pós-soldagem (weld burn)',
+        'Tubulações e sistemas de utilidades industriais',
+        'Equipamentos de processo alimentício pós-construção',
+        'Tanques de armazenamento com resíduos de óleo ou graxas',
+      ],
+      benefits: [
+        ['Recuperação da eficiência', 'Remoção de incrustações restaura a transferência de calor de trocadores e caldeiras.'],
+        ['Proteção prolongada', 'Passivação de inox cria barreira de proteção que durará anos com uso adequado.'],
+        ['Processo documentado', 'Concentrações, tempos e resultados documentados para conformidade e auditoria.'],
+        ['Sem danos ao metal base', 'Inibidores de corrosão protegem o material enquanto o processo remove apenas os depósitos.'],
+      ],
+    },
+    'economia-agua': {
+      name: 'Projetos para Economia de Água e Energia',
+      category: 'Manutenção e Limpeza',
+      short: 'Custo inicial zero — a PH Águas financia 100% da implementação. Pagamento feito como parte da economia gerada. Diagnóstico em 6 etapas.',
+      image: 'images/sistemas/osmose-4.jpg',
+      chips: ['Sem custo inicial', 'ROI garantido', 'Diagnóstico gratuito', 'Água + energia', 'Performance contract'],
+      desc: 'O programa de Projetos para Economia de Água e Energia é um modelo inovador de contratação onde o cliente não precisa de investimento inicial para modernizar seus sistemas. A PH Águas financia 100% da implementação das melhorias e o pagamento é feito como percentual da economia gerada ao longo do contrato — um modelo de "performance contract" onde o cliente paga apenas com o que economiza. O programa abrange seis etapas estruturadas: diagnóstico técnico detalhado da operação atual; avaliação operacional com simulação das economias potenciais; proposta técnico-financeira com projeção de ROI; implementação das tecnologias de conservação (automação de purgas, otimização de retrolavagens, reúso de água, isolamento de tubulações, variadores de frequência em bombas); monitoramento contínuo das economias; e relatórios mensais com evidências da performance alcançada.',
+      aboutTitle: 'Economia real com investimento zero — como funciona',
+      specs: [
+        ['Modelo financeiro', 'Performance contract — pagamento com parte da economia gerada'],
+        ['Investimento cliente', 'Zero — PH Águas financia 100% da implementação'],
+        ['Etapas do programa', '6 fases: diagnóstico, avaliação, proposta, implementação, monitoramento, relatório'],
+        ['Economias típicas de água', '20–50% de redução no consumo hídrico'],
+        ['Economias típicas de energia', '15–35% de redução no consumo elétrico dos sistemas hídricos'],
+        ['Prazo de contrato', '24–60 meses (dependendo do investimento e escopo)'],
+        ['Relatório mensal', 'Evidências das economias geradas com medição e verificação'],
+        ['Metodologia', 'IPMVP — International Performance Measurement and Verification Protocol'],
+      ],
+      steps: [
+        ['Diagnóstico técnico', 'Levantamento detalhado do consumo atual de água e energia em todos os sistemas hídricos da operação.'],
+        ['Avaliação operacional', 'Identificação de ineficiências: perdas, purgas excessivas, retrolavagens não otimizadas, bombeamento ineficiente.'],
+        ['Proposta técnico-financeira', 'Elaboração da proposta com investimento previsto, economias projetadas, prazo de payback e modelo de pagamento.'],
+        ['Aprovação e contratação', 'Assinatura do contrato de performance com metas de economia acordadas e linha de base medida.'],
+        ['Implementação das melhorias', 'Instalação das tecnologias de conservação: automação de purgas, variadores de frequência, reúso, isolamentos.'],
+        ['Monitoramento contínuo', 'Medição e verificação mensal das economias geradas em relação à linha de base estabelecida.'],
+        ['Relatório de performance', 'Relatório mensal com evidências das economias e cálculo do crédito de pagamento do período.'],
+      ],
+      uses: [
+        'Indústrias com alto consumo de água e energia em utilidades',
+        'Hotéis e hospitais com sistemas de utilidades extensos',
+        'Condomínios e loteamentos com alto consumo de água',
+        'Municípios com perdas de água na rede de distribuição',
+        'Indústrias em processo de certificação ISO 50001 (gestão de energia)',
+        'Empresas com metas ESG de redução de consumo de recursos',
+      ],
+      benefits: [
+        ['Sem risco financeiro', 'Cliente não investe — paga apenas com a economia gerada. Sem exposição de caixa.'],
+        ['Economia imediata', 'A implementação começa a gerar resultados já no primeiro mês.'],
+        ['Metas documentadas', 'Contrato com metas claras e metodologia de medição e verificação auditável.'],
+        ['Dupla economia', 'Redução simultânea de água e energia — dois custos operacionais reduzidos em um único programa.'],
+      ],
+    },
+    'bot': {
+      name: 'Locação de Equipamentos e B.O.T. — Build · Operate · Transfer',
+      category: 'Modelos de Negócio',
+      short: 'Projetamos, fabricamos e implantamos a solução ideal com investimento próprio. O cliente paga mensalmente e recebe a planta ao final do contrato.',
+      image: 'images/sistemas/osmose-1.jpg',
+      chips: ['Sem CAPEX', 'Build', 'Operate', 'Transfer', 'Investimento PH Águas'],
+      desc: 'O modelo B.O.T. (Build · Operate · Transfer) é a modalidade mais completa e inovadora da PH Águas. Neste modelo, a empresa financia, projeta, fabrica e implanta toda a planta de tratamento de água com capital próprio — o cliente não precisa investir nenhum recurso próprio (zero CAPEX). A PH Águas opera e mantém o sistema durante a vigência do contrato, assumindo total responsabilidade técnica pela qualidade da água produzida e pela disponibilidade do sistema. O cliente paga uma taxa mensal que inclui a amortização do capital investido e a operação/manutenção do sistema. Ao término do contrato, a planta completa é transferida para o patrimônio do cliente em perfeito estado de funcionamento. Este modelo é ideal para empresas que precisam de tratamento de água de qualidade, mas não querem ou não podem comprometer capital em ativos de infraestrutura.',
+      aboutTitle: 'Como o B.O.T. funciona na prática',
+      specs: [
+        ['Modelo', 'Build · Operate · Transfer — investimento 100% PH Águas'],
+        ['CAPEX cliente', 'Zero — sem desembolso inicial do cliente'],
+        ['Pagamento', 'Taxa operacional mensal (OPEX) durante o contrato'],
+        ['Duração típica', '36–120 meses (3 a 10 anos)'],
+        ['Responsabilidade técnica', 'PH Águas — qualidade, disponibilidade e manutenção durante o contrato'],
+        ['Ao término', 'Planta completa transferida para o cliente em condições operacionais'],
+        ['Garantia de qualidade', 'Parâmetros de qualidade da água garantidos em contrato com penalidades'],
+        ['Disponibilidade', 'SLA de disponibilidade mínima do sistema acordada em contrato'],
+      ],
+      steps: [
+        ['Diagnóstico e proposta', 'Análise da operação do cliente, definição da solução técnica e elaboração da proposta técnico-financeira do B.O.T.'],
+        ['Negociação do contrato', 'Definição das metas de qualidade da água, SLA de disponibilidade, prazo do contrato e taxa mensal.'],
+        ['Build — Projeto e fabricação', 'PH Águas projeta, especifica e fabrica (ou adquire) todos os equipamentos da planta.'],
+        ['Implantação', 'Instalação e montagem completa da planta de tratamento nas instalações do cliente.'],
+        ['Comissionamento', 'Testes de desempenho, ajustes e validação da qualidade da água produzida conforme contrato.'],
+        ['Operate — Operação e manutenção', 'PH Águas opera e mantém o sistema durante toda a vigência do contrato, com visitas periódicas e suporte técnico.'],
+        ['Transfer — Transferência', 'Ao término do contrato, a planta é formalmente transferida para o patrimônio do cliente com documentação técnica completa.'],
+      ],
+      uses: [
+        'Indústrias que precisam de tratamento de água sem comprometer capital',
+        'Empresas em crescimento rápido que precisam de infraestrutura hídrica imediata',
+        'Municípios e saneamento básico com restrições orçamentárias de CAPEX',
+        'Hospitais e clínicas que precisam de água purificada com garantia de qualidade',
+        'Hotéis e resorts que terceirizam completamente a gestão hídrica',
+        'Empresas que preferem converter CAPEX em OPEX previsível mensalmente',
+      ],
+      benefits: [
+        ['Zero CAPEX', 'Nenhum desembolso inicial — libera capital para o core business do cliente.'],
+        ['Risco operacional zero', 'PH Águas assume toda a responsabilidade técnica durante o contrato.'],
+        ['Qualidade garantida', 'Parâmetros de água e disponibilidade do sistema garantidos em contrato.'],
+        ['Patrimônio ao final', 'O cliente recebe a planta completa ao término — investimento zero, ativo real ao final.'],
+      ],
+    },
+  };
+
+  const params = new URLSearchParams(location.search);
+  const id = params.get('id') || '';
+  const srv = SERVICOS[id];
+
+  if (!srv) {
+    document.getElementById('d-name').textContent = 'Serviço não encontrado';
+    document.getElementById('d-short').textContent = 'Verifique o link ou retorne à página de serviços.';
+  } else {
+    document.title = srv.name + ' — PH Águas';
+    document.getElementById('d-breadcrumb').textContent = srv.name;
+    document.getElementById('d-category').textContent = srv.category;
+    document.getElementById('d-name').textContent = srv.name;
+    document.getElementById('d-short').textContent = srv.short;
+    document.getElementById('d-about-title').textContent = srv.aboutTitle || 'Como Funciona';
+    document.getElementById('d-desc').textContent = srv.desc;
+
+    const wa = document.getElementById('d-wa');
+    wa.href = 'https://wa.me/5511910301546?text=' + encodeURIComponent('Olá! Tenho interesse no serviço: ' + srv.name + '. Poderia enviar mais informações?');
+
+    const chipsEl = document.getElementById('d-chips');
+    (srv.chips || []).forEach(c => {
+      const span = document.createElement('span');
+      span.className = 'detail-chip';
+      span.textContent = c;
+      chipsEl.appendChild(span);
+    });
+
+    if (srv.image) {
+      const imgWrap = document.getElementById('d-img-wrap');
+      imgWrap.innerHTML = '<img src="' + srv.image + '" alt="' + srv.name + '" style="width:100%;height:420px;object-fit:cover;display:block;">';
+    }
+
+    const specsEl = document.getElementById('d-specs');
+    (srv.specs || []).forEach(([k, v]) => {
+      specsEl.innerHTML += '<tr><td>' + k + '</td><td>' + v + '</td></tr>';
+    });
+
+    const stepsEl = document.getElementById('d-steps');
+    (srv.steps || []).forEach(([title, text], i) => {
+      stepsEl.innerHTML += '<div class="detail-step"><div class="detail-step-num">' + (i + 1) + '</div><div><strong>' + title + '</strong><p>' + text + '</p></div></div>';
+    });
+
+    const usesEl = document.getElementById('d-uses');
+    (srv.uses || []).forEach(u => {
+      usesEl.innerHTML += '<li>' + u + '</li>';
+    });
+
+    const benefitsEl = document.getElementById('d-benefits');
+    (srv.benefits || []).forEach(([title, text]) => {
+      benefitsEl.innerHTML += '<div class="detail-benefit"><strong>' + title + '</strong><p>' + text + '</p></div>';
+    });
+  }
+  </script>
+</body>
+</html>

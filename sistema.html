@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema — PH Águas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="page-content">
+
+  <div id="detail-hero" class="detail-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Início</a><span>/</span>
+        <a href="sistemas.html">Sistemas</a><span>/</span>
+        <span id="d-breadcrumb">—</span>
+      </div>
+      <div class="detail-category-tag" id="d-category">—</div>
+      <h1 id="d-name">—</h1>
+      <p class="detail-hero-sub" id="d-short">—</p>
+      <div class="detail-hero-chips" id="d-chips"></div>
+      <div class="detail-hero-actions">
+        <a id="d-wa" href="#" class="btn btn-white btn-lg" target="_blank">Solicitar pelo WhatsApp</a>
+        <a href="contato.html" class="btn btn-lg" style="border:2px solid rgba(255,255,255,.4);color:white;padding:14px 32px;border-radius:8px;font-size:16px;font-weight:600;">Solicitar Análise Gratuita</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-img-section">
+    <div class="detail-img-wrap" id="d-img-wrap">
+      <div class="detail-img-placeholder" id="d-placeholder">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#0055B3" stroke-width="1" opacity=".25"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-body">
+    <div class="container">
+      <div class="detail-grid">
+        <div>
+          <div class="detail-section-label">Sobre o Sistema</div>
+          <div class="detail-section-title" id="d-about-title">Como Funciona</div>
+          <div class="detail-text" id="d-desc">—</div>
+          <div class="detail-section-label" style="margin-top:40px">Especificações Técnicas</div>
+          <table class="detail-specs-table" id="d-specs"></table>
+        </div>
+        <div>
+          <div class="detail-section-label">Processo e Etapas</div>
+          <div class="detail-steps" id="d-steps"></div>
+          <div class="detail-section-label" style="margin-top:40px">Aplicações e Setores</div>
+          <ul class="detail-uses-list" id="d-uses"></ul>
+          <div class="detail-section-label" style="margin-top:40px">Benefícios</div>
+          <div class="detail-benefits" id="d-benefits"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Quer este sistema na sua empresa?</h2>
+      <p>Projetamos, instalamos e operamos. Análise técnica sem custo para projetos acima de 5 m³/h.</p>
+      <div class="actions">
+        <a href="contato.html" class="btn btn-white btn-lg">Solicitar Análise Gratuita</a>
+        <a href="tel:+5511910301546" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;">(11) 91030-1546</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+  <script>
+  const SISTEMAS = {
+    'eta': {
+      name: 'Estação de Tratamento de Água (ETA)',
+      category: 'Filtração e Purificação',
+      short: 'Sistemas completos para tornar água bruta em água potável ou industrial. Projeto, fabricação e instalação em todo o Brasil.',
+      image: 'images/sistemas/osmose-1.jpg',
+      desc: 'A Estação de Tratamento de Água (ETA) é o conjunto de processos físicos, químicos e biológicos utilizados para converter água bruta captada de rios, poços, lagos ou chuva em água com qualidade adequada para consumo humano ou uso industrial. A PH Águas projeta ETAs compactas, modulares e automatizadas, dimensionadas conforme a qualidade da água bruta e a demanda do projeto — desde pequenas unidades comunitárias até grandes plantas industriais com capacidade de centenas de m³/h.',
+      aboutTitle: 'O que é e como funciona uma ETA',
+      specs: [
+        ['Capacidade típica', '1 a 500 m³/h (projetos especiais: maior)'],
+        ['Fonte de água', 'Rio, poço, lago, barragem ou chuva'],
+        ['Processo', 'Coagulação + floculação + decantação + filtração + desinfecção'],
+        ['Materiais', 'PRFV, aço inox, concreto, PEAD'],
+        ['Automação', 'CLP + SCADA + telemetria'],
+        ['Norma', 'ABNT NBR 12.216 / Portaria 888/2021'],
+        ['Instalação', 'Skid modular ou construção civil'],
+        ['Monitoramento', 'pH, turbidez, cloro, condutividade em tempo real'],
+      ],
+      steps: [
+        ['Captação', 'Bombeamento da água bruta do manancial para o sistema de tratamento com grade de proteção contra sólidos grosseiros.'],
+        ['Coagulação', 'Adição de coagulante (PAC ou sulfato de alumínio) para desestabilizar partículas coloidais em suspensão.'],
+        ['Floculação', 'Agitação controlada que agrupa as partículas coaguladas em flocos maiores e mais pesados.'],
+        ['Decantação', 'Separação gravitacional dos flocos por sedimentação em decantadores laminares ou convencionais.'],
+        ['Filtração', 'Passagem da água pelos leitos filtrantes (areia, antracito ou zeólita) para remoção de partículas residuais.'],
+        ['Desinfecção', 'Adição de cloro, ozônio ou irradiação UV para eliminação de micro-organismos patogênicos.'],
+        ['Distribuição', 'Armazenamento no reservatório e distribuição com pressão e qualidade monitoradas.'],
+      ],
+      uses: [
+        'Abastecimento de condomínios, fazendas e comunidades rurais',
+        'Água para processo industrial — alimentos, bebidas, cosméticos e farmacêutica',
+        'Abastecimento de hotéis, resorts e complexos turísticos',
+        'Captação e tratamento de água de chuva para reuso',
+        'Pré-tratamento para sistemas de osmose reversa',
+        'Municípios e saneamento básico',
+      ],
+      benefits: [
+        ['Modular e escalável', 'Capacidade ampliável sem substituição do sistema existente.'],
+        ['Automação total', 'Operação remota 24h com alertas em tempo real.'],
+        ['Conformidade', 'Atende Portaria MS 888/2021 e normas ABNT.'],
+        ['Baixo custo operacional', 'Otimização de consumo de reagentes e energia.'],
+      ],
+    },
+    'osmose-dessalinizacao': {
+      name: 'Dessalinização por Osmose Reversa',
+      category: 'Filtração Avançada',
+      short: 'Converte água do mar ou salobra em água doce de alta qualidade. Membranas de 0,001 micron com taxa de recuperação de até 90%.',
+      image: 'images/sistemas/osmose-reversa.jpg',
+      desc: 'A dessalinização por osmose reversa é o processo mais eficiente para produção de água doce a partir de água do mar (salinidade ~35.000 mg/L) ou salobra (1.000–10.000 mg/L). O sistema aplica pressão superior à pressão osmótica natural para forçar a passagem da água pura através de membranas semipermeáveis de 0,001 micron, retendo sal, bactérias, vírus e demais contaminantes. A PH Águas projeta sistemas de simples e duplo passo para diferentes necessidades de qualidade e volume, com pré-tratamento completo e recuperação de energia.',
+      aboutTitle: 'Como a osmose reversa remove o sal',
+      specs: [
+        ['Pressão de operação', '15–70 bar (dependendo da salinidade)'],
+        ['Taxa de recuperação', '35–50% (água do mar) / 70–85% (salobra)'],
+        ['Rejeição de sais', '> 99%'],
+        ['TDS produzido', '< 500 mg/L (potável) / < 50 mg/L (industrial)'],
+        ['Membranas', 'Hidranautics, DOW Filmtec, Toray'],
+        ['Configuração', 'Simples passo / duplo passo'],
+        ['Pré-tratamento', 'Coagulação + filtração + microfiltração + ajuste pH'],
+        ['Monitoramento', 'Fluxo, pressão, condutividade, SDI em tempo real'],
+      ],
+      steps: [
+        ['Pré-filtração', 'Remoção de sólidos suspensos, turbidez e coloides por coagulação, filtração e cartuchos de 5 microns.'],
+        ['Ajuste de pH e antiincrustante', 'Correção do pH e adição de antiincrustante para evitar fouling das membranas.'],
+        ['Alta pressão', 'Bomba de alta pressão pressuriza a água bruta acima da pressão osmótica da solução.'],
+        ['Membranas OR', 'A água pressurizada atravessa as membranas semipermeáveis. Água pura passa, sais e contaminantes são rejeitados.'],
+        ['Pós-tratamento', 'Remineralização, ajuste de pH e desinfecção para garantir qualidade potável ou industrial.'],
+        ['Recuperação de energia', 'Em plantas maiores, a pressão do concentrado é recuperada por dispositivos ERD para reduzir consumo energético.'],
+      ],
+      uses: [
+        'Ilhas e regiões costeiras sem água doce disponível',
+        'Embarcações e plataformas offshore',
+        'Resorts, hotéis e pousadas em regiões litorâneas',
+        'Indústrias que necessitam de água de baixa condutividade',
+        'Abastecimento emergencial em secas e catástrofes',
+        'Municípios no semiárido com água salobra de poços',
+      ],
+      benefits: [
+        ['Alta eficiência', 'Remove > 99% de sais, bactérias e vírus em um único passo.'],
+        ['Sem regenerantes', 'Não utiliza ácidos ou bases — menor custo de operação.'],
+        ['Escalável', 'De 1 m³/dia a milhões de litros por dia.'],
+        ['Sustentável', 'Recuperação de energia reduz consumo elétrico em até 40%.'],
+      ],
+    },
+    'osmose-desmineralizacao': {
+      name: 'Desmineralização por Osmose Reversa',
+      category: 'Desmineralização',
+      short: 'Remove sais, matéria orgânica e micro-organismos para aplicações industriais exigentes. Sem uso de ácidos ou bases no processo principal.',
+      image: 'images/sistemas/desmi-osmose.jpg',
+      desc: 'A desmineralização por osmose reversa utiliza membranas semipermeáveis para produzir água com baixíssima condutividade (< 10 µS/cm em simples passo, < 1 µS/cm em duplo passo) sem a necessidade de ácidos e bases para regeneração. É a tecnologia ideal para indústrias que precisam de água desmineralizada de forma contínua e econômica, como alimentação de caldeiras, produção farmacêutica, indústria de bebidas e processos de revestimento superficial. O sistema elimina carbonatos, sulfatos, cloretos, sílica e matéria orgânica com alta eficiência.',
+      aboutTitle: 'Osmose reversa para desmineralização industrial',
+      specs: [
+        ['Condutividade permeado', '< 10 µS/cm (simples passo) / < 1 µS/cm (duplo passo)'],
+        ['TDS de saída', '< 20 mg/L'],
+        ['Rejeição de sílica', '> 96%'],
+        ['Rejeição de bactérias', '> 99,9%'],
+        ['Pressão de operação', '10–20 bar (água doce desmineralizada)'],
+        ['Taxa de recuperação', '70–90%'],
+        ['Norma farmacêutica', 'Compatível com USP Purified Water'],
+        ['Pré-tratamento', 'Abrandamento + filtros + ajuste pH'],
+      ],
+      steps: [
+        ['Abrandamento', 'Remoção de Ca²⁺ e Mg²⁺ por resinas catiônicas para proteger as membranas de incrustações.'],
+        ['Filtração de segurança', 'Cartuchos de 5 e 1 micron para remoção de partículas antes das membranas.'],
+        ['Osmose reversa 1° passo', 'Redução de 95–98% dos sais dissolvidos totais.'],
+        ['Osmose reversa 2° passo', '(Opcional) Redução adicional para aplicações de alta pureza como farmacêutica e eletrônica.'],
+        ['Polimento (opcional)', 'Eletrodeionização (CEDI) ou resinas de leito misto para condutividade < 0,1 µS/cm.'],
+        ['Armazenamento e distribuição', 'Tanque com material adequado (PEAD, inox) e distribuição em loop sanitário.'],
+      ],
+      uses: [
+        'Alimentação de caldeiras de vapor de baixa e média pressão',
+        'Produção farmacêutica — Purified Water (USP)',
+        'Indústria de alimentos e bebidas — água de processo',
+        'Galvanoplastia e tratamento superficial de metais',
+        'Laboratórios e institutos de pesquisa',
+        'Fabricação de cosméticos e produtos de limpeza',
+      ],
+      benefits: [
+        ['Sem regenerantes', 'Elimina uso de HCl e NaOH em regenerações contínuas.'],
+        ['Alta pureza', 'Produz água de condutividade controlada e estável.'],
+        ['Automação', 'Monitoramento contínuo de condutividade e fluxo.'],
+        ['Menor espaço', 'Sistemas compactos em skid para fácil instalação.'],
+      ],
+    },
+    'carvao-ativado': {
+      name: 'Sistemas com Carvão Vegetal Ativado',
+      category: 'Adsorção',
+      short: 'Filtragem por adsorção para decloração, remoção de odores, sabores e compostos orgânicos. Carvão produzido de casca de coco.',
+      image: 'images/sistemas/osmose-2.jpg',
+      desc: 'O carvão vegetal ativado (CAG) é um material poroso com área superficial extraordinariamente grande — até 1.200 m²/g — capaz de adsorver compostos orgânicos, cloro livre, cloraminas, odores, sabores e micropoluentes como pesticidas e solventes. Os sistemas de filtração com CAG são essenciais como etapa de pré-tratamento para osmose reversa (protegendo as membranas do cloro), purificação de água potável e tratamento de efluentes com compostos recalcitrantes. O carvão de casca de coco utilizado pela PH Águas apresenta microporosidade superior ao carvão mineral, ideal para remoção de compostos de baixo peso molecular.',
+      aboutTitle: 'Como o carvão ativado purifica a água',
+      specs: [
+        ['Matéria-prima', 'Casca de coco (superior ao carvão mineral)'],
+        ['Área superficial', '900–1.200 m²/g'],
+        ['Granulometria típica', '0,6–2,0 mm (CAG) / 0,2–0,4 mm (CAP)'],
+        ['pH de operação', '5,5–8,5'],
+        ['Temperatura', 'Até 60°C'],
+        ['EBCT (contato)', '5–15 minutos'],
+        ['Retrolavagem', 'Periódica ou automática'],
+        ['Vida útil', '1–5 anos (dependendo da carga orgânica)'],
+      ],
+      steps: [
+        ['Pré-filtração', 'Remoção de sólidos em suspensão antes do leito de carvão para evitar colmatação precoce.'],
+        ['Adsorção em leito fixo', 'A água percola pelo leito de carvão ativado. Compostos orgânicos, cloro e odores são adsorvidos na estrutura microporosa.'],
+        ['Retrolavagem', 'Periodicamente, o leito é retrolavado para remover finos e manter a permeabilidade.'],
+        ['Monitoramento', 'Análise de breakthrough (vazamento de cloro ou compostos orgânicos) indica quando o carvão precisa ser substituído ou reativado.'],
+        ['Reativação/substituição', 'O carvão saturado pode ser enviado para reativação térmica ou substituído por novo.'],
+      ],
+      uses: [
+        'Pré-tratamento obrigatório para sistemas de osmose reversa (remoção de cloro)',
+        'Purificação de água potável — remoção de odor e sabor',
+        'Indústrias alimentícias — água de processo sem cloro',
+        'Aquários marinhos e ornamentais de grande porte',
+        'Tratamento de efluentes com compostos orgânicos recalcitrantes',
+        'Pré-tratamento para resinas de troca iônica e UV',
+      ],
+      benefits: [
+        ['Amplo espectro', 'Remove cloro, THMs, pesticidas, solventes e odores.'],
+        ['Natural e seguro', 'Sem adição de produtos químicos no processo.'],
+        ['Versátil', 'Configurações manuais, automáticas e em skid.'],
+        ['Reutilizável', 'Carvão pode ser reativado termicamente.'],
+      ],
+    },
+    'troca-ionica': {
+      name: 'Desmineralização por Troca Iônica',
+      category: 'Troca Iônica',
+      short: 'Produção de água desmineralizada de alta pureza por resinas catiônicas e aniônicas. Condutividade de 0,1 µS/cm em leito misto.',
+      image: 'images/sistemas/osmose-3.jpg',
+      desc: 'A desmineralização por troca iônica utiliza resinas poliméricas carregadas para trocar íons indesejáveis da água por íons H⁺ (resina catiônica) e OH⁻ (resina aniônica), produzindo água pura. O sistema pode ser configurado em Coluna Dupla (catiônica + aniônica em série, produzindo água de 10–4 µS/cm), Mixed Bed — Leito Misto (resinas misturadas, < 1–0,1 µS/cm) ou combinações para água ultrapura abaixo de 0,1 µS/cm. É a tecnologia de referência para galvanoplastia, produção de vapor, laboratórios e eletrônica.',
+      aboutTitle: 'Como funciona a troca iônica',
+      specs: [
+        ['Configurações', 'Coluna Dupla / Mixed Bed / combinadas'],
+        ['Condutividade CD', '4–10 µS/cm'],
+        ['Condutividade Mixed Bed', '0,05–0,1 µS/cm'],
+        ['Resina catiônica', 'SAC — Ácido forte (H⁺)'],
+        ['Resina aniônica', 'SBA — Base forte (OH⁻)'],
+        ['Regenerante catiônica', 'HCl 8–10% ou H₂SO₄ 4–8%'],
+        ['Regenerante aniônica', 'NaOH 4–6%'],
+        ['Vida útil resinas', '3–7 anos'],
+      ],
+      steps: [
+        ['Pré-tratamento', 'Abrandamento + filtração + carvão ativado para proteger as resinas de sólidos e cloro.'],
+        ['Coluna catiônica', 'Resina ácido forte troca Ca²⁺, Mg²⁺, Na⁺, K⁺ e outros cátions por H⁺.'],
+        ['Coluna aniônica', 'Resina base forte troca Cl⁻, SO₄²⁻, HCO₃⁻, SiO₂ e outros ânions por OH⁻.'],
+        ['Mixed Bed (polimento)', 'Leito misto de resinas catiônica e aniônica em íntimo contato para condutividade < 0,1 µS/cm.'],
+        ['Regeneração automática', 'Controlador detecta saturação por condutividade e inicia ciclo automático de regeneração.'],
+        ['Armazenamento', 'Água desmineralizada armazenada em tanques de PEAD ou inox com sistema sanitário.'],
+      ],
+      uses: [
+        'Caldeiras de vapor — água de reposição de alta pureza',
+        'Galvanoplastia e tratamento superficial de metais preciosos',
+        'Produção de eletrônicos e semicondutores',
+        'Laboratórios de análise e pesquisa',
+        'Indústria farmacêutica — água purificada USP',
+        'Processos de pintura e revestimento por eletrodeposição',
+      ],
+      benefits: [
+        ['Alta pureza garantida', 'Condutividade < 0,1 µS/cm em leito misto.'],
+        ['Regeneração no local', 'Sistema regenera com ácido e base — sem troca de resinas.'],
+        ['Controle automático', 'Regeneração por condutividade, temporizador ou volume.'],
+        ['Custo previsível', 'Consumo de reagentes proporcional ao volume produzido.'],
+      ],
+    },
+    'abrandamento': {
+      name: 'Abrandamento da Água',
+      category: 'Tratamento de Dureza',
+      short: 'Elimina totalmente a dureza da água (Ca²⁺ e Mg²⁺) prevenindo incrustações em caldeiras, lavanderias e torres. Sistema automático em skid.',
+      image: 'images/sistemas/osmose-4.jpg',
+      desc: 'O abrandamento é o processo de remoção de íons de cálcio (Ca²⁺) e magnésio (Mg²⁺) responsáveis pela dureza da água — principal causa de incrustações em caldeiras, tubulações, trocadores de calor, lavanderias e torres de resfriamento. O sistema utiliza resinas catiônicas na forma sódica (Na⁺) que trocam Ca²⁺ e Mg²⁺ por Na⁺, não percebido pelo paladar e não causador de incrustações. A regeneração é simples — salmoura de cloreto de sódio (NaCl) — e pode ser programada por temporizador, volume ou condutividade. A PH Águas fornece sistemas desde 0,5 m³/h para residências até 100 m³/h para grandes indústrias.',
+      aboutTitle: 'Como o abrandamento elimina a dureza',
+      specs: [
+        ['Resina utilizada', 'SAC Sódica (Na⁺) — ácido forte'],
+        ['Remoção de dureza', '> 99% (saída ≈ 0 mg/L CaCO₃)'],
+        ['Regenerante', 'Cloreto de sódio — sal industrial'],
+        ['Capacidade de troca', '≥ 45 g CaCO₃ / litro de resina'],
+        ['Frequência regeneração', 'Por volume ou temporizador (automático)'],
+        ['Temperatura', 'Até 60°C (com resina adequada)'],
+        ['Controle', 'Válvula automática Clack, Pentair ou Fleck'],
+        ['Skid', 'Modular, plug-and-play, instalação rápida'],
+      ],
+      steps: [
+        ['Entrada da água dura', 'Água com Ca²⁺ e Mg²⁺ entra pelo topo do vaso de pressão PRFV ou aço.'],
+        ['Troca iônica', 'A resina catiônica Na⁺ captura Ca²⁺ e Mg²⁺, liberando Na⁺ na água tratada.'],
+        ['Monitoramento', 'Condutivímetro ou durômetro verifica continuamente a qualidade da água abrandada.'],
+        ['Detecção de saturação', 'Quando a resina atinge capacidade máxima, o controlador inicia regeneração automática.'],
+        ['Retrolavagem', 'Água limpa flui em sentido inverso para soltar os flocos e limpar o leito.'],
+        ['Regeneração com salmoura', 'Solução de NaCl 8–10% percola o leito, trocando Ca²⁺ e Mg²⁺ acumulados por Na⁺.'],
+        ['Enxágue e retorno', 'Enxágue final remove excesso de sal e o sistema retorna automaticamente ao serviço.'],
+      ],
+      uses: [
+        'Caldeiras de vapor — prevenção de incrustações e explosões',
+        'Lavanderias industriais e hospitalares — economia de sabão e proteção de roupas',
+        'Torres de resfriamento — controle de ciclos de concentração',
+        'Trocadores de calor e condensadores industriais',
+        'Restaurantes, hotéis e serviços de alimentação',
+        'Residências com água dura — proteção de chuveiros e eletrodomésticos',
+      ],
+      benefits: [
+        ['Proteção total de equipamentos', 'Elimina 100% da dureza, impedindo incrustações.'],
+        ['Automático 24h', 'Regeneração automática sem intervenção manual.'],
+        ['Baixo custo de sal', 'Regenerante barato e amplamente disponível.'],
+        ['Rápida instalação', 'Sistema em skid — instalação em 1 dia.'],
+      ],
+    },
+    'remocao-ferro': {
+      name: 'Remoção de Ferro, Manganês e Metais Pesados',
+      category: 'Filtração Natural',
+      short: 'Remove ferro, manganês, amônia e metais pesados com leitos de Zeólita Clinoptilolita. Processo ecológico sem produtos químicos.',
+      image: 'images/sistemas/osmose-reversa-2.png',
+      desc: 'A remoção de ferro e manganês é essencial quando a água apresenta coloração amarela/laranja (ferro) ou preta/marrom (manganês), além de odor metálico e manchas em roupas e equipamentos. A PH Águas utiliza Zeólita Clinoptilolita — mineral natural de origem vulcânica com alta seletividade iônica — como meio filtrante principal. A zeólita adsorve e troca ferro, manganês, amônia e metais pesados sem uso de produtos químicos agressivos, é ecologicamente sustentável e não gera passivo ambiental. Para ferro solúvel (ferroso Fe²⁺), o processo inclui etapa de oxidação por aeração ou injeção de ozônio antes da filtração.',
+      aboutTitle: 'Como é feita a remoção de ferro e manganês',
+      specs: [
+        ['Meio filtrante', 'Zeólita Clinoptilolita (mineral vulcânico natural)'],
+        ['Ferro removido', 'Fe²⁺ (ferroso) e Fe³⁺ (férrico) — até 50 mg/L'],
+        ['Manganês removido', 'Mn²⁺ — até 5 mg/L'],
+        ['Amônia removida', 'NH₄⁺ — até 10 mg/L'],
+        ['Metais pesados', 'Pb, Cd, Cu, Zn (seletividade iônica)'],
+        ['Vaso filtrante', 'PRFV (fibra de vidro reforçada com poliéster)'],
+        ['Controle', 'Manual ou automático com válvula temporizada'],
+        ['Retrolavagem', 'Automática por temporizador ou diferencial de pressão'],
+      ],
+      steps: [
+        ['Pré-aeração (Fe²⁺)', 'Ferro solúvel (Fe²⁺) é oxidado a Fe³⁺ por aeração em torre, injeção de ar ou ozônio para facilitar sua captura.'],
+        ['Filtração em zeólita', 'A água percola o leito de zeólita Clinoptilolita que adsorve e retém ferro, manganês, amônia e metais.'],
+        ['Retrolavagem', 'Periodicamente o leito é retrolavado em contracorrente para remoção dos sólidos retidos e regeneração do meio.'],
+        ['Monitoramento', 'Análise periódica de ferro e manganês na água tratada confirma eficiência do sistema.'],
+        ['Pós-tratamento', 'Desinfecção com cloro ou UV para garantia microbiológica da água filtrada.'],
+      ],
+      uses: [
+        'Poços artesianos com alto teor de ferro e manganês',
+        'Residências, sítios e fazendas com água de poço',
+        'Hotéis e pousadas em regiões com água ferrosa',
+        'Indústrias com restrições de ferro na água de processo',
+        'ETAs de pequeno porte para comunidades rurais',
+        'Proteção de membranas de osmose reversa contra ferro',
+      ],
+      benefits: [
+        ['Sem produtos químicos', 'Zeólita natural — processo limpo e ecológico.'],
+        ['Alta eficiência', 'Remove ferro, Mn, amônia e metais em um único leito.'],
+        ['Durável', 'Zeólita com vida útil de mais de 10 anos.'],
+        ['Simples manutenção', 'Retrolavagem automática, sem regenerantes perigosos.'],
+      ],
+    },
+    'desinfeccao-uv': {
+      name: 'Desinfecção por Ultravioleta (UV)',
+      category: 'Desinfecção Física',
+      short: 'Esterilização microbiológica sem cloro. Comprimento de onda 240–280 nm elimina 99,99% de bactérias, vírus e Giardia sem subprodutos tóxicos.',
+      image: 'images/sistemas/reuso.jpg',
+      desc: 'A desinfecção por ultravioleta (UV) é uma alternativa ecológica e eficaz à cloração química. O sistema utiliza lâmpadas germicidas de mercúrio de baixa pressão ou LED UV que emitem radiação no comprimento de onda de 240–280 nm — faixa ideal para danificar o DNA e RNA dos micro-organismos, impedindo sua reprodução e causando sua inativação permanente. O processo não gera subprodutos químicos carcinogênicos como trihalometanos (THMs), é seguro para qualquer pH e não altera sabor, odor ou cor da água. Compatível com qualquer sistema de tratamento existente.',
+      aboutTitle: 'Como a UV inativa micro-organismos',
+      specs: [
+        ['Comprimento de onda', '240–280 nm (germicida)'],
+        ['Dose mínima', '40 mJ/cm² (padrão NSF/ANSI 55-A)'],
+        ['Eficácia', '> 99,99% contra bactérias e vírus (log 4)'],
+        ['Material do reator', 'Aço inoxidável AISI 316L'],
+        ['Vida útil da lâmpada', '9.000–12.000 horas'],
+        ['Perda de carga', '< 0,5 bar'],
+        ['Temperatura', '5–40°C'],
+        ['Monitoramento', 'Sensor UV online com alarme de falha'],
+      ],
+      steps: [
+        ['Pré-filtração', 'A água deve ter turbidez < 1 NTU e ferro < 0,3 mg/L para máxima eficiência da UV.'],
+        ['Câmara UV', 'A água passa pela câmara de inox onde é irradiada por lâmpadas germicidas ou LEDs UV.'],
+        ['Inativação do DNA', 'A radiação UV penetra na célula do micro-organismo e danifica irreversivelmente seu DNA/RNA.'],
+        ['Monitoramento', 'Sensor UV online monitora intensidade da lâmpada e aciona alarme se a dose cair abaixo do mínimo.'],
+        ['Pós-tratamento', 'Para sistemas de distribuição longos, cloro residual mínimo pode ser adicionado após a UV.'],
+      ],
+      uses: [
+        'Desinfecção de água potável sem cloro — piscinas naturais, spas e resorts',
+        'Indústria alimentícia — água de processo sem trihalometanos',
+        'Farmacêutica e biotecnologia — esterilização de água purificada',
+        'Aquicultura e piscicultura — controle de patógenos sem produtos químicos',
+        'Hospitais e clínicas — prevenção de Legionella em circuitos de água',
+        'Pré-tratamento de sistemas de osmose reversa — redução de biofouling',
+      ],
+      benefits: [
+        ['Sem cloro', 'Não forma THMs ou outros subprodutos carcinogênicos.'],
+        ['Instantâneo', 'Desinfecção em segundos sem tempo de contato.'],
+        ['Eficaz contra Giardia', 'Elimina cistos resistentes ao cloro.'],
+        ['Baixo custo operacional', 'Apenas troca de lâmpada anual.'],
+      ],
+    },
+    'ozonio': {
+      name: 'Geração de Ozônio e Oxidação Avançada',
+      category: 'Desinfecção Avançada',
+      short: 'O ozônio é 200× mais eficiente que o cloro. Geração automática no local de uso. Elimina E. coli, Salmonela, Cryptosporidium e Legionella.',
+      image: 'images/sistemas/osmose-reversa.jpg',
+      desc: 'O ozônio (O₃) é o desinfetante mais potente disponível para tratamento de água, com poder de oxidação 200× superior ao cloro. Gerado no próprio local de aplicação a partir do ar ambiente por descarga corona ou UV, o ozônio é um gás instável que se decompõe rapidamente em O₂ sem deixar resíduos tóxicos. É altamente eficaz contra todas as formas de micro-organismos patogênicos, incluindo Cryptosporidium parvum e Giardia (resistentes ao cloro), E. coli, Salmonela, Legionella e vírus. Além da desinfecção, o ozônio oxida ferro solúvel, manganês, sulfetos e compostos orgânicos, melhorando cor, odor e sabor da água.',
+      aboutTitle: 'Como o ozônio desinfecta e purifica a água',
+      specs: [
+        ['Poder oxidante', '2,07 V (vs. 1,36 V do cloro)'],
+        ['Eficiência vs. cloro', '200× maior — dose menor necessária'],
+        ['Produção', 'Descarga corona a partir do ar ambiente'],
+        ['Concentração', '5–15 mg/L no gás (6–12% p/p)'],
+        ['Tempo de contato', '5–30 minutos (depende do alvo)'],
+        ['Subprodutos', 'Nenhum — decompõe em O₂'],
+        ['Micro-organismos', 'Bactérias, vírus, fungos, Giardia, Crypto'],
+        ['Monitoramento', 'Sensor de O₃ residual online'],
+      ],
+      steps: [
+        ['Geração de ozônio', 'Gerador por descarga corona transforma O₂ do ar comprimido seco em O₃ com alta eficiência.'],
+        ['Injeção e contato', 'O₃ é injetado na água por difusores de bolha fina ou venturi para máximo contato gás-líquido.'],
+        ['Câmara de contato', 'A água ozonizada permanece em câmara de contato por 5–30 minutos para atingir log de inativação desejado.'],
+        ['Oxidação de contaminantes', 'Ferro, manganês, sulfetos e compostos orgânicos são oxidados e precipitados para posterior filtração.'],
+        ['Destruição de ozônio residual', 'O₃ residual é destruído por carvão ativado ou UV antes da distribuição — sem sabor ou odor.'],
+        ['Monitoramento online', 'Sensor de O₃ residual garante dosagem adequada e previne excesso.'],
+      ],
+      uses: [
+        'Desinfecção de água potável em municípios — substituição ao cloro',
+        'Indústria alimentícia e bebidas — esterilização sem resíduos',
+        'Piscinas naturais e resorts — água cristalina sem cloro',
+        'Hospitais — prevenção de Legionella em circuitos de água quente',
+        'Tratamento de efluentes industriais — oxidação de compostos recalcitrantes',
+        'Aquicultura e processamento de frutos do mar',
+      ],
+      benefits: [
+        ['Mais potente que cloro', '200× mais eficiente em menor concentração.'],
+        ['Sem resíduos', 'Decompõe em O₂ puro — nenhum subproduto.'],
+        ['Produção local', 'Gerado no local — sem compra ou estoque de cloro.'],
+        ['Multifuncional', 'Desinfeta, oxida ferro/Mn e melhora cor e odor.'],
+      ],
+    },
+    'upw-wfi': {
+      name: 'Água Ultrapura — UPW e WFI',
+      category: 'Alta Pureza',
+      short: 'Abastecimento contínuo de água ultrapura com condutividade até 16 MΩ/cm. Conforme USP e EP para farmacêutica, eletrônica e laboratórios.',
+      image: 'images/equipamentos/purificadores.jpg',
+      desc: 'Os sistemas de geração de água UPW (Ultra Pure Water) e WFI (Water for Injection) são os mais sofisticados em tratamento de água, produzindo água com condutividade de 18,2 MΩ/cm (resistividade máxima) e teor de TOC < 10 ppb. São obrigatórios na indústria farmacêutica (USP/EP), fabricação de semicondutores e eletrônica de precisão. O processo integra múltiplas tecnologias: osmose reversa duplo passo, desgaseificação por membrana (GTM), eletrodeionização (CEDI), ultrafiltração e distribuição em loop sanitário com proteção UV.',
+      aboutTitle: 'Como se produz água ultrapura',
+      specs: [
+        ['Condutividade UPW', '< 0,1 µS/cm (> 10 MΩ/cm)'],
+        ['Resistividade máxima', '18,2 MΩ/cm (25°C)'],
+        ['TOC', '< 10 ppb'],
+        ['Bactérias', '< 1 UFC/100 mL (WFI ≈ 0)'],
+        ['Endotoxinas', '< 0,25 EU/mL (WFI)'],
+        ['Temperatura loop WFI', '80°C (circulação contínua)'],
+        ['Norma', 'USP < 1231 >, EP 0008, ISO 14644'],
+        ['Processo', 'OR duplo passo + GTM + CEDI + UF + UV'],
+      ],
+      steps: [
+        ['Pré-tratamento', 'Abrandamento, filtração de sedimentos, carvão ativado e microfiltração protegem as etapas subsequentes.'],
+        ['Osmose reversa 1° passo', 'Remoção de 95–98% dos sais, compostos orgânicos e micro-organismos.'],
+        ['Osmose reversa 2° passo', 'Purificação adicional para condutividade < 1 µS/cm e rejeição de sílica > 99%.'],
+        ['Desgaseificação (GTM)', 'Membrana de desgaseificação remove CO₂ dissolvido e gases residuais.'],
+        ['CEDI — Eletrodeionização', 'Corrente elétrica + resinas de leito misto reduzem condutividade a < 0,05 µS/cm de forma contínua sem regenerantes.'],
+        ['Ultrafiltração', 'Membrana de 6–10 kDa remove endotoxinas, partículas e bactérias para qualidade WFI.'],
+        ['Loop sanitário', 'Distribuição em loop contínuo (80°C para WFI) com UV para manutenção da pureza em todos os pontos de uso.'],
+      ],
+      uses: [
+        'Indústria farmacêutica — WFI para injetáveis e enxágue de equipamentos',
+        'Fabricação de semicondutores, chips e displays',
+        'Laboratórios de análise de alta precisão',
+        'Indústria de biotecnologia e produção de biofármacos',
+        'Hospitais de alta complexidade e oncologia',
+        'Pesquisa científica que exige zero contaminação',
+      ],
+      benefits: [
+        ['Conformidade regulatória', 'Atende USP, EP, ANVISA e ISO para água farmacêutica.'],
+        ['Sem regenerantes', 'CEDI dispensa HCl e NaOH — operação contínua.'],
+        ['Loop sanitário', 'Circulação contínua elimina risco de contaminação biológica.'],
+        ['Monitoramento total', 'TOC, condutividade, endotoxinas e temperatura online.'],
+      ],
+    },
+    'polarizadores': {
+      name: 'Polarizadores Magnéticos',
+      category: 'Sem Produtos Químicos',
+      short: 'Tecnologia magnética instalada externamente nas tubulações. Sem energia elétrica, sem produtos químicos. Previne incrustações em caldeiras e torres.',
+      image: 'images/equipamentos/valvulas.jpg',
+      desc: 'Os polarizadores magnéticos são dispositivos instalados na superfície externa das tubulações que criam um campo magnético transversal ao fluxo de água. Este campo altera as propriedades físico-químicas dos sais dissolvidos — principalmente carbonato de cálcio (CaCO₃) — modificando sua forma de cristalização de calcita (incrustante) para aragonita (não aderente), que é arrastada pelo fluxo sem se depositar nas superfícies. A tecnologia não requer energia elétrica, produtos químicos, obras civis ou manutenção preventiva. É uma solução complementar ou alternativa para sistemas onde o uso de produtos químicos é indesejado ou restrito.',
+      aboutTitle: 'Como o campo magnético previne incrustações',
+      specs: [
+        ['Princípio', 'Campo magnético transversal ao fluxo'],
+        ['Consumo de energia', 'Zero — sem fonte elétrica'],
+        ['Produtos químicos', 'Nenhum'],
+        ['Instalação', 'Externa à tubulação — sem corte de linha'],
+        ['Materiais', 'Magnetos de neodímio + estrutura em aço inox'],
+        ['Compatibilidade', 'Todos os tipos de tubulação — PVC, aço, PRFV'],
+        ['Vida útil', 'Ilimitada — magnetos permanentes'],
+        ['Temperatura', 'Até 90°C sem perda de eficiência'],
+      ],
+      steps: [
+        ['Análise da água', 'Avaliação do tipo e concentração de sais para dimensionamento correto do polarizador.'],
+        ['Instalação externa', 'Os magnetos são instalados ao redor da tubulação sem necessidade de corte ou obras hidráulicas.'],
+        ['Alteração cristalográfica', 'O campo magnético muda a morfologia dos cristais de CaCO₃ de calcita (aderente) para aragonita (não aderente).'],
+        ['Arraste dos cristais', 'Os cristais de aragonita em suspensão são arrastados pelo fluxo de água sem depositar nas superfícies.'],
+        ['Limpeza gradual', 'Incrustações existentes se desprendem gradualmente ao longo de semanas de operação.'],
+      ],
+      uses: [
+        'Caldeiras de vapor — prevenção de incrustação nos tubos',
+        'Torres de resfriamento — redução de depósitos em recheios e bocais',
+        'Trocadores de calor — manutenção de eficiência térmica',
+        'Tubulações de água quente em prédios e hotéis',
+        'Chuveiros e aquecedores elétricos residenciais',
+        'Sistemas onde químicos são proibidos — alimentos e farmacêutica',
+      ],
+      benefits: [
+        ['Zero energia', 'Instalado uma vez — funciona para sempre sem custo.'],
+        ['Sem manutenção', 'Magnetos permanentes — vida útil ilimitada.'],
+        ['Fácil instalação', 'Sem corte de linha ou parada de operação.'],
+        ['Ecológico', 'Elimina ou reduz uso de antiincrustantes químicos.'],
+      ],
+    },
+    'reuso': {
+      name: 'Sistemas de Reúso de Água',
+      category: 'Sustentabilidade',
+      short: 'Transforma efluentes sanitários e industriais tratados em água reutilizável. Redução de até 40% no consumo de água potável.',
+      image: 'images/sistemas/reuso.jpg',
+      desc: 'Os sistemas de reúso de água tratam efluentes sanitários (esgoto doméstico) ou industriais para produzir água de qualidade adequada para fins não potáveis: descarga de vasos sanitários, irrigação de jardins, lavagem de pisos, torres de resfriamento, lavagem de veículos e outros usos. A PH Águas utiliza as tecnologias MBBR (Moving Bed Biofilm Reactor) e Ultrafiltração (UF) para tratamento biológico avançado seguido de polimento físico, produzindo efluente com qualidade muito superior ao mínimo exigido pela ABNT NBR 13969. Em condomínios residenciais, o reúso pode reduzir o consumo de água potável em até 40%.',
+      aboutTitle: 'Como o sistema de reúso trata o efluente',
+      specs: [
+        ['Tecnologia biológica', 'MBBR — Reator de Biofilme em Leito Móvel'],
+        ['Polimento físico', 'Ultrafiltração (UF) — membrana 0,02 µm'],
+        ['Qualidade do efluente', 'Conforme ABNT NBR 13969 e NBR 15527'],
+        ['Redução do consumo', 'Até 40% de água potável economizada'],
+        ['DBO efluente tratado', '< 10 mg/L'],
+        ['Turbidez', '< 2 NTU'],
+        ['Coliformes', '< 200 NMP/100 mL (reúso restrito)'],
+        ['Aplicações', 'Vasos sanitários, irrigação, lavagem, torres'],
+      ],
+      steps: [
+        ['Gradeamento', 'Remoção de sólidos grosseiros do esgoto bruto por grade e peneira.'],
+        ['MBBR biológico', 'Micro-organismos aeróbios aderidos a mídias plásticas (carriers) degradam matéria orgânica dissolvida.'],
+        ['Decantação secundária', 'Separação de lodo biológico da água tratada por decantação ou flotação.'],
+        ['Ultrafiltração', 'Membrana de 0,02 µm retém bactérias, vírus, SST e turbidez — efluente cristalino.'],
+        ['Desinfecção', 'Cloro ou UV garantem padrão microbiológico para reúso não potável.'],
+        ['Distribuição em rede dupla', 'Rede hidráulica separada distribui água de reúso para pontos específicos (vasos, irrigação).'],
+      ],
+      uses: [
+        'Condomínios residenciais — descarga de vasos e irrigação',
+        'Shoppings e centros comerciais — limpeza e sanitários',
+        'Hotéis e resorts — jardins e resfriamento de ar',
+        'Indústrias — água de processo de menor grau de pureza',
+        'Aeroportos e hospitais — serviços gerais',
+        'Cidades — irrigação de parques e vias públicas',
+      ],
+      benefits: [
+        ['Economia real', 'Reduz conta de água potável em até 40%.'],
+        ['ROI rápido', 'Retorno do investimento em 2–5 anos.'],
+        ['Conformidade', 'Atende NBR 13969 e legislação ambiental.'],
+        ['Sustentabilidade', 'Valoriza o imóvel e contribui com ESG.'],
+      ],
+    },
+    'ete': {
+      name: 'Estação de Tratamento de Efluentes (ETE)',
+      category: 'Tratamento de Efluentes',
+      short: 'Sistemas compactos e modulares para efluentes domésticos e industriais. Conformidade com CONAMA 430 e CETESB. Materiais PRFV ou PP.',
+      image: 'images/sistemas/ete.jpg',
+      desc: 'A Estação de Tratamento de Efluentes (ETE) realiza o tratamento dos efluentes líquidos antes de seu descarte em corpo hídrico ou rede coletora pública. A PH Águas projeta ETEs compactas e modulares para efluentes sanitários (DBO, SST, nitrogênio, fósforo) e industriais (óleos, graxas, metais, compostos orgânicos específicos). Os sistemas são pré-montados em PRFV ou PP para fácil instalação, transporte e ampliação. Todo o projeto considera as concentrações de descarte exigidas pelo CONAMA 430, CETESB e legislações estaduais, com laudo técnico periódico para comprovação.',
+      aboutTitle: 'Etapas do tratamento de efluentes',
+      specs: [
+        ['Capacidade', '1–500 m³/dia (projetos especiais: maior)'],
+        ['Materiais', 'PRFV, PP, aço inox, concreto'],
+        ['Tratamento primário', 'Gradeamento + desarenação + decantação'],
+        ['Tratamento biológico', 'Lodo ativado, MBBR, UASB, lagoas'],
+        ['Tratamento terciário', 'Filtração + desinfecção (UV, cloro ou ozônio)'],
+        ['Norma', 'CONAMA 430/2011, CETESB D7.013'],
+        ['DBO efluente', '< 60 mg/L (CONAMA) / < 20 mg/L (rigoroso)'],
+        ['Instalação', 'Pré-montado em módulos — 1 semana de instalação'],
+      ],
+      steps: [
+        ['Tratamento preliminar', 'Grade, caixa de areia e medidor de vazão removem sólidos grosseiros e areia.'],
+        ['Tratamento primário', 'Decantador primário remove sólidos sedimentáveis e parte da DBO por sedimentação.'],
+        ['Tratamento biológico (secundário)', 'Micro-organismos aeróbios e anaeróbios degradam a matéria orgânica dissolvida.'],
+        ['Decantação secundária', 'Lodo biológico é separado do efluente clarificado e retornado ao reator.'],
+        ['Tratamento terciário', 'Filtração, remoção de nutrientes (N e P) e desinfecção para atingir padrões de descarte ou reúso.'],
+        ['Desidratação de lodo', 'Lodo gerado é desidratado por filtro-prensa ou centrífuga antes do destino final.'],
+        ['Monitoramento e laudo', 'Análises físico-químicas e microbiológicas periódicas com laudo para conformidade ambiental.'],
+      ],
+      uses: [
+        'Indústrias alimentícias, frigoríficos e laticínios',
+        'Hotéis, resorts e empreendimentos fora da rede pública',
+        'Condomínios e loteamentos sem saneamento público',
+        'Clínicas, hospitais e laboratórios',
+        'Posto de lavagem de veículos e oficinas mecânicas',
+        'Indústrias de papel, têxtil e galvânica',
+      ],
+      benefits: [
+        ['Conformidade ambiental', 'Atende CONAMA, CETESB e legislações estaduais.'],
+        ['Compacto e modular', 'Fácil transporte, instalação e ampliação.'],
+        ['Laudo técnico', 'Documentação para licença ambiental e IBAMA.'],
+        ['Reúso possível', 'Efluente tratado pode ser reaproveitado.'],
+      ],
+    },
+    'caldeiras': {
+      name: 'Tratamento de Água para Caldeiras e Vapor',
+      category: 'Serviço Industrial',
+      short: 'Programa completo de tratamento químico e monitoramento para caldeiras de vapor. Análises em campo e laboratório próprio. Prevenção de corrosão, incrustação e carryover.',
+      image: 'images/sistemas/reatores.jpg',
+      desc: 'O tratamento da água de caldeiras é essencial para garantir a segurança da operação, eficiência energética e vida útil do equipamento. A ausência de tratamento adequado causa incrustações nos tubos (redução de 1 mm de incrustação aumenta consumo de energia em 10%), corrosão interna por oxigênio dissolvido e ácidos, e carryover de água no vapor (danos à turbina). A PH Águas executa programas completos: análise da água de reposição, dosagem de produtos (sequestrante de O₂, antiincrustante fosfato, alcalinizante e antiespumante), análises semanais/quinzenais/mensais em campo e coleta para laboratório próprio.',
+      aboutTitle: 'Por que tratar a água da caldeira',
+      specs: [
+        ['pH da água de caldeira', '10,5 a 12,0'],
+        ['Alcalinidade (P)', '200–400 mg/L CaCO₃'],
+        ['Fosfato residual', '20–40 mg/L PO₄'],
+        ['Dureza da água tratada', '0 mg/L (abrandada)'],
+        ['Cloretos', '< 200 mg/L (dependendo da pressão)'],
+        ['Silicatos', '< 150 mg/L SiO₂'],
+        ['TDS por purga', 'Controlado por condutividade'],
+        ['Frequência de análise', 'Semanal, quinzenal ou mensal'],
+      ],
+      steps: [
+        ['Análise da água de reposição', 'Coleta e análise de pH, dureza, alcalinidade, cloretos e silicatos para dimensionar o tratamento.'],
+        ['Abrandamento', 'Remoção de Ca²⁺ e Mg²⁺ por resinas catiônicas para evitar incrustações nos tubos.'],
+        ['Dosagem de sequestrante de O₂', 'Sulfito de sódio catalisado ou hidrazina remove o oxigênio dissolvido corrosivo.'],
+        ['Dosagem de antiincrustante', 'Fosfato-polímero precipita sílica e mantém superfícies limpas.'],
+        ['Controle de purga', 'Purga de fundo e de superfície é controlada por condutividade para remover TDS acumulado.'],
+        ['Análise periódica em campo', 'Técnico da PH Águas realiza análises de pH, alcalinidade, fosfato e dureza na visita técnica.'],
+        ['Laudo técnico', 'Relatório periódico com histórico de parâmetros, recomendações e comprovação de conformidade.'],
+      ],
+      uses: [
+        'Caldeiras flamotubulares e aquatubulares de baixa e média pressão',
+        'Geradores de vapor elétricos e a óleo em hospitais e lavanderias',
+        'Indústrias de alimentos, bebidas, cosméticos e farmacêutica',
+        'Têxteis e curtumes que utilizam vapor no processo',
+        'Caldeiras de hotéis e grandes edificações',
+        'Usinas de biomassa e cogeração',
+      ],
+      benefits: [
+        ['Segurança', 'Previne explosões por incrustação severa e corrosão.'],
+        ['Economia de energia', 'Tubos limpos = menor consumo de combustível.'],
+        ['Maior vida útil', 'Caldeiras bem tratadas duram 20+ anos.'],
+        ['Conformidade NR-13', 'Documentação para inspeção de vasos de pressão.'],
+      ],
+    },
+    'torres': {
+      name: 'Tratamento de Torres de Resfriamento e Chillers',
+      category: 'Serviço Industrial',
+      short: 'Controle de incrustação, corrosão e biofouling em torres e chillers. Inspeção com documentação fotográfica e laudo laboratorial periódico.',
+      image: 'images/sistemas/osmose-3.jpg',
+      desc: 'O tratamento de água em torres de resfriamento e chillers é fundamental para manter a eficiência do sistema de refrigeração e prevenir falhas. A circulação contínua com evaporação concentra sais e cria ambiente ideal para crescimento de micro-organismos, incluindo Legionella pneumophila. A PH Águas executa programas de tratamento completos com: produtos químicos (antiincrustante, anticorrosivo multimetal e biocida), análises em campo na frequência contratada, inspeção com documentação fotográfica, laudo laboratorial periódico e disponibilização de produtos em regime de comodato.',
+      aboutTitle: 'Por que as torres precisam de tratamento',
+      specs: [
+        ['Ciclos de concentração', '3–6 (controlados por purga)'],
+        ['pH da água de circulação', '7,0–8,5'],
+        ['Dureza', '< 500 mg/L CaCO₃ (controlada)'],
+        ['Ferro total', '< 1,0 mg/L'],
+        ['Biocida residual', 'Conforme protocolo de aplicação'],
+        ['Controle de Legionella', 'Conforme ABNT NBR 16.083'],
+        ['Frequência de análise', 'Semanal, quinzenal ou mensal'],
+        ['Documentação', 'Laudo fotográfico e relatório laboratorial'],
+      ],
+      steps: [
+        ['Análise inicial', 'Coleta da água da torre para análise física, química e microbiológica no laboratório próprio PH Águas.'],
+        ['Dosagem de antiincrustante', 'Polímero dispersante controla formação de carbonato, sulfato e sílica nos recheios e trocadores.'],
+        ['Dosagem de anticorrosivo', 'Inibidor multimetal (NR5) protege aço, cobre, alumínio e ligas dos equipamentos.'],
+        ['Dosagem de biocida', 'Aplicação de biocida não oxidante (BIO 03) em choque periódico controla biofilme e Legionella.'],
+        ['Controle de purga', 'Purga automática por condutividade mantém ciclos de concentração no nível programado.'],
+        ['Inspeção técnica', 'Técnico realiza análises em campo, inspeção visual com fotos e coleta para laboratório.'],
+        ['Laudo e relatório', 'Relatório mensal com histórico de parâmetros, fotos de inspeção e recomendações técnicas.'],
+      ],
+      uses: [
+        'Torres de resfriamento industriais — químicas, alimentícias e têxteis',
+        'Chillers de água gelada em shopping centers, hospitais e hotéis',
+        'Sistemas de ar condicionado central de grande porte',
+        'Trocadores de calor e condensadores industriais',
+        'Processos industriais com resfriamento contínuo de água',
+        'Conformidade com regulamentações de Legionella',
+      ],
+      benefits: [
+        ['Eficiência mantida', 'Recheios e trocadores limpos = menor consumo de energia.'],
+        ['Segurança Legionella', 'Protocolo conforme NBR 16.083 e normas de saúde pública.'],
+        ['Documentação completa', 'Histórico técnico para auditorias e inspeções regulatórias.'],
+        ['Comodato disponível', 'Equipamentos e produtos sem investimento inicial do cliente.'],
+      ],
+    },
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const id = new URLSearchParams(location.search).get('id') || '';
+    const s = SISTEMAS[id];
+    if (!s) {
+      document.getElementById('d-name').textContent = 'Sistema não encontrado';
+      return;
+    }
+    document.title = s.name + ' — PH Águas';
+    document.getElementById('d-breadcrumb').textContent = s.name;
+    document.getElementById('d-category').textContent = s.category;
+    document.getElementById('d-name').textContent = s.name;
+    document.getElementById('d-short').textContent = s.short;
+    document.getElementById('d-chips').innerHTML = s.category.split(' / ').concat(
+      s.specs.slice(0,3).map(r => r[1])
+    ).slice(0,4).map(c => `<span class="detail-hero-chip">${c}</span>`).join('');
+    const waMsg = encodeURIComponent('Olá, gostaria de solicitar informações sobre o sistema: ' + s.name);
+    document.getElementById('d-wa').href = 'https://wa.me/5511910301546?text=' + waMsg;
+
+    const wrap = document.getElementById('d-img-wrap');
+    if (s.image) {
+      const img = document.createElement('img');
+      img.src = s.image; img.alt = s.name;
+      img.onerror = () => { img.style.display='none'; document.getElementById('d-placeholder').style.display='flex'; };
+      wrap.innerHTML = ''; wrap.appendChild(img);
+    }
+
+    document.getElementById('d-about-title').textContent = s.aboutTitle;
+    document.getElementById('d-desc').textContent = s.desc;
+    document.getElementById('d-specs').innerHTML = s.specs.map(([k,v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+    document.getElementById('d-steps').innerHTML = s.steps.map(([t,d],i) =>
+      `<div class="detail-step"><div class="detail-step-num">${String(i+1).padStart(2,'0')}</div><div class="detail-step-content"><strong>${t}</strong><span>${d}</span></div></div>`
+    ).join('');
+    document.getElementById('d-uses').innerHTML = s.uses.map(u => `<li>${u}</li>`).join('');
+    document.getElementById('d-benefits').innerHTML = s.benefits.map(([t,d]) =>
+      `<div class="detail-benefit"><strong>${t}</strong><span>${d}</span></div>`
+    ).join('');
+  });
+  </script>
+</body>
+</html>

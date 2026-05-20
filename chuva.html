@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captacao de Agua de Chuva &mdash; PH Aguas</title>
+  <meta name="description" content="Sistemas completos de captacao e reaproveitamento de agua de chuva para residencias, predios, comercios e escolas. Entenda como funciona cada etapa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    /* ─ HOW IT WORKS ─ */
+    .how-section { background: var(--blue-dark); padding: 64px 0; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 40px; }
+    @media(max-width:768px){ .how-grid { grid-template-columns: 1fr; gap: 0; } }
+    .how-step {
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+      padding: 32px 28px; position: relative;
+    }
+    .how-step:first-child { border-radius: var(--radius) 0 0 var(--radius); }
+    .how-step:last-child { border-radius: 0 var(--radius) var(--radius) 0; }
+    .how-num { font-family: var(--font-display); font-size: 48px; font-weight: 800; color: rgba(255,255,255,.1); line-height: 1; margin-bottom: 12px; }
+    .how-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,.12); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+    .how-icon svg { width: 22px; height: 22px; stroke: rgba(255,255,255,.85); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .how-title { font-size: 15px; font-weight: 700; color: white; margin-bottom: 8px; }
+    .how-desc { font-size: 13px; color: rgba(255,255,255,.7); line-height: 1.6; }
+
+    /* ─ APPLICATION CARDS ─ */
+    .app-section { padding: 80px 0; }
+    .app-section:nth-child(even) { background: var(--gray-bg); }
+    .app-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    @media(max-width:900px){ .app-layout { grid-template-columns: 1fr; gap: 32px; } }
+    .app-img-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .app-img-wrap img { width: 100%; height: 380px; object-fit: cover; display: block; }
+    .app-img-badge {
+      position: absolute; bottom: 16px; left: 16px;
+      background: var(--blue); color: white; border-radius: var(--radius);
+      padding: 8px 16px; font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .06em;
+    }
+    .app-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--blue); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .app-tag::before { content: ''; display: block; width: 20px; height: 2px; background: var(--blue); }
+    .app-title { font-family: var(--font-display); font-size: clamp(22px, 2.5vw, 30px); font-weight: 800; color: var(--text-dark); margin-bottom: 12px; }
+    .app-intro { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 28px; }
+    .app-steps { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+    .app-step { display: flex; gap: 14px; align-items: flex-start; padding: 16px; background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius); }
+    .app-step-num { width: 28px; height: 28px; border-radius: 50%; background: var(--blue); color: white; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .app-step-body strong { display: block; font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+    .app-step-body span { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .app-uses { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 24px; }
+    .app-use { font-size: 13px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .app-use::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
+    .app-saving { background: var(--blue-light); border: 1px solid var(--blue); border-radius: var(--radius); padding: 14px 18px; display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+    .saving-val { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--blue); flex-shrink: 0; }
+    .saving-text { font-size: 13px; color: var(--blue-dark); line-height: 1.5; }
+
+    /* ─ BENEFITS ─ */
+    .benefits-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    @media(max-width:768px){ .benefits-grid { grid-template-columns: 1fr; } }
+    .benefit-card { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius); padding: 24px 20px; text-align: center; }
+    .benefit-icon { width: 48px; height: 48px; background: var(--blue-light); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+    .benefit-icon svg { width: 24px; height: 24px; stroke: var(--blue); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .benefit-title { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .benefit-desc { font-size: 13px; color: var(--text); line-height: 1.55; }
+  </style>
+</head>
+<body class="page-content">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a><span>/</span>
+        <a href="sistemas.html">Sistemas</a><span>/</span>
+        <span>Captacao de Agua de Chuva</span>
+      </div>
+      <h1>Captacao e Reaproveitamento de Agua de Chuva</h1>
+      <p>Entenda como funciona o sistema completo, da coleta ao uso final. Solucoes para casas, predios, comercios e escolas.</p>
+    </div>
+  </div>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how-section">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag" style="color:rgba(255,255,255,.65)">Do telhado ate a torneira</span>
+        <h2 class="section-title" style="color:white">Como funciona o sistema</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,.7);margin:0">Seis etapas simples que transformam a chuva em agua reutilizavel</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-num">01</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24"><path d="M20 16.58A5 5 0 0018 7h-1.26A8 8 0 104 15.25M8 16h.01M12 16h.01M16 16h.01M8 20h.01M12 20h.01M16 20h.01"/></svg></div>
+          <div class="how-title">Coleta no telhado</div>
+          <div class="how-desc">A chuva cai sobre o telhado e e direcionada pelas calhas e tubulacoes de descida ate o sistema de tratamento. A area do telhado define o volume maximo de captacao.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">02</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg></div>
+          <div class="how-title">Filtro de folhas e gravetos</div>
+          <div class="how-desc">Antes de entrar no reservatorio, a agua passa por um filtro grosseiro que retira folhas, galhos e detritos maiores. Isso protege o reservatorio e facilita a manutencao.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">03</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="how-title">Descarte dos primeiros milimetros</div>
+          <div class="how-desc">Os primeiros litros de chuva carregam mais sujeira do telhado. O sistema descarta automaticamente essa agua inicial, garantindo que somente a agua mais limpa entre no reservatorio.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">04</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <div class="how-title">Cisterna de armazenamento</div>
+          <div class="how-desc">A agua filtrada e armazenada em cisterna enterrada ou elevada, protegida de luz solar e contaminacao. O volume e calculado conforme o indice de chuva da regiao e a demanda do imovel.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">05</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M2 12h4M18 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+          <div class="how-title">Bomba e distribuicao</div>
+          <div class="how-desc">Uma bomba automatica envia a agua armazenada para o ponto de uso. O sistema liga e desliga sozinho conforme a demanda, sem necessidade de operacao manual.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-num">06</div>
+          <div class="how-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <div class="how-title">Filtro fino e agua pronta</div>
+          <div class="how-desc">Antes do uso final, a agua passa por um filtro de polipropileno que remove particulas finas. A agua resultante e limpa e segura para usos nao potaveis como descarga, irrigacao e limpeza.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center">
+        <h2 class="section-title">Beneficios do <span>Sistema</span></h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card fade-up">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9 16.5v-9l7.5 4.5-7.5 4.5z"/></svg></div>
+          <div class="benefit-title">Reducao de ate 50% na conta de agua</div>
+          <div class="benefit-desc">Usos nao potaveis como descarga, irrigacao e limpeza representam ate metade do consumo total de agua potavel de um imovel.</div>
+        </div>
+        <div class="benefit-card fade-up" data-delay="80">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/></svg></div>
+          <div class="benefit-title">Sustentabilidade ambiental</div>
+          <div class="benefit-desc">Reduz a pressao sobre os mananciais e sistemas de distribuicao de agua potavel. Contribui com as metas de sustentabilidade da empresa ou condominio.</div>
+        </div>
+        <div class="benefit-card fade-up" data-delay="160">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <div class="benefit-title">Conformidade com norma ABNT NBR 15527</div>
+          <div class="benefit-desc">Nossos sistemas sao projetados conforme a norma tecnica brasileira para aproveitamento de agua de chuva em areas urbanas.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APLICACAO: CASA -->
+  <section class="app-section" id="casa">
+    <div class="container">
+      <div class="app-layout">
+        <div class="app-img-wrap fade-up">
+          <img src="images/chuva-casa.jpg" alt="Sistema de captacao de chuva para casa residencial">
+          <div class="app-img-badge">Residencial</div>
+        </div>
+        <div class="fade-up" data-delay="100">
+          <div class="app-tag">Tipo de imovel</div>
+          <div class="app-title">Casa Residencial</div>
+          <div class="app-intro">Ideal para casas com telhados a partir de 80m². O sistema completo inclui calhas, filtro de entrada, cisterna, bomba automatica e filtro final. Instalacao em 1 a 2 dias com minima obra.</div>
+
+          <div class="app-steps">
+            <div class="app-step">
+              <div class="app-step-num">1</div>
+              <div class="app-step-body">
+                <strong>Calhas ja existentes sao aproveitadas</strong>
+                <span>Se o imovel ja tem calhas instaladas, em muitos casos e possivel aproveita-las. Apenas conectamos o ramal de captacao.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">2</div>
+              <div class="app-step-body">
+                <strong>Filtro de entrada remove folhas e detritos</strong>
+                <span>Um filtro de tela fina instalado na entrada descarta automaticamente a sujeira antes de entrar na cisterna.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">3</div>
+              <div class="app-step-body">
+                <strong>Cisterna enterrada ou em area de servico</strong>
+                <span>Para casas, usamos cisternas de polietileno (500L a 5.000L) ou concreto, instaladas de forma discreta no quintal ou area de servico.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">4</div>
+              <div class="app-step-body">
+                <strong>Bomba liga sozinha quando voce usa a torneira</strong>
+                <span>A bomba pressurizadora entra em acao automaticamente. Voce usa a agua de chuva exatamente como usaria a agua da rede, sem nenhuma diferenca na operacao.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-saving">
+            <div class="saving-val">40%</div>
+            <div class="saving-text"><strong>Economia media em residencias.</strong> Com telhado de 100m², em Sao Paulo voce pode captar cerca de 1.500 litros por mes de chuva moderada.</div>
+          </div>
+
+          <div style="font-weight:600;font-size:13px;color:var(--text-dark);margin-bottom:10px">Usos indicados:</div>
+          <div class="app-uses">
+            <div class="app-use">Descarga de vasos sanitarios</div>
+            <div class="app-use">Irrigacao de jardim</div>
+            <div class="app-use">Lavagem de calcadas</div>
+            <div class="app-use">Lavagem de veiculos</div>
+            <div class="app-use">Lavagem de roupas (uso externo)</div>
+            <div class="app-use">Limpeza geral do imovel</div>
+          </div>
+          <a href="contato.html?interesse=Captacao+Chuva+Casa" class="btn btn-primary">Solicitar Projeto para Minha Casa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APLICACAO: PREDIO -->
+  <section class="app-section" id="predial">
+    <div class="container">
+      <div class="app-layout">
+        <div class="fade-up" data-delay="100">
+          <div class="app-tag">Tipo de imovel</div>
+          <div class="app-title">Predio Residencial</div>
+          <div class="app-intro">Para predios, o sistema precisa ser dimensionado para o numero de unidades e a area total do telhado. A cisterna e geralmente maior (5.000L a 50.000L) e o sistema inclui pressostatos por andar para garantir pressao uniforme.</div>
+
+          <div class="app-steps">
+            <div class="app-step">
+              <div class="app-step-num">1</div>
+              <div class="app-step-body">
+                <strong>Telhado e cobertura coletam a agua</strong>
+                <span>Toda a area de cobertura do predio contribui para a captacao. O sindico nao precisa mudar nada na estrutura existente na maioria dos casos.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">2</div>
+              <div class="app-step-body">
+                <strong>Sistema de dupla filtragem</strong>
+                <span>A agua e filtrada em duas etapas antes de entrar na cisterna, garantindo qualidade adequada para uso nao potavel em areas comuns.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">3</div>
+              <div class="app-step-body">
+                <strong>Cisterna compartilhada no subsolo ou area tecnica</strong>
+                <span>O reservatorio e instalado no subsolo ou na area tecnica do predio. O espaco necessario e calculado conforme o consumo medio do condominio.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">4</div>
+              <div class="app-step-body">
+                <strong>Rede separada apenas para uso nao potavel</strong>
+                <span>Instalamos uma tubulacao separada e identificada em cor diferente para a agua de chuva. Ela abastece descargas e torneiras de limpeza, sem risco de mistura com a agua potavel.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-saving">
+            <div class="saving-val">R$</div>
+            <div class="saving-text"><strong>Economia significativa no condominio.</strong> Em um predio de 50 apartamentos, a economia pode chegar a R$ 1.500 por mes na conta de agua coletiva.</div>
+          </div>
+
+          <div style="font-weight:600;font-size:13px;color:var(--text-dark);margin-bottom:10px">Usos indicados:</div>
+          <div class="app-uses">
+            <div class="app-use">Descarga nos banheiros</div>
+            <div class="app-use">Limpeza de areas comuns</div>
+            <div class="app-use">Irrigacao de jardins</div>
+            <div class="app-use">Lavagem de garagem</div>
+            <div class="app-use">Piscina (reposicao)</div>
+            <div class="app-use">Torres de resfriamento</div>
+          </div>
+          <a href="contato.html?interesse=Captacao+Chuva+Predial" class="btn btn-primary">Solicitar Projeto para Meu Predio</a>
+        </div>
+        <div class="app-img-wrap fade-up" data-delay="60">
+          <img src="images/chuva-predial.jpg" alt="Sistema de captacao de chuva para predio residencial">
+          <div class="app-img-badge">Predial</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APLICACAO: COMERCIAL -->
+  <section class="app-section" id="comercial">
+    <div class="container">
+      <div class="app-layout">
+        <div class="app-img-wrap fade-up">
+          <img src="images/chuva-comercial.jpg" alt="Sistema de captacao de chuva para predio comercial">
+          <div class="app-img-badge">Comercial</div>
+        </div>
+        <div class="fade-up" data-delay="100">
+          <div class="app-tag">Tipo de imovel</div>
+          <div class="app-title">Predio Comercial</div>
+          <div class="app-intro">Escritorios, galpoes e comercios tem alto potencial de economia pois o consumo nao potavel (sanitarios, limpeza, estacionamentos) representa parcela significativa da conta de agua. O retorno do investimento pode ser obtido em 18 a 36 meses.</div>
+
+          <div class="app-steps">
+            <div class="app-step">
+              <div class="app-step-num">1</div>
+              <div class="app-step-body">
+                <strong>Levantamento da area de captacao</strong>
+                <span>Nossa equipe mede o telhado e calcula o volume captavel com base nos dados pluviometricos da regiao. Apresentamos o projeto de viabilidade sem compromisso.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">2</div>
+              <div class="app-step-body">
+                <strong>Sistema de filtragem industrial</strong>
+                <span>Para comercios de maior porte, usamos filtros com maior capacidade de vazao, com retrolavagem automatica para reducao da manutencao.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">3</div>
+              <div class="app-step-body">
+                <strong>Reservatorio dimensionado para o pico de chuva</strong>
+                <span>O volume da cisterna e calculado para armazenar agua suficiente para os periodos de estiagem, aproveitando ao maximo os periodos chuvosos.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">4</div>
+              <div class="app-step-body">
+                <strong>Painel de controle com monitoramento de nivel</strong>
+                <span>O sistema inclui sensor de nivel e painel de controle que alterna automaticamente entre agua de chuva e agua da rede quando o reservatorio esvazia.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-saving">
+            <div class="saving-val">30%</div>
+            <div class="saving-text"><strong>A economia media em predios comerciais.</strong> O retorno do investimento e calculado no projeto e entregue no relatorio tecnico de viabilidade.</div>
+          </div>
+
+          <div style="font-weight:600;font-size:13px;color:var(--text-dark);margin-bottom:10px">Usos indicados:</div>
+          <div class="app-uses">
+            <div class="app-use">Sanitarios coletivos</div>
+            <div class="app-use">Limpeza de estacionamento</div>
+            <div class="app-use">Irrigacao de areas verdes</div>
+            <div class="app-use">Lavagem de fachadas</div>
+            <div class="app-use">Processo industrial (agua bruta)</div>
+            <div class="app-use">Climatizacao e torres</div>
+          </div>
+          <a href="contato.html?interesse=Captacao+Chuva+Comercial" class="btn btn-primary">Solicitar Projeto Comercial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APLICACAO: ESCOLA -->
+  <section class="app-section" id="escola">
+    <div class="container">
+      <div class="app-layout">
+        <div class="fade-up" data-delay="100">
+          <div class="app-tag">Tipo de imovel</div>
+          <div class="app-title">Escolas e Universidades</div>
+          <div class="app-intro">Instituicoes de ensino tem duas razoes para implementar o sistema: a economia financeira real e o valor educacional. Alunos aprendem na pratica sobre sustentabilidade. O sistema pode ser instalado com projeto didatico de educacao ambiental incluso.</div>
+
+          <div class="app-steps">
+            <div class="app-step">
+              <div class="app-step-num">1</div>
+              <div class="app-step-body">
+                <strong>Mapeamento do campus</strong>
+                <span>Identificamos todos os telhados e areas de captacao disponiveis. Em escolas grandes, podemos usar multiplos pontos de coleta conectados a um reservatorio central.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">2</div>
+              <div class="app-step-body">
+                <strong>Sistema com painel didatico opcional</strong>
+                <span>Podemos instalar um painel de monitoramento com visor que mostra em tempo real o volume captado, economizado e o impacto ambiental. Excelente ferramenta de aula.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">3</div>
+              <div class="app-step-body">
+                <strong>Dimensionamento para o pico de uso escolar</strong>
+                <span>O sistema e projetado para o horario de pico (intervalo, entrada e saida) quando os banheiros tem maior demanda. O reservatorio e dimensionado para suprir esse pico.</span>
+              </div>
+            </div>
+            <div class="app-step">
+              <div class="app-step-num">4</div>
+              <div class="app-step-body">
+                <strong>Manutencao simples e barata</strong>
+                <span>O custo de manutencao do sistema e muito baixo: limpeza do filtro de entrada a cada 6 meses e verificacao da bomba anualmente. Pode ser feito pela propria equipe de manutencao da escola.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-saving">
+            <div class="saving-val">40%</div>
+            <div class="saving-text"><strong>A economia media em escolas publicas e privadas.</strong> Projetos realizados em municipios do interior de SP e Grande ABC.</div>
+          </div>
+
+          <div style="font-weight:600;font-size:13px;color:var(--text-dark);margin-bottom:10px">Usos indicados:</div>
+          <div class="app-uses">
+            <div class="app-use">Descarga em banheiros</div>
+            <div class="app-use">Irrigacao de hortas escolares</div>
+            <div class="app-use">Limpeza de areas externas</div>
+            <div class="app-use">Limpeza de quadras esportivas</div>
+            <div class="app-use">Jardins e areas verdes</div>
+            <div class="app-use">Uso em aulas praticas</div>
+          </div>
+          <a href="contato.html?interesse=Captacao+Chuva+Escola" class="btn btn-primary">Solicitar Projeto para Escola</a>
+        </div>
+        <div class="app-img-wrap fade-up" data-delay="60">
+          <img src="images/chuva-escola.jpg" alt="Sistema de captacao de chuva para escola">
+          <div class="app-img-badge">Educacao</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>Qual sistema e ideal para voce?</h2>
+      <p>Nossa equipe elabora o projeto tecnico e o relatorio de viabilidade sem custo. Atendemos em todo o Brasil.</p>
+      <div class="actions">
+        <a href="contato.html?interesse=Captacao+de+Agua+de+Chuva" class="btn btn-white btn-lg">Solicitar Projeto</a>
+        <a href="tel:+5511910301546" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;">(11) 91030-1546</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
