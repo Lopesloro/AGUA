@@ -5,7 +5,7 @@ const HEADER_HTML = `
 <header id="header">
   <div class="header-wrap">
     <a href="index.html" class="logo" aria-label="PH Águas — página inicial">
-      <img src="images/brand/logo.png" alt="PH Águas" width="220" height="88">
+      <img src="images/brand/logo.png" alt="PH Águas" width="88" height="88">
     </a>
     <nav class="nav-main" aria-label="Navegação principal">
       <a href="sobre.html" class="nav-link-plain">Sobre</a>
@@ -150,7 +150,7 @@ const FOOTER_HTML = `
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/brand/logo.png" alt="PH Águas" width="200" height="80">
+        <img src="images/brand/logo.png" alt="PH Águas" width="80" height="80">
         <p>Soluções completas em tratamento de água e efluentes para indústria, comércio e residências. Mais de 25 anos de experiência em todo o Brasil.</p>
         <div class="footer-social">
           <a href="https://www.linkedin.com/company/phaguas" target="_blank" rel="noopener" aria-label="LinkedIn da PH Águas">
