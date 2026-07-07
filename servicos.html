@@ -7,6 +7,7 @@
   <meta name="description" content="12 serviços técnicos em tratamento de água: consultoria, instalação, caldeiras, torres, automação, retrofit, limpeza química e locação B.O.T.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/brand/logo.png">
   <link rel="stylesheet" href="styles/main.css">
   <style>
     .srv-family { margin-bottom: 56px; }
@@ -34,6 +35,15 @@
     .bot-text span { font-size: 13px; color: rgba(255,255,255,.7); }
 
     @media(max-width:768px){ .bot-grid { grid-template-columns: 1fr; } .bot-highlight { grid-column: 1; } }
+
+    .srv-photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 24px; }
+    .srv-photo-card { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: all var(--transition); }
+    .srv-photo-card:hover { box-shadow: var(--shadow-lg); border-color: var(--blue); transform: translateY(-4px); }
+    .srv-photo-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: var(--blue-pale); }
+    .srv-photo-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+    .srv-photo-title { font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; }
+    .srv-photo-desc { font-size: 13.5px; color: var(--text); line-height: 1.6; margin-bottom: 18px; flex: 1; }
+    .srv-photo-body .btn { align-self: flex-start; }
   </style>
 </head>
 <body class="page-content">
@@ -42,7 +52,7 @@
     <div class="container">
       <div class="breadcrumb"><a href="index.html">Início</a><span>/</span><span>Serviços</span></div>
       <h1>Serviços Técnicos Especializados</h1>
-      <p>12 modalidades de serviço para implantação, operação e manutenção de sistemas de tratamento de água.</p>
+      <p>Soluções completas para implantação, operação, manutenção e higienização de sistemas de tratamento de água.</p>
     </div>
   </div>
 
@@ -50,10 +60,12 @@
     <div class="container">
 
       <div class="filter-tabs">
-        <button class="filter-tab active" data-filter="all">Todos (12)</button>
+        <button class="filter-tab active" data-filter="all">Todos</button>
         <button class="filter-tab" data-filter="projetos">Projetos e Implantação</button>
         <button class="filter-tab" data-filter="operacao">Operação Industrial</button>
-        <button class="filter-tab" data-filter="manutencao">Manutenção</button>
+        <button class="filter-tab" data-filter="manutencao">Manutenção Industrial</button>
+        <button class="filter-tab" data-filter="limpeza">Limpeza e Higienização</button>
+        <button class="filter-tab" data-filter="complementares">Complementares</button>
         <button class="filter-tab" data-filter="negocios">Modelos de Negócio</button>
       </div>
 
@@ -76,7 +88,7 @@
               <li>Implantação e comissionamento</li>
               <li>Análise de viabilidade técnica e econômica</li>
             </ul>
-            <a href="servico.html?id=consultoria" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=consultoria" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
           <div class="srv-card fade-up" data-delay="80">
@@ -90,7 +102,7 @@
               <li>Reformas de tanques e reservatórios</li>
               <li>Reparos e otimização de bombas</li>
             </ul>
-            <a href="servico.html?id=instalacao" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=instalacao" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
           <div class="srv-card fade-up" data-delay="160">
@@ -104,7 +116,7 @@
               <li>Adaptação a novos padrões de poluentes</li>
               <li>Maximização da vida útil do equipamento</li>
             </ul>
-            <a href="servico.html?id=retrofit" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=retrofit" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
           <div class="srv-card fade-up" data-delay="240">
@@ -118,7 +130,7 @@
               <li>Conformidade ambiental para descarte</li>
               <li>Relatórios de desempenho hídrico</li>
             </ul>
-            <a href="servico.html?id=gestao-sustentavel" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=gestao-sustentavel" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
         </div>
@@ -143,7 +155,7 @@
               <li>Monitoramento de pH, condutividade e dureza</li>
               <li>Relatório de desempenho periódico</li>
             </ul>
-            <a href="servico.html?id=caldeiras-servico" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=caldeiras-servico" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
           <div class="srv-card fade-up" data-delay="80">
@@ -157,7 +169,7 @@
               <li>Inspeção com documentação fotográfica</li>
               <li>Laudo laboratorial periódico</li>
             </ul>
-            <a href="servico.html?id=torres-servico" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=torres-servico" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
           <div class="srv-card fade-up" data-delay="160">
@@ -171,7 +183,7 @@
               <li>Integração com sistemas existentes</li>
               <li>Redução de mão de obra operacional</li>
             </ul>
-            <a href="servico.html?id=automacao" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=automacao" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
         </div>
@@ -180,7 +192,7 @@
       <!-- MANUTENÇÃO -->
       <div class="srv-family" id="srv-manutencao" data-family="manutencao">
         <div class="family-header">
-          <span class="family-name">Manutenção e Limpeza</span>
+          <span class="family-name">Manutenção Industrial</span>
           <span class="family-count">3 serviços</span>
         </div>
         <div class="srv-grid">
@@ -196,7 +208,7 @@
               <li>Torres de resfriamento e chillers</li>
               <li>Linhas de alimentos, cosméticos e farmacêuticos</li>
             </ul>
-            <a href="servico.html?id=higienizacao" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=higienizacao" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
           <div class="srv-card fade-up" data-delay="80">
@@ -210,7 +222,7 @@
               <li>Vasos de pressão e trocadores de calor</li>
               <li>Sistemas de tubagens e válvulas</li>
             </ul>
-            <a href="servico.html?id=limpeza-quimica" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=limpeza-quimica" class="btn btn-primary btn-sm">Ver Detalhes</a>
           </div>
 
           <div class="srv-card fade-up" data-delay="160">
@@ -224,7 +236,83 @@
               <li>Relatórios de economia mensal</li>
               <li>Sem risco financeiro para o cliente</li>
             </ul>
-            <a href="servico.html?id=economia-agua" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a>
+            <a href="servico.html?id=economia-agua" class="btn btn-primary btn-sm">Ver Detalhes</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- LIMPEZA E HIGIENIZAÇÃO -->
+      <div class="srv-family" id="srv-limpeza" data-family="limpeza">
+        <div class="family-header">
+          <span class="family-name">Limpeza e Higienização</span>
+          <span class="family-count">3 serviços</span>
+        </div>
+        <div class="srv-photo-grid">
+
+          <div class="srv-photo-card fade-up" data-delay="0">
+            <img src="images/artes/limpeza-caixa-dagua.jpg" alt="Limpeza e higienização de caixa d'água e reservatórios" loading="lazy" width="1200" height="1200">
+            <div class="srv-photo-body">
+              <div class="srv-photo-title">Limpeza e Higienização de Caixa d'Água e Reservatórios</div>
+              <div class="srv-photo-desc">Higienização periódica de caixas d'água e reservatórios com laudo técnico, garantindo água segura e conformidade sanitária para residências, condomínios e empresas.</div>
+              <a href="https://wa.me/5511910301546?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20limpeza%20de%20caixa%20d'água%20e%20reservatórios" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            </div>
+          </div>
+
+          <div class="srv-photo-card fade-up" data-delay="80">
+            <img src="images/artes/limpeza-bebedouro.jpg" alt="Limpeza e higienização de bebedouros e filtros" loading="lazy" width="1200" height="1200">
+            <div class="srv-photo-body">
+              <div class="srv-photo-title">Limpeza e Higienização de Bebedouros e Filtros</div>
+              <div class="srv-photo-desc">Higienização de bebedouros e troca de elementos filtrantes, assegurando água potável segura para colaboradores, alunos e clientes em qualquer ambiente.</div>
+              <a href="https://wa.me/5511910301546?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20limpeza%20de%20bebedouros%20e%20filtros" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            </div>
+          </div>
+
+          <div class="srv-photo-card fade-up" data-delay="160">
+            <img src="images/artes/manutencao-filtro-areia.jpg" alt="Manutenção de filtros de areia, carvão, zeólita e resinas" loading="lazy" width="1200" height="1200">
+            <div class="srv-photo-body">
+              <div class="srv-photo-title">Manutenção de Filtros (Areia, Carvão, Zeólita e Resinas)</div>
+              <div class="srv-photo-desc">Troca e regeneração de meios filtrantes — areia, carvão ativado, zeólita e resinas catiônica e aniônica — para manter a eficiência e a segurança do seu tratamento.</div>
+              <a href="https://wa.me/5511910301546?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20manutenção%20de%20filtros" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SERVIÇOS COMPLEMENTARES -->
+      <div class="srv-family" id="srv-complementares" data-family="complementares">
+        <div class="family-header">
+          <span class="family-name">Serviços Complementares</span>
+          <span class="family-count">3 serviços</span>
+        </div>
+        <div class="srv-photo-grid">
+
+          <div class="srv-photo-card fade-up" data-delay="0">
+            <img src="images/artes/ete-br-ecosystem.jpg" alt="BR Ecosystem — Estação de Tratamento de Esgoto" loading="lazy" width="1200" height="1200">
+            <div class="srv-photo-body">
+              <div class="srv-photo-title">BR Ecosystem — Estação de Tratamento de Esgoto</div>
+              <div class="srv-photo-desc">Estações compactas de tratamento de esgoto com fácil operação, economia e eficiência — gerando água de reúso e reduzindo o impacto ambiental de loteamentos, condomínios e indústrias.</div>
+              <a href="https://wa.me/5511910301546?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20ETE%20BR%20Ecosystem" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Saber Mais</a>
+            </div>
+          </div>
+
+          <div class="srv-photo-card fade-up" data-delay="80">
+            <img src="images/artes/limpeza-coifas.jpg" alt="Limpeza profissional de coifas" loading="lazy" width="1200" height="1200">
+            <div class="srv-photo-body">
+              <div class="srv-photo-title">Limpeza de Coifas</div>
+              <div class="srv-photo-desc">Limpeza profissional de coifas e sistemas de exaustão, reduzindo risco de incêndio e mantendo a higiene e a eficiência das cozinhas industriais e comerciais.</div>
+              <a href="https://wa.me/5511910301546?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20limpeza%20de%20coifas" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            </div>
+          </div>
+
+          <div class="srv-photo-card fade-up" data-delay="160">
+            <img src="images/artes/limpeza-dutos.jpg" alt="Limpeza de ar-condicionado e dutos" loading="lazy" width="1200" height="1200">
+            <div class="srv-photo-body">
+              <div class="srv-photo-title">Limpeza de Ar-Condicionado e Dutos</div>
+              <div class="srv-photo-desc">Higienização de aparelhos de ar-condicionado e dutos de ventilação, melhorando a qualidade do ar, reduzindo riscos respiratórios e prolongando a vida útil dos equipamentos.</div>
+              <a href="https://wa.me/5511910301546?text=Olá,%20gostaria%20de%20um%20orçamento%20para%20limpeza%20de%20ar-condicionado%20e%20dutos" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Solicitar Orçamento</a>
+            </div>
           </div>
 
         </div>

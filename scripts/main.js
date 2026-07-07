@@ -20,8 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const mobileMenu = document.querySelector('.mobile-menu');
   if (hamburger && mobileMenu) {
-    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }));
   }
 
   // Active nav — only top-level triggers, not dropdown items
@@ -161,7 +167,7 @@ function openPhModal(data) {
     specsEl.innerHTML = '';
   }
 
-  const waMsg = 'Ola, gostaria de solicitar informacoes sobre: ' + (data.waItem || data.title || '');
+  const waMsg = 'Olá, gostaria de solicitar informações sobre: ' + (data.waItem || data.title || '');
   document.getElementById('ph-modal-wa').href = 'https://wa.me/5511910301546?text=' + encodeURIComponent(waMsg);
 
   modal.classList.add('open');

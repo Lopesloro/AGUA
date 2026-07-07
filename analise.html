@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análise de Água — PH Águas</title>
+  <meta name="description" content="Análise e monitoramento da qualidade da água: controle de parâmetros críticos, ensaios de Jar Test, cloração e reúso. A engenharia por trás de cada tratamento da PH Águas.">
+  <link rel="canonical" href="https://www.phaguas.com.br/analise.html">
+  <meta property="og:title" content="Análise de Água — PH Águas">
+  <meta property="og:description" content="Controle de parâmetros críticos, ensaios de Jar Test, cloração e reúso — a engenharia por trás de cada tratamento.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/artes/por-tras-da-eficiencia.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/brand/logo.png">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .analise-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 72px; }
+    @media(max-width:768px){ .analise-intro { grid-template-columns: 1fr; gap: 32px; } }
+    .analise-intro-img { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+    .analise-intro-img img { width: 100%; height: 100%; object-fit: cover; }
+    .analise-intro-text h2 { font-family: var(--font-display); font-size: clamp(26px,3vw,36px); font-weight: 800; color: var(--text-dark); margin-bottom: 18px; line-height: 1.2; }
+    .analise-intro-text p { font-size: 15px; color: var(--text); line-height: 1.75; margin-bottom: 16px; }
+    .analise-intro-text .highlight { color: var(--blue); font-weight: 600; }
+
+    .param-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 16px; margin-top: 8px; }
+    .param-card { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius); padding: 20px; transition: all var(--transition); }
+    .param-card:hover { box-shadow: var(--shadow); border-color: var(--blue); transform: translateY(-3px); }
+    .param-card .p-val { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--blue); margin-bottom: 4px; }
+    .param-card .p-lbl { font-size: 13px; color: var(--text); line-height: 1.5; }
+
+    .art-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; }
+    @media(max-width:760px){ .art-grid { grid-template-columns: 1fr; } }
+    .art-card { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition); }
+    .art-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .art-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: var(--blue-pale); }
+    .art-card-body { padding: 22px 24px 26px; }
+    .art-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--blue); margin-bottom: 8px; }
+    .art-title { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--text-dark); margin-bottom: 10px; }
+    .art-desc { font-size: 14px; color: var(--text); line-height: 1.65; }
+  </style>
+</head>
+<body class="page-content">
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Início</a><span>/</span><span>Análise de Água</span></div>
+      <h1>Análise de Água</h1>
+      <p>Cada tratamento eficiente começa por medir. Diagnosticamos a qualidade da água e monitoramos os parâmetros que garantem segurança e desempenho.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="analise-intro">
+        <div class="analise-intro-img">
+          <img src="images/artes/por-tras-da-eficiencia.jpg" alt="Analista da PH Águas avaliando amostra de água em laboratório" width="1200" height="1200" loading="lazy">
+        </div>
+        <div class="analise-intro-text">
+          <h2>A engenharia por trás da eficiência</h2>
+          <p>Antes de recomendar qualquer sistema, a <span class="highlight">PH Águas</span> analisa a água na origem. É esse diagnóstico que define a tecnologia, a dosagem e a rotina de manutenção mais adequadas para cada operação.</p>
+          <p>Nossa equipe técnica acompanha os <strong>parâmetros críticos</strong> da água — físico-químicos e microbiológicos — assegurando conformidade legal, economia de insumos e resultado real em campo.</p>
+          <div class="param-grid">
+            <div class="param-card"><div class="p-val">pH</div><div class="p-lbl">Acidez e alcalinidade</div></div>
+            <div class="param-card"><div class="p-val">Turbidez</div><div class="p-lbl">Partículas em suspensão</div></div>
+            <div class="param-card"><div class="p-val">Cloro</div><div class="p-lbl">Residual e desinfecção</div></div>
+            <div class="param-card"><div class="p-val">Dureza</div><div class="p-lbl">Cálcio e magnésio</div></div>
+            <div class="param-card"><div class="p-val">Condutividade</div><div class="p-lbl">Sais dissolvidos (TDS)</div></div>
+            <div class="param-card"><div class="p-val">Microbiológico</div><div class="p-lbl">Coliformes e bactérias</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gray">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">Como Analisamos</span>
+        <h2 class="section-title">Ensaios e <span>controle de qualidade</span></h2>
+        <p class="section-subtitle">Da bancada ao campo: os métodos que sustentam a eficiência dos nossos tratamentos.</p>
+      </div>
+      <div class="art-grid fade-up">
+        <div class="art-card">
+          <img src="images/artes/jar-test.jpg" alt="Ensaios de Jar Test — floculador com seis jarras" width="1200" height="1200" loading="lazy">
+          <div class="art-card-body">
+            <div class="art-tag">Ensaios de Jar Test</div>
+            <div class="art-title">Dosagem sob medida</div>
+            <div class="art-desc">Simulamos o tratamento em bancada para definir coagulante, floculante e dosagem ideais. Resultado: personalização do tratamento, segurança, economia, eficiência e conformidade legal.</div>
+          </div>
+        </div>
+        <div class="art-card">
+          <img src="images/artes/cloracao.jpg" alt="Cloração da água para desinfecção" width="1200" height="1200" loading="lazy">
+          <div class="art-card-body">
+            <div class="art-tag">Cloração</div>
+            <div class="art-title">Água segura e protegida</div>
+            <div class="art-desc">O controle da cloração elimina microrganismos e mantém o residual desinfetante dentro dos limites regulatórios, garantindo água potável segura ponto a ponto.</div>
+          </div>
+        </div>
+        <div class="art-card">
+          <img src="images/artes/por-tras-da-eficiencia.jpg" alt="Controle de parâmetros críticos da água" width="1200" height="1200" loading="lazy">
+          <div class="art-card-body">
+            <div class="art-tag">Monitoramento</div>
+            <div class="art-title">Parâmetros críticos sob controle</div>
+            <div class="art-desc">Acompanhamento contínuo de pH, cloro, dureza, condutividade e carga microbiológica — a segurança microbiológica que sustenta cada sistema em operação.</div>
+          </div>
+        </div>
+        <div class="art-card">
+          <img src="images/artes/reuso-classe1.jpg" alt="Sistema de reúso de água classe 1" width="1200" height="1200" loading="lazy">
+          <div class="art-card-body">
+            <div class="art-tag">Reúso</div>
+            <div class="art-title">Água de reúso classe 1</div>
+            <div class="art-desc">Analisamos o efluente tratado para viabilizar o reúso com segurança — baixo consumo de energia, sem geração de lodo e com remoção comprovada de contaminantes.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Quer conhecer a qualidade da sua água?</h2>
+      <p>Solicite uma análise técnica e receba a recomendação de tratamento mais eficiente para a sua operação.</p>
+      <div class="actions">
+        <a href="contato.html" class="btn btn-white btn-lg">Solicitar Análise</a>
+        <a href="https://wa.me/5511910301546?text=Olá,%20gostaria%20de%20solicitar%20uma%20análise%20de%20água" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/components.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>

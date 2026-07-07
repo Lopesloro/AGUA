@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produtos Químicos e Resinas — PH Águas</title>
-  <meta name="description" content="Produtos químicos para tratamento de água: coagulantes, biocidas, inibidores para caldeiras, torres de resfriamento e osmose reversa. Resinas de troca iônica.">
+  <meta name="description" content="Produtos químicos e resinas utilizados nos serviços da PH Águas: onde e como aplicamos coagulantes, alcalinizantes, biocidas e resinas de troca iônica, com orientação de segurança e EPI.">
+  <link rel="canonical" href="https://www.phaguas.com.br/produtos.html">
+  <meta property="og:title" content="Produtos Químicos e Resinas — PH Águas">
+  <meta property="og:description" content="Onde e como utilizamos os produtos químicos e resinas nos nossos serviços de tratamento de água, com orientação de segurança e EPI.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/brand/logo.png">
   <link rel="stylesheet" href="styles/main.css">
   <style>
     .prod-family { margin-bottom: 64px; }
@@ -15,17 +20,14 @@
     .prod-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--blue); opacity: 0; transition: opacity var(--transition); }
     .prod-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: var(--blue); }
     .prod-card:hover::before { opacity: 1; }
-    .prod-icon { width: 48px; height: 48px; background: var(--blue-light); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; flex-shrink: 0; }
-    .prod-icon svg { width: 24px; height: 24px; fill: none; stroke: var(--blue); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .prod-tag { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
     .prod-name { font-size: 17px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; line-height: 1.3; }
     .prod-formula { font-size: 12px; color: var(--text-light); font-family: monospace; margin-bottom: 12px; }
     .prod-desc { font-size: 13px; color: var(--text); line-height: 1.65; margin-bottom: 16px; flex: 1; }
-    .prod-apps { margin-bottom: 18px; }
+    .prod-apps { margin-top: auto; }
     .prod-apps-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--text-light); margin-bottom: 8px; }
     .prod-app-chips { display: flex; flex-wrap: wrap; gap: 5px; }
     .prod-app { font-size: 11px; background: var(--blue-light); color: var(--blue); padding: 3px 10px; border-radius: 100px; font-weight: 500; }
-    .prod-footer { border-top: 1px solid var(--gray-border); padding-top: 16px; }
 
     .resin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     @media(max-width: 768px){ .resin-grid { grid-template-columns: 1fr; } }
@@ -37,16 +39,9 @@
     .resin-subtitle { font-size: 14px; color: var(--text); }
     .resin-body { padding: 24px 28px 26px; flex: 1; display: flex; flex-direction: column; }
     .resin-desc { font-size: 14px; color: var(--text); line-height: 1.65; margin-bottom: 20px; }
-    .resin-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-    .resin-spec-item { }
-    .resin-spec-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--text-light); margin-bottom: 3px; }
-    .resin-spec-val { font-size: 13px; font-weight: 600; color: var(--text-dark); }
-    .resin-uses { margin-bottom: 20px; }
-    .resin-uses-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-light); margin-bottom: 8px; }
-    .resin-use-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
-    .resin-use-list li { font-size: 13px; color: var(--text); padding-left: 16px; position: relative; }
-    .resin-use-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; background: var(--blue); border-radius: 50%; }
-    .resin-footer { border-top: 1px solid var(--gray-border); padding-top: 16px; margin-top: auto; }
+    .resin-apps-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--text-light); margin-bottom: 8px; }
+    .resin-app-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .resin-app { font-size: 12px; background: var(--blue-light); color: var(--blue); padding: 4px 12px; border-radius: 100px; font-weight: 500; }
 
     .application-segment { background: var(--gray-bg); border-radius: var(--radius-lg); padding: 40px 36px; margin-bottom: 24px; }
     .segment-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
@@ -56,6 +51,28 @@
     .segment-info p { font-size: 13px; color: var(--text); }
     .segment-prods { display: flex; flex-wrap: wrap; gap: 8px; }
     .segment-prod-chip { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius); padding: 8px 14px; font-size: 13px; font-weight: 500; color: var(--text-dark); }
+
+    .note-banner { background: var(--blue-pale); border: 1px solid var(--gray-border); border-left: 4px solid var(--blue); border-radius: var(--radius); padding: 18px 22px; font-size: 14px; color: var(--text); line-height: 1.65; margin-bottom: 40px; }
+    .note-banner strong { color: var(--text-dark); }
+
+    .safety-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 20px; margin-bottom: 32px; }
+    .safety-card { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius-lg); padding: 26px 24px; }
+    .safety-card h4 { font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
+    .safety-card .safety-prods { font-size: 12px; color: var(--text-light); margin-bottom: 16px; }
+    .safety-block { margin-bottom: 14px; }
+    .safety-block-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--blue); margin-bottom: 6px; }
+    .safety-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 5px; }
+    .safety-list li { font-size: 13px; color: var(--text); line-height: 1.5; padding-left: 16px; position: relative; }
+    .safety-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 5px; height: 5px; background: var(--blue); border-radius: 50%; }
+
+    .emergency-band { background: var(--blue-dark); border-radius: var(--radius-lg); padding: 36px; color: white; }
+    .emergency-band h3 { font-family: var(--font-display); font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    .emergency-band p { font-size: 14px; color: rgba(255,255,255,.8); margin-bottom: 24px; }
+    .emergency-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 16px; }
+    .emergency-item { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius); padding: 16px 18px; }
+    .emergency-item .em-label { font-size: 12px; color: rgba(255,255,255,.7); margin-bottom: 4px; }
+    .emergency-item .em-num { font-size: 20px; font-weight: 800; color: white; }
+    .emergency-item a.em-num { display: inline-block; }
   </style>
 </head>
 <body class="page-content">
@@ -64,181 +81,208 @@
     <div class="container">
       <div class="breadcrumb"><a href="index.html">Início</a><span>/</span><span>Produtos</span></div>
       <h1>Produtos Químicos e Resinas</h1>
-      <p>Linha completa de produtos para tratamento de água industrial: coagulantes, biocidas, inibidores e resinas de troca iônica para todos os sistemas.</p>
+      <p>Onde e como utilizamos os produtos e resinas de troca iônica nos nossos serviços de tratamento de água — com orientação completa de segurança e manuseio.</p>
     </div>
   </div>
 
   <section class="section">
     <div class="container">
 
+      <div class="note-banner">
+        <strong>Importante:</strong> não comercializamos produtos químicos avulsos. Os produtos abaixo são utilizados exclusivamente na prestação dos nossos serviços e fornecidos apenas para empresas com as quais mantemos contrato. Esta página mostra <strong>onde e como aplicamos cada produto</strong>.
+      </div>
+
       <div class="filter-tabs">
         <button class="filter-tab active" data-filter="all">Todos</button>
         <button class="filter-tab" data-filter="quimicos">Químicos</button>
         <button class="filter-tab" data-filter="resinas">Resinas</button>
         <button class="filter-tab" data-filter="aplicacoes">Por Aplicação</button>
+        <button class="filter-tab" data-filter="seguranca">Segurança e EPI</button>
       </div>
 
       <!-- PRODUTOS QUÍMICOS -->
-      <div class="prod-family" data-family="quimicos">
+      <div class="prod-family" id="prod-quimicos" data-family="quimicos">
         <div class="family-header">
           <span class="family-name">Produtos Químicos</span>
-          <span class="family-count">9 produtos</span>
+          <span class="family-count">10 produtos</span>
         </div>
 
-        <div class="prod-grid">
+        <div class="prod-grid" id="prod-aplicacoes">
 
           <div class="prod-card fade-up" data-delay="0">
             <div class="prod-tag">Alcalinizante</div>
-            <div class="prod-name">Soda Cáustica</div>
-            <div class="prod-formula">NaOH — Hidróxido de Sódio</div>
-            <div class="prod-desc">Solução concentrada de hidróxido de sódio para correção de pH, regeneração de resinas catiônicas e tratamento alcalino de efluentes. Disponível em solução líquida 50% ou pérolas sólidas.</div>
+            <div class="prod-name">Hidróxido de Sódio</div>
+            <div class="prod-formula">NaOH</div>
+            <div class="prod-desc">Utilizado na correção de pH, na regeneração de resinas catiônicas e no tratamento alcalino de efluentes. Aplicado em solução líquida ou pérolas sólidas conforme o processo.</div>
             <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
+              <div class="prod-apps-label">Onde utilizamos</div>
               <div class="prod-app-chips">
                 <span class="prod-app">Correção de pH</span>
-                <span class="prod-app">Resinas</span>
+                <span class="prod-app">Regeneração de resinas</span>
                 <span class="prod-app">Efluentes</span>
                 <span class="prod-app">Osmose reversa</span>
               </div>
             </div>
-            <div class="prod-footer"><a href="produto.html?id=soda-caustica" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
           </div>
 
           <div class="prod-card fade-up" data-delay="60">
             <div class="prod-tag">Coagulante</div>
             <div class="prod-name">Policloreto de Alumínio — PAC</div>
             <div class="prod-formula">Al₂(OH)ₙCl₆₋ₙ</div>
-            <div class="prod-desc">Coagulante inorgânico de alta eficiência para remoção de turbidez, cor aparente e sólidos suspensos. Ação rápida em ampla faixa de pH. Reduz geração de lodo em relação ao sulfato de alumínio.</div>
+            <div class="prod-desc">Coagulante de alta eficiência que aplicamos na remoção de turbidez, cor e sólidos suspensos, com ação rápida em ampla faixa de pH e menor geração de lodo.</div>
             <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
+              <div class="prod-apps-label">Onde utilizamos</div>
               <div class="prod-app-chips">
                 <span class="prod-app">ETA</span>
                 <span class="prod-app">ETE</span>
                 <span class="prod-app">Pré-tratamento</span>
-                <span class="prod-app">Água potável</span>
+                <span class="prod-app">Clarificação</span>
               </div>
             </div>
-            <div class="prod-footer"><a href="produto.html?id=pac" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
           </div>
 
           <div class="prod-card fade-up" data-delay="120">
-            <div class="prod-tag">Inibidor Multifuncional</div>
+            <div class="prod-tag">Floculante</div>
+            <div class="prod-name">Polímero Aniônico</div>
+            <div class="prod-formula">Poliacrilamida aniônica</div>
+            <div class="prod-desc">Auxiliar de floculação que aplicamos após a coagulação para agregar as partículas, acelerar a decantação e melhorar a desidratação do lodo.</div>
+            <div class="prod-apps">
+              <div class="prod-apps-label">Onde utilizamos</div>
+              <div class="prod-app-chips">
+                <span class="prod-app">Floculação</span>
+                <span class="prod-app">Decantação</span>
+                <span class="prod-app">Desidratação de lodo</span>
+                <span class="prod-app">Clarificação</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-card fade-up" data-delay="180">
+            <div class="prod-tag">Alcalinizante</div>
+            <div class="prod-name">Barrilha</div>
+            <div class="prod-formula">Na₂CO₃ — Carbonato de Sódio</div>
+            <div class="prod-desc">Utilizada no ajuste de pH e alcalinidade e na correção da dureza da água, favorecendo a coagulação e a estabilidade dos processos de tratamento.</div>
+            <div class="prod-apps">
+              <div class="prod-apps-label">Onde utilizamos</div>
+              <div class="prod-app-chips">
+                <span class="prod-app">Ajuste de pH</span>
+                <span class="prod-app">Alcalinidade</span>
+                <span class="prod-app">Correção de dureza</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-card fade-up" data-delay="240">
+            <div class="prod-tag">Alcalinizante e Coagulação</div>
+            <div class="prod-name">Cal Hidratada</div>
+            <div class="prod-formula">Ca(OH)₂ — Hidróxido de Cálcio</div>
+            <div class="prod-desc">Aplicada na correção de pH, no auxílio à coagulação, na remoção de metais e no condicionamento de lodo em estações de tratamento de água e efluentes.</div>
+            <div class="prod-apps">
+              <div class="prod-apps-label">Onde utilizamos</div>
+              <div class="prod-app-chips">
+                <span class="prod-app">Correção de pH</span>
+                <span class="prod-app">Coagulação</span>
+                <span class="prod-app">Remoção de metais</span>
+                <span class="prod-app">Condicionamento de lodo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="prod-card fade-up" data-delay="300">
+            <div class="prod-tag">Inibidor Anticorrosivo</div>
             <div class="prod-name">NR5 — Inibidor Anticorrosivo</div>
             <div class="prod-formula">Formulação aquosa multifuncional</div>
-            <div class="prod-desc">Inibidor anticorrosivo multimetal para sistemas de refrigeração abertos. Atua na proteção contra corrosão de aço carbono, cobre, alumínio e ligas metálicas. Compatível com biocidas e antiincrustantes.</div>
+            <div class="prod-desc">Aplicado na proteção contra corrosão de aço carbono, cobre e ligas metálicas em sistemas de refrigeração abertos. Compatível com biocidas e antiincrustantes.</div>
             <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
+              <div class="prod-apps-label">Onde utilizamos</div>
               <div class="prod-app-chips">
                 <span class="prod-app">Torres de resfriamento</span>
                 <span class="prod-app">Chillers</span>
                 <span class="prod-app">Loops fechados</span>
               </div>
             </div>
-            <div class="prod-footer"><a href="produto.html?id=nr5" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
           </div>
 
-          <div class="prod-card fade-up" data-delay="180">
+          <div class="prod-card fade-up" data-delay="360">
             <div class="prod-tag">Antiincrustante</div>
-            <div class="prod-name">TOR 40 — Antiincrustante para Torres</div>
+            <div class="prod-name">TOR 40 — Antiincrustante</div>
             <div class="prod-formula">Polímero orgânico + dispersante</div>
-            <div class="prod-desc">Produto antiincrustante e dispersante para torres de resfriamento. Previne formação de incrustações de carbonato de cálcio, sulfato e sílica nas superfícies de transferência de calor. Aumenta eficiência energética do sistema.</div>
+            <div class="prod-desc">Aplicado em torres de resfriamento para prevenir incrustações de carbonato, sulfato e sílica nas superfícies de troca de calor, mantendo a eficiência energética.</div>
             <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
+              <div class="prod-apps-label">Onde utilizamos</div>
               <div class="prod-app-chips">
                 <span class="prod-app">Torres abertas</span>
                 <span class="prod-app">Trocadores de calor</span>
                 <span class="prod-app">Condensadores</span>
               </div>
             </div>
-            <div class="prod-footer"><a href="produto.html?id=tor40" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
           </div>
 
-          <div class="prod-card fade-up" data-delay="240">
-            <div class="prod-tag">Antiincrustante</div>
+          <div class="prod-card fade-up" data-delay="420">
+            <div class="prod-tag">Antiincrustante Premium</div>
             <div class="prod-name">TOR 43 — Antiincrustante Premium</div>
             <div class="prod-formula">Polímero de alto desempenho</div>
-            <div class="prod-desc">Versão premium do TOR 40 para sistemas com maior concentração de sais e maior ciclo de concentração. Compatível com água de alto teor de sílica e dureza. Indicado para torres de alto fluxo e ciclos elevados.</div>
+            <div class="prod-desc">Aplicado em sistemas com maior concentração de sais e ciclos elevados, inclusive água de alta dureza e teor de sílica, em torres de alto fluxo.</div>
             <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
+              <div class="prod-apps-label">Onde utilizamos</div>
               <div class="prod-app-chips">
                 <span class="prod-app">Torres alto ciclo</span>
                 <span class="prod-app">Alta dureza</span>
                 <span class="prod-app">Alta sílica</span>
               </div>
             </div>
-            <div class="prod-footer"><a href="produto.html?id=tor43" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
           </div>
 
-          <div class="prod-card fade-up" data-delay="300">
+          <div class="prod-card fade-up" data-delay="480">
             <div class="prod-tag">Biocida</div>
             <div class="prod-name">BIO 03 — Biocida Não Oxidante</div>
-            <div class="prod-formula">DBNPA + BNPD — Formulação sinérgica</div>
-            <div class="prod-desc">Biocida não oxidante de amplo espectro para controle de bactérias aeróbias, anaeróbias, algas e fungos em sistemas de água de resfriamento. Rápida ação de choque e baixa toxicidade residual.</div>
+            <div class="prod-formula">Formulação sinérgica</div>
+            <div class="prod-desc">Aplicado no controle de bactérias, algas e fungos em sistemas de água de resfriamento, com ação de choque e no controle de biofilme e Legionella.</div>
             <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
+              <div class="prod-apps-label">Onde utilizamos</div>
               <div class="prod-app-chips">
                 <span class="prod-app">Torres abertas</span>
-                <span class="prod-app">Controle Legionella</span>
+                <span class="prod-app">Controle de Legionella</span>
                 <span class="prod-app">Biofilme</span>
               </div>
             </div>
-            <div class="prod-footer"><a href="produto.html?id=bio03" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
           </div>
 
-          <div class="prod-card fade-up" data-delay="360">
-            <div class="prod-tag">Antiespumante</div>
-            <div class="prod-name">NF 300 — Antiespumante Industrial</div>
-            <div class="prod-formula">Base de silicone + poliol</div>
-            <div class="prod-desc">Antiespumante de alta eficiência para sistemas de água de processo, ETE e torres de resfriamento. Elimina rapidamente a espuma e previne sua reformação. Compatível com membranas e sistemas de osmose reversa.</div>
-            <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
-              <div class="prod-app-chips">
-                <span class="prod-app">Torres</span>
-                <span class="prod-app">ETE</span>
-                <span class="prod-app">Osmose Reversa</span>
-                <span class="prod-app">Processo</span>
-              </div>
-            </div>
-            <div class="prod-footer"><a href="produto.html?id=nf300" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
-          </div>
-
-          <div class="prod-card fade-up" data-delay="420">
+          <div class="prod-card fade-up" data-delay="540">
             <div class="prod-tag">Tratamento de Caldeiras</div>
             <div class="prod-name">Multifuncional para Caldeiras</div>
             <div class="prod-formula">Sequestrante + fosfato + antiespumante</div>
-            <div class="prod-desc">Formulação completa para tratamento interno de caldeiras de vapor. Combina sequestrante de oxigênio, antiincrustante, inibidor de corrosão e antiespumante. Protege tubulação, corpo e cabeçotes da caldeira. Monitora TDS via condutividade.</div>
+            <div class="prod-desc">Aplicado no tratamento interno de caldeiras de vapor, protegendo tubulação, corpo e cabeçotes contra incrustação e corrosão.</div>
             <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
+              <div class="prod-apps-label">Onde utilizamos</div>
               <div class="prod-app-chips">
-                <span class="prod-app">Caldeiras vapor</span>
+                <span class="prod-app">Caldeiras de vapor</span>
                 <span class="prod-app">Baixa pressão</span>
                 <span class="prod-app">Média pressão</span>
               </div>
             </div>
-            <div class="prod-footer"><a href="produto.html?id=multifuncional-caldeiras" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
           </div>
 
-          <div class="prod-card fade-up" data-delay="480">
+          <div class="prod-card fade-up" data-delay="600">
             <div class="prod-tag">Acidulante</div>
             <div class="prod-name">Ácido Clorídrico — HCl</div>
-            <div class="prod-formula">HCl — Graus industriais: 31–33%</div>
-            <div class="prod-desc">Ácido clorídrico industrial para correção de pH, regeneração de resinas de troca iônica catiônicas e limpeza química de membranas de osmose reversa. Grau industrial. Armazenamento e manuseio com EPI adequado.</div>
+            <div class="prod-formula">HCl</div>
+            <div class="prod-desc">Aplicado na correção de pH, na regeneração de resinas catiônicas e na limpeza química (CIP) de membranas de osmose reversa, sempre com EPI adequado.</div>
             <div class="prod-apps">
-              <div class="prod-apps-label">Aplicações</div>
+              <div class="prod-apps-label">Onde utilizamos</div>
               <div class="prod-app-chips">
-                <span class="prod-app">Resinas catiônicas</span>
-                <span class="prod-app">CIP membranas</span>
-                <span class="prod-app">Correção pH</span>
+                <span class="prod-app">Regeneração de resinas</span>
+                <span class="prod-app">CIP de membranas</span>
+                <span class="prod-app">Correção de pH</span>
               </div>
             </div>
-            <div class="prod-footer"><a href="produto.html?id=hcl" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
           </div>
 
         </div>
       </div>
 
       <!-- RESINAS DE TROCA IÔNICA -->
-      <div class="prod-family" data-family="resinas">
+      <div class="prod-family" id="prod-resinas" data-family="resinas">
         <div class="family-header">
           <span class="family-name">Resinas de Troca Iônica</span>
           <span class="family-count">2 tipos</span>
@@ -252,36 +296,14 @@
               <div class="resin-subtitle">Remoção de Ca²⁺, Mg²⁺, Na⁺, Fe²⁺ e metais pesados</div>
             </div>
             <div class="resin-body">
-              <div class="resin-desc">Resinas de gel ou macroporosa forte em ácido (SAC) para remoção de cátions divalentes e monovalentes da água. Regeneradas com ácido clorídrico (HCl) ou ácido sulfúrico (H₂SO₄). Excelente capacidade de troca e vida útil prolongada.</div>
-              <div class="resin-specs">
-                <div class="resin-spec-item">
-                  <div class="resin-spec-label">Forma</div>
-                  <div class="resin-spec-val">H⁺ ou Na⁺</div>
-                </div>
-                <div class="resin-spec-item">
-                  <div class="resin-spec-label">Regenerante</div>
-                  <div class="resin-spec-val">HCl / H₂SO₄</div>
-                </div>
-                <div class="resin-spec-item">
-                  <div class="resin-spec-label">Aplicação</div>
-                  <div class="resin-spec-val">Abrandamento / DI</div>
-                </div>
-                <div class="resin-spec-item">
-                  <div class="resin-spec-label">Temperatura</div>
-                  <div class="resin-spec-val">até 120°C</div>
-                </div>
+              <div class="resin-desc">Utilizamos as resinas catiônicas na remoção de cátions da água. São aplicadas em abrandamento e desmineralização e regeneradas com ácido durante a manutenção dos sistemas.</div>
+              <div class="resin-apps-label">Onde utilizamos</div>
+              <div class="resin-app-chips">
+                <span class="resin-app">Abrandadores</span>
+                <span class="resin-app">Desmineralização</span>
+                <span class="resin-app">Pré-tratamento de osmose</span>
+                <span class="resin-app">Remoção de ferro e manganês</span>
               </div>
-              <div class="resin-uses">
-                <div class="resin-uses-title">Sistemas recomendados</div>
-                <ul class="resin-use-list">
-                  <li>Abrandadores para caldeiras e torres</li>
-                  <li>Desmineralizadores de leito misto</li>
-                  <li>Pré-tratamento para osmose reversa</li>
-                  <li>Remoção de ferro e manganês</li>
-                  <li>Sistemas de desmineralização completa (DI)</li>
-                </ul>
-              </div>
-              <div class="resin-footer"><a href="produto.html?id=resina-cationica" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
             </div>
           </div>
 
@@ -292,36 +314,14 @@
               <div class="resin-subtitle">Remoção de Cl⁻, SO₄²⁻, NO₃⁻, SiO₂ e ânions orgânicos</div>
             </div>
             <div class="resin-body">
-              <div class="resin-desc">Resinas de base forte (SBA) para remoção completa de ânions da água, incluindo silicatos e ácidos orgânicos. Regeneradas com hidróxido de sódio (NaOH). Essenciais em colunas de desmineralização completa para água ultrapura.</div>
-              <div class="resin-specs">
-                <div class="resin-spec-item">
-                  <div class="resin-spec-label">Forma</div>
-                  <div class="resin-spec-val">OH⁻ ou Cl⁻</div>
-                </div>
-                <div class="resin-spec-item">
-                  <div class="resin-spec-label">Regenerante</div>
-                  <div class="resin-spec-val">NaOH</div>
-                </div>
-                <div class="resin-spec-item">
-                  <div class="resin-spec-label">Aplicação</div>
-                  <div class="resin-spec-val">DI / Ultrapura</div>
-                </div>
-                <div class="resin-spec-item">
-                  <div class="resin-spec-label">Temperatura</div>
-                  <div class="resin-spec-val">até 60°C</div>
-                </div>
+              <div class="resin-desc">Utilizamos as resinas aniônicas na remoção de ânions, inclusive silicatos e orgânicos. Aplicadas na desmineralização completa e no polimento de água de alta pureza, regeneradas com álcali.</div>
+              <div class="resin-apps-label">Onde utilizamos</div>
+              <div class="resin-app-chips">
+                <span class="resin-app">Desmineralização</span>
+                <span class="resin-app">Água ultrapura (UPW/WFI)</span>
+                <span class="resin-app">Polimento pós-osmose</span>
+                <span class="resin-app">Remoção de nitratos</span>
               </div>
-              <div class="resin-uses">
-                <div class="resin-uses-title">Sistemas recomendados</div>
-                <ul class="resin-use-list">
-                  <li>Desmineralizadores para vapor de processo</li>
-                  <li>Sistemas de água ultrapura (UPW/WFI)</li>
-                  <li>Polimento final pós-osmose reversa</li>
-                  <li>Remoção de nitratos em água potável</li>
-                  <li>Tratamento de efluentes industriais</li>
-                </ul>
-              </div>
-              <div class="resin-footer"><a href="produto.html?id=resina-anionica" class="btn btn-primary btn-sm" target="_blank">Ver Detalhes</a></div>
             </div>
           </div>
 
@@ -347,10 +347,9 @@
           </div>
           <div class="segment-prods">
             <div class="segment-prod-chip">NR5 — Anticorrosivo multimetal</div>
-            <div class="segment-prod-chip">TOR 40 — Antiincrustante padrão</div>
+            <div class="segment-prod-chip">TOR 40 — Antiincrustante</div>
             <div class="segment-prod-chip">TOR 43 — Antiincrustante premium</div>
             <div class="segment-prod-chip">BIO 03 — Biocida não oxidante</div>
-            <div class="segment-prod-chip">NF 300 — Antiespumante</div>
           </div>
         </div>
 
@@ -361,14 +360,13 @@
             </div>
             <div class="segment-info">
               <h3>Caldeiras de Vapor</h3>
-              <p>Prevenção de incrustação, corrosão e carryover no vapor</p>
+              <p>Prevenção de incrustação, corrosão e arraste no vapor</p>
             </div>
           </div>
           <div class="segment-prods">
             <div class="segment-prod-chip">Multifuncional Caldeiras</div>
-            <div class="segment-prod-chip">Soda Cáustica — ajuste pH</div>
+            <div class="segment-prod-chip">Hidróxido de Sódio — ajuste de pH</div>
             <div class="segment-prod-chip">Resina Catiônica — abrandamento</div>
-            <div class="segment-prod-chip">NF 300 — antiespumante</div>
           </div>
         </div>
 
@@ -378,17 +376,145 @@
               <svg viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
             </div>
             <div class="segment-info">
-              <h3>Sistemas de Filtração e Osmose Reversa</h3>
-              <p>Pré-tratamento, coagulação e limpeza química de membranas</p>
+              <h3>ETA, ETE e Osmose Reversa</h3>
+              <p>Coagulação, floculação, correção de pH e limpeza de membranas</p>
             </div>
           </div>
           <div class="segment-prods">
             <div class="segment-prod-chip">PAC — coagulação</div>
-            <div class="segment-prod-chip">Soda Cáustica — ajuste pH</div>
-            <div class="segment-prod-chip">HCl — CIP ácido membranas</div>
-            <div class="segment-prod-chip">NF 300 — antiespumante</div>
-            <div class="segment-prod-chip">Resina Catiônica — pré-tratamento</div>
-            <div class="segment-prod-chip">Resina Aniônica — polimento</div>
+            <div class="segment-prod-chip">Polímero Aniônico — floculação</div>
+            <div class="segment-prod-chip">Cal Hidratada — pH e coagulação</div>
+            <div class="segment-prod-chip">Barrilha — alcalinidade</div>
+            <div class="segment-prod-chip">HCl — CIP ácido de membranas</div>
+            <div class="segment-prod-chip">Resinas Catiônica e Aniônica</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SEGURANÇA, MANUSEIO E EPI -->
+      <div class="prod-family" id="prod-seguranca" data-family="seguranca">
+        <div class="family-header">
+          <span class="family-name">Segurança, Manuseio e EPI</span>
+          <span class="family-count">Orientações essenciais</span>
+        </div>
+
+        <div class="note-banner">
+          <strong>Uso profissional.</strong> O manuseio destes produtos é feito exclusivamente por equipe treinada da PH Águas, com os Equipamentos de Proteção Individual (EPI) obrigatórios e conforme a Ficha de Informação de Segurança (FISPQ) de cada produto. As orientações abaixo são um resumo — em caso de acidente, siga sempre a FISPQ e procure atendimento médico.
+        </div>
+
+        <div class="safety-grid">
+
+          <div class="safety-card fade-up">
+            <h4>Álcalis Corrosivos</h4>
+            <div class="safety-prods">Hidróxido de Sódio · Barrilha · Cal Hidratada</div>
+            <div class="safety-block">
+              <div class="safety-block-label">EPI obrigatório</div>
+              <ul class="safety-list">
+                <li>Luvas de nitrila ou PVC e óculos de proteção com protetor facial</li>
+                <li>Avental ou vestimenta impermeável e botas de PVC</li>
+                <li>Respirador para poeira/névoa (cal e barrilha)</li>
+              </ul>
+            </div>
+            <div class="safety-block">
+              <div class="safety-block-label">Em caso de contato</div>
+              <ul class="safety-list">
+                <li>Pele e olhos: lavar com água corrente por 15 minutos</li>
+                <li>Retirar roupas contaminadas; não esfregar a pele</li>
+                <li>Ingestão: não induzir vômito; procurar atendimento médico</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="safety-card fade-up" data-delay="60">
+            <h4>Ácidos</h4>
+            <div class="safety-prods">Ácido Clorídrico (HCl)</div>
+            <div class="safety-block">
+              <div class="safety-block-label">EPI obrigatório</div>
+              <ul class="safety-list">
+                <li>Luvas resistentes a ácido, óculos e protetor facial</li>
+                <li>Avental impermeável, botas e respirador com filtro para vapores ácidos</li>
+                <li>Manusear em local ventilado; nunca adicionar água ao ácido</li>
+              </ul>
+            </div>
+            <div class="safety-block">
+              <div class="safety-block-label">Em caso de contato</div>
+              <ul class="safety-list">
+                <li>Pele e olhos: lavar com água corrente por 15 minutos</li>
+                <li>Inalação: remover para local arejado</li>
+                <li>Procurar atendimento médico imediato</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="safety-card fade-up" data-delay="120">
+            <h4>Coagulantes e Floculantes</h4>
+            <div class="safety-prods">PAC · Polímero Aniônico</div>
+            <div class="safety-block">
+              <div class="safety-block-label">EPI obrigatório</div>
+              <ul class="safety-list">
+                <li>Luvas e óculos de proteção</li>
+                <li>Atenção: polímero derramado deixa o piso extremamente escorregadio</li>
+              </ul>
+            </div>
+            <div class="safety-block">
+              <div class="safety-block-label">Em caso de contato</div>
+              <ul class="safety-list">
+                <li>Pele e olhos: lavar com água em abundância</li>
+                <li>Conter e sinalizar derramamentos imediatamente</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="safety-card fade-up" data-delay="180">
+            <h4>Biocidas e Inibidores</h4>
+            <div class="safety-prods">BIO 03 · NR5 · TOR 40 · TOR 43 · Multifuncional</div>
+            <div class="safety-block">
+              <div class="safety-block-label">EPI obrigatório</div>
+              <ul class="safety-list">
+                <li>Luvas de nitrila, óculos e vestimenta impermeável</li>
+                <li>Respirador em ambientes fechados; nunca misturar com oxidantes</li>
+              </ul>
+            </div>
+            <div class="safety-block">
+              <div class="safety-block-label">Em caso de contato</div>
+              <ul class="safety-list">
+                <li>Pele e olhos: lavar com água corrente por 15 minutos</li>
+                <li>Ingestão/inalação: procurar atendimento médico com a FISPQ</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="emergency-band fade-up">
+          <h3>Telefones de Emergência e Úteis</h3>
+          <p>Em caso de acidente, intoxicação ou vazamento, acione imediatamente.</p>
+          <div class="emergency-grid">
+            <div class="emergency-item">
+              <div class="em-label">SAMU — Emergência médica</div>
+              <a class="em-num" href="tel:192">192</a>
+            </div>
+            <div class="emergency-item">
+              <div class="em-label">Corpo de Bombeiros</div>
+              <a class="em-num" href="tel:193">193</a>
+            </div>
+            <div class="emergency-item">
+              <div class="em-label">Disque-Intoxicação (ANVISA)</div>
+              <a class="em-num" href="tel:08007226001">0800 722 6001</a>
+            </div>
+            <div class="emergency-item">
+              <div class="em-label">Emergência Ambiental (CETESB)</div>
+              <a class="em-num" href="tel:08000113560">0800 011 3560</a>
+            </div>
+            <div class="emergency-item">
+              <div class="em-label">PH Águas — Suporte Técnico</div>
+              <a class="em-num" href="tel:+5511910301546">(11) 91030-1546</a>
+            </div>
+            <div class="emergency-item">
+              <div class="em-label">PH Águas — Escritório</div>
+              <a class="em-num" href="tel:+551123550292">(11) 2355-0292</a>
+            </div>
           </div>
         </div>
 
@@ -400,7 +526,7 @@
   <div class="cta-band">
     <div class="container">
       <h2>Precisa de análise da sua água?</h2>
-      <p>Avaliamos sua água e recomendamos os produtos certos. Laudo técnico sem custo para projetos acima de 200 m³/h.</p>
+      <p>Avaliamos sua água e definimos os produtos e o tratamento certos para a sua operação.</p>
       <div class="actions">
         <a href="contato.html" class="btn btn-white btn-lg">Solicitar Análise</a>
         <a href="tel:+5511910301546" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.4);color:white;">(11) 91030-1546</a>
