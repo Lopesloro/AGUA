@@ -32,7 +32,7 @@
     @media(max-width:500px){ .chuva-grid { grid-template-columns: 1fr; } }
     .chuva-card { background: var(--white); border: 1px solid var(--gray-border); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition); cursor: pointer; text-decoration: none; color: inherit; display: block; }
     .chuva-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: var(--blue); }
-    .chuva-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .chuva-card img { width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; display: block; background: var(--blue-pale); }
     .chuva-card-body { padding: 18px 20px 20px; }
     .chuva-tag { font-size: 11px; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
     .chuva-title { font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 6px; }
