@@ -185,11 +185,11 @@
             </div>
 
             <div class="form-submit-row" style="margin-top:20px;">
-              <button type="submit" class="btn btn-primary btn-lg">Enviar pelo WhatsApp</button>
+              <button type="submit" class="btn btn-primary btn-lg">Enviar Solicitação</button>
             </div>
 
             <div id="form-success">
-              Mensagem preparada! O WhatsApp será aberto com seu pedido de contato.
+              Solicitação enviada! Nossa equipe técnica responde em até 24 horas.
             </div>
           </form>
         </div>
@@ -290,7 +290,8 @@
           }
         }
       }
-      form.addEventListener('submit', function(e){
+      const submitBtn = form.querySelector('button[type="submit"]');
+      form.addEventListener('submit', async function(e){
         e.preventDefault();
         const nome = document.getElementById('nome').value.trim();
         const empresa = document.getElementById('empresa').value.trim();
@@ -301,17 +302,48 @@
         const vazao = document.getElementById('vazao').value.trim();
         const mensagem = document.getElementById('mensagem').value.trim();
         if(!nome||!empresa||!email||!telefone||!interesse||!mensagem){ return; }
-        let msg = `Olá, gostaria de solicitar informações pela PH Águas.\n\n`;
-        msg += `*Nome:* ${nome}\n`;
-        msg += `*Empresa:* ${empresa}\n`;
-        msg += `*E-mail:* ${email}\n`;
-        msg += `*Telefone:* ${telefone}\n`;
-        msg += `*Interesse:* ${interesse}\n`;
-        if(setor) msg += `*Setor:* ${setor}\n`;
-        if(vazao) msg += `*Vazão estimada:* ${vazao}\n`;
-        msg += `\n*Mensagem:*\n${mensagem}`;
-        success.style.display = 'block';
-        setTimeout(()=>{ window.open(`https://wa.me/5511910301546?text=${encodeURIComponent(msg)}`, '_blank'); }, 300);
+
+        let corpo = `Nome: ${nome}\n`;
+        corpo += `Empresa: ${empresa}\n`;
+        corpo += `E-mail: ${email}\n`;
+        corpo += `Telefone: ${telefone}\n`;
+        corpo += `Interesse: ${interesse}\n`;
+        if(setor) corpo += `Setor: ${setor}\n`;
+        if(vazao) corpo += `Vazão estimada: ${vazao}\n`;
+        corpo += `\nMensagem:\n${mensagem}`;
+
+        const dados = new FormData();
+        dados.append('access_key', 'ee6dfb84-6e92-48f1-b7eb-aa3028a19783');
+        dados.append('subject', `Solicitação de Orçamento — ${interesse}`);
+        dados.append('from_name', 'Site PH Águas');
+        dados.append('name', nome);
+        dados.append('email', email);
+        dados.append('replyto', email);
+        dados.append('empresa', empresa);
+        dados.append('telefone', telefone);
+        dados.append('interesse', interesse);
+        if(setor) dados.append('setor', setor);
+        if(vazao) dados.append('vazao', vazao);
+        dados.append('message', corpo);
+
+        const textoOriginal = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        try {
+          const resp = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: dados });
+          const json = await resp.json();
+          if(resp.ok && json.success){
+            success.style.display = 'block';
+            form.reset();
+          } else {
+            alert('Erro ao enviar: ' + (json.message || 'tente novamente.'));
+          }
+        } catch(err){
+          alert('Algo deu errado. Tente novamente ou fale pelo telefone.');
+        } finally {
+          submitBtn.textContent = textoOriginal;
+          submitBtn.disabled = false;
+        }
       });
     })();
   </script>
