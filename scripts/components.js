@@ -205,6 +205,7 @@ const FOOTER_HTML = `
     <div class="footer-bottom">
       <span>&copy; 2025 PH Águas. Todos os direitos reservados.</span>
       <span>CNPJ: 09.123.456/0001-00 | Em conformidade com a LGPD</span>
+      <span>Desenvolvido por <a href="https://blueshieldpro.com.br/" target="_blank" rel="noopener">BlueShieldPro</a></span>
     </div>
   </div>
 </footer>
